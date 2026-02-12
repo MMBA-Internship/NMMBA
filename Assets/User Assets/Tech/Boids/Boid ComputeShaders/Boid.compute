@@ -1,0 +1,200 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel Spawn
+#pragma kernel Move
+
+#define EPSILON 1e-5f
+
+struct Boid
+{
+    float3 pos;
+    float3 velocity;
+};
+
+RWStructuredBuffer<Boid> Boids;
+
+cbuffer Params
+{
+    float deltaTime;
+    float time;
+    
+    int boidAmount;
+    
+    float3 boundsExtents;
+    float boundsRadius;
+    float3 boundsCenter;
+    
+    float3 followTarget;
+    float followStrength;    
+    
+    float3 avoidTarget;
+    float avoidStrength;
+    
+    float forwardSpeed;
+    float rotationSpeed;
+    
+    float avoidanceRadius;
+    float cohesionRadius;
+    float alignmentRadius;
+    
+    float boundsStrength;
+    float avoidanceStrength;
+    float cohesionStrength;
+    float alignmentStrength;
+
+    float seed;
+};
+
+// Safe normalize: returns zero vector if length is too small
+float3 safeNormalize(float3 v)
+{
+    float len = length(v);
+    if (len < EPSILON)
+        return float3(0, 0, 0);
+    return v / len;
+}
+
+float nrand(float2 uv)
+{
+    return frac(sin(dot(uv, float2(12.9898, 78.233))) * 43758.5453);
+}
+
+float3 RandomFloat3(float id)
+{
+    return float3(nrand(float2(id.x * 37.0 + seed, time * 0.123)),
+                        nrand(float2(id.x * 57.0 + seed, time * 0.345)),
+                        nrand(float2(id.x * 97.0 + seed, time * 0.567)));
+}
+
+// Creates boids in a random area called on the firt index of the first dispatch
+void CreateBoids(float id)
+{
+    float3 pos;
+    float3 direction;
+    
+    pos = RandomFloat3(id.x);
+    
+    float3 scaledPosition = lerp(boundsCenter - boundsExtents, boundsCenter + boundsExtents, pos);
+    
+    direction = float3(0,0,-1);
+    
+    Boid boid;
+    boid.pos = scaledPosition;
+    boid.velocity = direction;
+    
+    Boids[id.x] = boid;
+}
+
+// Calculates the bounds for the boids and guides them to stay inside
+float3 ToBounds(float3 position)
+{
+    float3 offset = position - boundsCenter;
+    float3 force = float3(0,0,0);
+
+    if (abs(offset.x) > boundsExtents.x/2)
+        force.x = -sign(offset.x);
+
+    if (abs(offset.y) > boundsExtents.y/2)
+        force.y = -sign(offset.y);
+
+    if (abs(offset.z) > boundsExtents.z/2)
+        force.z = -sign(offset.z);
+
+    return safeNormalize(force);
+}
+
+// Calculates the bounds for the boids and guides them to stay inside the radius
+float3 ToBoundsRadius(float3 position)
+{
+    float3 offset = position - boundsCenter;
+    float3 force = float3(0, 0, 0);
+
+    if (length(offset) > boundsRadius)
+        force = -offset;
+
+    return safeNormalize(force);
+}
+
+float GetExponentialStrength(float dist, float k, float tau)
+{
+    float strength = k * (1.0 - exp(-dist / tau));
+    
+    return strength;
+}
+
+// Calculates the boid position and velocity
+void BoidCalculation(int self)
+{
+    float3 selfPos = Boids[self].pos;
+    float3 selfDirection = Boids[self].velocity;
+    
+    float3 avoidanceDirection = float3(0,0,0);
+    float3 cohesionDirection = float3(0, 0, 0);
+    float3 alignmentDirection = float3(0, 0, 0);
+
+    float3 middlePoint = selfPos;
+    float3 alignmentTotal = selfDirection;
+    
+    float3 followDirection = followTarget - selfPos;
+    float3 avoidDirection = selfPos - avoidTarget;
+
+    for (int i = 0; i < boidAmount; i++)
+    {
+        if (i == self)
+            continue;
+        
+        float3 otherPos = Boids[i].pos;
+        float3 distanceToBoid = otherPos - selfPos;      
+        float dist = length(distanceToBoid);
+        
+        if (dist < avoidanceRadius)
+        {
+            float avoidanceStrength = 1.0f - (length(distanceToBoid) / avoidanceRadius);
+            avoidanceDirection += -distanceToBoid * avoidanceStrength;
+        }
+        if (dist < cohesionRadius)
+        {
+            middlePoint += otherPos;
+        }
+        if (dist < alignmentRadius)
+        {
+            alignmentTotal += Boids[i].velocity;
+        }
+    }
+    cohesionDirection = selfPos - middlePoint;
+    alignmentDirection = alignmentTotal;
+    
+    float3 steeringDirection = safeNormalize(avoidanceDirection) * avoidanceStrength;
+    steeringDirection += safeNormalize(cohesionDirection) * cohesionStrength;
+    steeringDirection += safeNormalize(alignmentDirection) * alignmentStrength;
+    steeringDirection += safeNormalize(followDirection) * GetExponentialStrength(length(followDirection), followStrength, 2.0f);
+    steeringDirection += safeNormalize(avoidDirection) * GetExponentialStrength(length(avoidDirection), avoidStrength, 2.0f);
+    steeringDirection += ToBoundsRadius(selfPos) * boundsStrength;
+    
+    steeringDirection = safeNormalize(steeringDirection);
+        
+    float3 tRotation = normalize(lerp(Boids[self].velocity, steeringDirection, rotationSpeed * deltaTime));
+
+    float3 newVelocity = safeNormalize(tRotation) * forwardSpeed;
+
+    Boids[self].pos += newVelocity * deltaTime;
+    Boids[self].velocity = tRotation;
+
+}
+
+[numthreads(128,1,1)]
+void Spawn (uint3 id : SV_DispatchThreadID)
+{
+    CreateBoids(id.x);
+}
+
+[numthreads(128, 1, 1)]
+void Move(uint3 id : SV_DispatchThreadID)
+{
+    int index = id.x;
+    
+    if (index >= boidAmount)
+        return;
+    
+    BoidCalculation(index);
+
+}
