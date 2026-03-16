@@ -23,7 +23,7 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 0.109
   scatter:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0.377
   tint:
     m_OverrideState: 1
@@ -213,7 +213,7 @@ MonoBehaviour:
   master:
     m_OverrideState: 1
     m_Value:
-      <length>k__BackingField: 3
+      <length>k__BackingField: 2
       m_Loop: 0
       m_ZeroValue: 0
       m_Range: 1
@@ -225,15 +225,6 @@ MonoBehaviour:
           value: 0
           inSlope: 1
           outSlope: 1
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 0.8665448
-          value: 0.67173624
-          inSlope: 1.1421291
-          outSlope: 1.1421291
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
@@ -284,7 +275,7 @@ MonoBehaviour:
   green:
     m_OverrideState: 1
     m_Value:
-      <length>k__BackingField: 4
+      <length>k__BackingField: 2
       m_Loop: 0
       m_ZeroValue: 0
       m_Range: 1
@@ -296,24 +287,6 @@ MonoBehaviour:
           value: 0
           inSlope: 1
           outSlope: 1
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 0.15238096
-          value: 0.15613383
-          inSlope: 1
-          outSlope: 1
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 0.76785713
-          value: 0.6047087
-          inSlope: 0.99389046
-          outSlope: 0.99389046
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
@@ -422,7 +395,78 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-  m_SelectedCurve: 0
+  m_SelectedCurve: 3
+--- !u!114 &-3600408532668732002
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598e2d32e2c7b0c418e030c3236d663a, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: Unity.RenderPipelines.HighDefinition.Runtime::UnityEngine.Rendering.HighDefinition.ChromaticAberration
+  active: 1
+  quality:
+    m_OverrideState: 1
+    m_Value: 2
+  spectralLut:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.114
+  m_MaxSamples:
+    m_OverrideState: 1
+    m_Value: 12
+--- !u!114 &-2376160951103360202
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcf384b154398e341b6b29969c078198, type: 3}
+  m_Name: MotionBlur
+  m_EditorClassIdentifier: Unity.RenderPipelines.HighDefinition.Runtime::UnityEngine.Rendering.HighDefinition.MotionBlur
+  active: 1
+  quality:
+    m_OverrideState: 1
+    m_Value: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 1
+  maximumVelocity:
+    m_OverrideState: 0
+    m_Value: 200
+  minimumVelocity:
+    m_OverrideState: 0
+    m_Value: 2
+  cameraMotionBlur:
+    m_OverrideState: 0
+    m_Value: 1
+  specialCameraClampMode:
+    m_OverrideState: 0
+    m_Value: 0
+  cameraVelocityClamp:
+    m_OverrideState: 0
+    m_Value: 0.05
+  cameraTranslationVelocityClamp:
+    m_OverrideState: 0
+    m_Value: 0.05
+  cameraRotationVelocityClamp:
+    m_OverrideState: 0
+    m_Value: 0.03
+  depthComparisonExtent:
+    m_OverrideState: 0
+    m_Value: 1
+  m_SampleCount:
+    m_OverrideState: 1
+    m_Value: 4
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,6 +485,32 @@ MonoBehaviour:
   - {fileID: -9067128050835286232}
   - {fileID: 5709941597213263124}
   - {fileID: -8833845474233673827}
+  - {fileID: -3600408532668732002}
+  - {fileID: 3318762055415390889}
+  - {fileID: 8608987007963781065}
+  - {fileID: -2376160951103360202}
+--- !u!114 &3318762055415390889
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5ab44aadfb1804db5fd470983ac1b8, type: 3}
+  m_Name: LiftGammaGain
+  m_EditorClassIdentifier: Unity.RenderPipelines.HighDefinition.Runtime::UnityEngine.Rendering.HighDefinition.LiftGammaGain
+  active: 1
+  lift:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 0}
+  gamma:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: -0.122249305}
+  gain:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 0.44009787}
 --- !u!114 &5709941597213263124
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -508,4 +578,71 @@ MonoBehaviour:
     m_Value: 0
   saturation:
     m_OverrideState: 1
-    m_Value: 23.1
+    m_Value: 34
+--- !u!114 &8608987007963781065
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa3b8214f75b354e9ba2caadd022259, type: 3}
+  m_Name: DepthOfField
+  m_EditorClassIdentifier: Unity.RenderPipelines.HighDefinition.Runtime::UnityEngine.Rendering.HighDefinition.DepthOfField
+  active: 1
+  quality:
+    m_OverrideState: 1
+    m_Value: 2
+  focusMode:
+    m_OverrideState: 1
+    m_Value: 2
+  focusDistance:
+    m_OverrideState: 0
+    m_Value: 10
+  focusDistanceMode:
+    m_OverrideState: 0
+    m_Value: 0
+  nearFocusStart:
+    m_OverrideState: 1
+    m_Value: 0
+  nearFocusEnd:
+    m_OverrideState: 1
+    m_Value: 3
+  farFocusStart:
+    m_OverrideState: 1
+    m_Value: 72
+  farFocusEnd:
+    m_OverrideState: 1
+    m_Value: 308.56
+  m_NearSampleCount:
+    m_OverrideState: 1
+    m_Value: 8
+  m_NearMaxBlur:
+    m_OverrideState: 1
+    m_Value: 7
+  m_FarSampleCount:
+    m_OverrideState: 1
+    m_Value: 14
+  m_FarMaxBlur:
+    m_OverrideState: 1
+    m_Value: 13
+  m_Resolution:
+    m_OverrideState: 1
+    m_Value: 1
+  m_HighQualityFiltering:
+    m_OverrideState: 1
+    m_Value: 1
+  m_PhysicallyBased:
+    m_OverrideState: 1
+    m_Value: 0
+  m_AdaptiveSamplingWeight:
+    m_OverrideState: 0
+    m_Value: 0.75
+  m_LimitManualRangeNearBlur:
+    m_OverrideState: 1
+    m_Value: 0
+  coCStabilization:
+    m_OverrideState: 0
+    m_Value: 1
