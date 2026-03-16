@@ -1,0 +1,18 @@
+:root {
+}
+
+.panel {
+    background-color: rgba(0, 0, 0, 0.46);
+}
+
+.hidden {
+    display: none;
+}
+
+.menu {
+    align-self: auto;
+    align-items: center;
+    justify-content: flex-start;
+    visibility: visible;
+    align-content: auto;
+}
