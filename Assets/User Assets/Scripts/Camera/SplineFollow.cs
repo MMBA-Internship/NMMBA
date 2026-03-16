@@ -1,48 +1,35 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Splines;
 
 public class SplineFollow : MonoBehaviour
 {
-    [SerializeField] private BezierCurve bezierCurve;
-    [SerializeField] private float speed;
-    [SerializeField] private float pointRange;
+	[SerializeField] private SplineContainer path;
+	[SerializeField] private float speed;
 
-    private Vector3[] points;
-    private int currentTargetIndex = 0;
+	private float t = 0f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        points = bezierCurve.GetPoints();
-    }
+	void Update()
+	{
+		if (path == null) return;
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        Quaternion targetRotation = Quaternion.LookRotation(CalculateCurveDirection().normalized);
+		var spline = path.Spline;
 
-        transform.Translate(speed * CalculateCurveDirection().normalized, Space.World);
-    }
+		// advance along spline
+		t += speed * Time.deltaTime;
 
-    private Vector3 CalculateCurveDirection()
-    {
-        if (bezierCurve == null || points.Length == 0) return Vector3.zero;
+		if (t > 1f)
+			t -= 1f;
 
-        if (Vector3.Distance(transform.position, points[currentTargetIndex]) < pointRange)
-        {
-            if (points.Length > currentTargetIndex)
-            {
-                currentTargetIndex = (currentTargetIndex + 1);
-            }
-            if (currentTargetIndex >= points.Length)
-            {
-                currentTargetIndex = 0;
-            }
-        }
+		// position on curve
+		Vector3 position = path.EvaluatePosition(t);
 
-        Vector3 targetDirection = points[currentTargetIndex] - transform.position;
-        Vector3 moveDirection = Vector3.Normalize(targetDirection);
+		// direction of curve
+		Vector3 tangent = path.EvaluateTangent(t);
 
-        return moveDirection;
-    }
+		transform.position = position;
+		transform.rotation = Quaternion.LookRotation(tangent);
+	}
 
 }
