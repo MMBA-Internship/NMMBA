@@ -123,7 +123,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: ece813837a19ea94c9159832df41a5e2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5343c87a17d3ad94481c9aa0048b4841, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ThicknessMap:
@@ -269,6 +269,9 @@ Material:
     - _UVEmissive: 0
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
+    - _WaveSize: 0
+    - _WaveSpeed: 6.8
+    - _WaveStrength: 0.08
     - _ZTestDepthEqualForOpaque: 3
     - _ZTestGBuffer: 3
     - _ZTestTransparent: 4
