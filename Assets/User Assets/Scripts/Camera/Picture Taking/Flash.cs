@@ -3,21 +3,20 @@ using UnityEngine.UI;
 
 public class Flash : MonoBehaviour
 {
-    [SerializeField] private EventHolder onPictureTaken;
     [SerializeField] private Image image;
     [SerializeField] private float cooldown;
 
     private void OnEnable()
     {
-        onPictureTaken.Subscribe(FlashScreen);
+        GameEvents.OnPictureTaken += FlashScreen;
     }
 
     private void OnDisable()
     {
-        onPictureTaken.Unsubscribe(FlashScreen);
+        GameEvents.OnPictureTaken -= FlashScreen;
     }
 
-    void FlashScreen()
+    void FlashScreen(RenderTexture rt)
     {
         Color color = image.color;
         color.a = 0.4f;
