@@ -3,22 +3,41 @@ using UnityEngine;
 
 public class SessionScoreManager : MonoBehaviour
 {
-    public int TotalSessionScore { get; private set; }
+    [SerializeField] private List<SinglePhotoScoreResult> photoResults = new List<SinglePhotoScoreResult>();
 
-    private List<SinglePhotoScoreResult> photoResults = new();
+    public int TotalSessionScore { get; private set; } // CHANGED
+    public string HighestScoringPictureName { get; private set; } = "None"; // ADDED
+    public int HighestPictureScore { get; private set; } = 0; // ADDED
 
-    public List<SinglePhotoScoreResult> GetResults()
+    private void OnEnable()
     {
-        return photoResults;
+        // CHANGED
+        GameEvents.OnPhotoScored += AddPhotoResult;
     }
 
+    private void OnDisable()
+    {
+        GameEvents.OnPhotoScored -= AddPhotoResult;
+    }
 
-    public void AddPhotoResult(SinglePhotoScoreResult result)
+    // CHANGED
+    private void AddPhotoResult(SinglePhotoScoreResult result)
     {
         photoResults.Add(result);
         TotalSessionScore += result.totalScore;
-        Debug.Log($"Photo score: {result.totalScore}, session total: {TotalSessionScore}");
-    }
-   
 
+        if (result.totalScore > HighestPictureScore)
+        {
+            HighestPictureScore = result.totalScore;
+            HighestScoringPictureName = result.pictureName;
+        }
+
+        GameEvents.RaiseSessionScoreChanged(TotalSessionScore);
+    }
+
+    // ADDED: useful for ending screen access
+    public List<SinglePhotoScoreResult> GetAllPhotoResults()
+    {
+        return photoResults;
+    }
 }
