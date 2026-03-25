@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/User Assets/Art/UI/UI Elements.meta
 guid: 8947683d4d2691e47b83420bbd99ac05
+========
+guid: 4105de32455f93d4382186a2d3e60b7c
+>>>>>>>> Programming:Assets/User Assets/Scripts/Point System.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

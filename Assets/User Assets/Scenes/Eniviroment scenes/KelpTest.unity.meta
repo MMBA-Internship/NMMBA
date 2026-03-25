@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/User Assets/Scenes/Eniviroment scenes/KelpTest.unity.meta
 guid: 1476da31fc8f0d64b972b9672a677c15
+========
+guid: ea8eceb37280af54c8d5bccbc4213abf
+>>>>>>>> Programming:Assets/User Assets/Scenes/Main_Engineer.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

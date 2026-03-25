@@ -1,76 +1,68 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class AnimalFind : MonoBehaviour
 {
-    [Range(0, 360)] public float fovAngle;
+    [Range(0, 360)] public float fovAngle = 60f;
     [SerializeField] private Camera viewPoint;
-    [SerializeField] private string fishlayerName = "Enemy";
-    [SerializeField] private LayerMask ignoreLayers;
+    [SerializeField] private string fishTag = "Enemy";
+    [SerializeField] private LayerMask obstructionLayers;
     [SerializeField] private GameObject playerObj;
     [SerializeField] private float cameraDistance = 30f;
 
-    
-    //Image targetReference;
-    //[SerializeField] Canvas TargetCanvas;
-    //[SerializeField] Canvas HUD;
-
     private void Awake()
     {
-        // TODO Need to specify the layers that are important to check between
-        //ignoreLayers = LayerMask.GetMask("Player") | LayerMask.GetMask("Ground") | LayerMask.GetMask("Obstacle") | LayerMask.GetMask("Wall");
+        if (viewPoint == null)
+            viewPoint = Camera.main;
+
+        if (playerObj == null && viewPoint != null)
+            playerObj = viewPoint.gameObject;
     }
-    void Update()
+
+    public List<AnimalVisibilityInfo> GetFishVisibilityData()
     {
-        if (Input.GetButtonDown("Fire3"))
+        List<AnimalVisibilityInfo> visibleFishData = new List<AnimalVisibilityInfo>();
+
+        if (playerObj == null || viewPoint == null)
         {
-            List<GameObject> fish = GetVisibleFish();
-            Debug.Log("Visible Fish: " + fish.Count);
-
-
+            Debug.LogError("AnimalFind: playerObj or viewPoint is missing.");
+            return visibleFishData;
         }
-    }
-
-    public List <GameObject> GetVisibleFish()
-    {
-        List<GameObject> fish = new List<GameObject>();
-        List<float> angleToFish = new List<float>();
 
         Collider[] availableTargets = Physics.OverlapSphere(playerObj.transform.position, cameraDistance);
 
         foreach (Collider target in availableTargets)
         {
-            if(!target.gameObject.CompareTag(fishlayerName)) continue;
-            
-            Vector3 directionToTarget = (target.transform.position - playerObj.transform.position).normalized;
+            if (!target.gameObject.CompareTag(fishTag))
+                continue;
+
+            Vector3 directionToTarget = (target.transform.position - viewPoint.transform.position).normalized;
             float angle = Vector3.Angle(viewPoint.transform.forward, directionToTarget);
 
+            bool isInFrame = angle <= fovAngle * 0.5f;
+            if (!isInFrame)
+                continue;
 
-            //RESEARCHHHHHH
-            //how toget percentage of how much of the fish is visible in the camera view
-            if (!Physics.Linecast(playerObj.transform.position, target.gameObject.transform.position, ignoreLayers, QueryTriggerInteraction.Ignore))
+            bool isObstructed = Physics.Linecast(
+                viewPoint.transform.position,
+                target.transform.position,
+                obstructionLayers,
+                QueryTriggerInteraction.Ignore
+            );
+
+            FishData fishData = target.GetComponent<FishData>();
+
+            AnimalVisibilityInfo info = new AnimalVisibilityInfo
             {
-                fish.Add(target.gameObject);
-                angleToFish.Add(angle);
-            }
+                fishObject = target.gameObject,
+                fishData = fishData,
+                isInFrame = isInFrame,
+                isObstructed = isObstructed
+            };
+
+            visibleFishData.Add(info);
         }
 
-        for (int i = fish.Count - 1; i >= 0; i--)
-        {
-            if (angleToFish[i] > fovAngle * 0.5f)
-            {
-                fish.RemoveAt(i);
-                angleToFish.RemoveAt(i);
-            }
-
-        }
-
-        return fish;
+        return visibleFishData;
     }
-
-
 }
