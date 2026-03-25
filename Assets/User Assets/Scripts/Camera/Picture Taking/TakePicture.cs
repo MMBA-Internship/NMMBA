@@ -1,36 +1,55 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TakePicture : MonoBehaviour
 {
-	[SerializeField] private int w;
-	[SerializeField] private int h;
-	private RenderTexture renderTexture;
-	[SerializeField] private Image flashImage;
+    [SerializeField] private int w;
+    [SerializeField] private int h;
 
-	// Start is called once before the first execution of Update after the MonoBehaviour is created
-	void Start()
-	{
-		renderTexture = new RenderTexture(Screen.width / 10, Screen.height / 10, 24);
-	}
+    private RenderTexture renderTexture;
 
-	IEnumerator CapturePhoto_Co()
-	{
-		yield return new WaitForEndOfFrame();
+    private bool isCapturing;
 
-		Camera.main.targetTexture = renderTexture;
+    private void OnEnable()
+    {
+        GameEvents.OnPhotoInputPressed += TryCapture;
+    }
 
-		Camera.main.Render();
+    private void OnDisable()
+    {
+        GameEvents.OnPhotoInputPressed -= TryCapture;
+    }
 
-		Camera.main.targetTexture = null;
+    private void Start()
+    {
+        int width = w > 0 ? w : Screen.width / 10;
+        int height = h > 0 ? h : Screen.height / 10;
 
-		GameEvents.OnPictureTaken.Invoke(renderTexture);
-	}
+        renderTexture = new RenderTexture(width, height, 24);
+    }
 
-	public void Capture()
-	{
-		if (flashImage.color.a <= 0)
-			StartCoroutine(CapturePhoto_Co());
-	}
+    private void TryCapture()
+    {
+        if (isCapturing)
+            return;
+
+        StartCoroutine(CapturePhoto_Co());
+    }
+
+    private IEnumerator CapturePhoto_Co()
+    {
+        isCapturing = true;
+
+        GameEvents.RaisePhotoCaptureStarted();
+
+        yield return new WaitForEndOfFrame();
+
+        Camera.main.targetTexture = renderTexture;
+        Camera.main.Render();
+        Camera.main.targetTexture = null;
+
+        GameEvents.RaisePictureTaken(renderTexture);
+
+        isCapturing = false;
+    }
 }

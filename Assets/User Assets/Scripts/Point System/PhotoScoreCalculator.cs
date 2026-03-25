@@ -13,7 +13,7 @@ public class PhotoScoreCalculator : MonoBehaviour
             animalFind = GetComponent<AnimalFind>();
 
         if (animalFind == null)
-            animalFind = FindObjectOfType<AnimalFind>();
+            animalFind = FindAnyObjectByType<AnimalFind>();    
     }
 
     private void OnEnable()

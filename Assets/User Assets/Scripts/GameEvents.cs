@@ -3,12 +3,6 @@ using UnityEngine;
 
 public static class GameEvents
 {
-<<<<<<< Updated upstream
-	// Use Func<T> if you need to return as well
-
-	public static Action<RenderTexture> OnPictureTaken;
-}
-=======
     // input asks for a photo through the bus
     public static event Action OnPhotoInputPressed;
 
@@ -25,22 +19,22 @@ public static class GameEvents
     // fired whenever total session score changes
     public static event Action<int> OnSessionScoreChanged;
 
+    // scene flow
+    public static event Action<string> OnSceneChangeRequested;
+    public static event Action<string, float> OnSceneChangeRequestedAfterCountdown;
+    public static event Action<float> OnSceneCountdownUpdated;
+
     public static void RaisePhotoInputPressed() => OnPhotoInputPressed?.Invoke();
     public static void RaisePhotoCaptureStarted() => OnPhotoCaptureStarted?.Invoke();
     public static void RaisePictureTaken(RenderTexture picture) => OnPictureTaken?.Invoke(picture);
     public static void RaisePhotoScored(SinglePhotoScoreResult result) => OnPhotoScored?.Invoke(result);
     public static void RaiseSessionScoreChanged(int totalScore) => OnSessionScoreChanged?.Invoke(totalScore);
 
-
-
-    // scene flow
-    public static event Action<string> OnSceneChangeRequested;
-    public static event Action<string, float> OnSceneChangeRequestedAfterCountdown;
-    public static event Action<float> OnSceneCountdownUpdated;
-
     public static void RaiseSceneChangeRequested(string sceneName) => OnSceneChangeRequested?.Invoke(sceneName);
+
     public static void RaiseSceneChangeRequestedAfterCountdown(string sceneName, float countdownSeconds)
         => OnSceneChangeRequestedAfterCountdown?.Invoke(sceneName, countdownSeconds);
-    public static void RaiseSceneCountdownUpdated(float timeRemaining) => OnSceneCountdownUpdated?.Invoke(timeRemaining);
+
+    public static void RaiseSceneCountdownUpdated(float timeRemaining)
+        => OnSceneCountdownUpdated?.Invoke(timeRemaining);
 }
->>>>>>> Stashed changes
