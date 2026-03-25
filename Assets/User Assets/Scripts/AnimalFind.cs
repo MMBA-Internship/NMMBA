@@ -8,10 +8,8 @@ public class AnimalFind : MonoBehaviour
 {
     [Range(0, 360)] public float fovAngle;
     [SerializeField] Camera viewPoint;
-    Image targetReference;
     [SerializeField] Canvas TargetCanvas;
     LayerMask ignoreLayers;
-    [SerializeField] Canvas HUD;
     GameObject PlayerObj;
     float cameraDistance;
     private void Awake()
@@ -43,7 +41,7 @@ public class AnimalFind : MonoBehaviour
                         {
                             fish.RemoveAt(i);
                             angleToFish.RemoveAt(i);
-                        }
+                        }// TODO add scoring of fish
                     }
                 }
             }
