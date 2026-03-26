@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.SceneManagement;
+
 
 public class GameStateManager : MonoBehaviour
 {
@@ -22,7 +24,8 @@ public class GameStateManager : MonoBehaviour
     public TextMeshProUGUI versionText; 
 
     [Header("Gameplay UI Elements")]
-    public TextMeshProUGUI oxygenTimerText;
+    public TextMeshProUGUI oxygenTimerText_A;
+    public TextMeshProUGUI oxygenTimerText_B;
     public TextMeshProUGUI finalScoreText;
 
     [Header("Settings")]
@@ -66,7 +69,7 @@ public class GameStateManager : MonoBehaviour
 
     void ShowLobby()
     {
-        // Show only lobby, hide everything else
+        //show only the lobby, hiding everything else
         LobbyScreen.SetActive(true);
         GameplayScreen_A.SetActive(false);
         GameplayScreen_B.SetActive(false);
@@ -101,12 +104,12 @@ public class GameStateManager : MonoBehaviour
         Tutorial_B.SetActive(false);
     }
 
-    // Called by Ready button
+    //called by ready button
     public void OnReadyPressed()
     {
         notReadyState.SetActive(false);
         readyState.SetActive(true);
-        countdownCoroutine = StartCoroutine(CountdownThenStart()); // Store it
+        countdownCoroutine = StartCoroutine(CountdownThenStart()); 
     }
 
     IEnumerator CountdownThenStart()
@@ -125,14 +128,14 @@ public class GameStateManager : MonoBehaviour
 
     public void OnCancelPressed()
     {
-        // Stop the countdown if it's running
+        //stop the countdown
         if (countdownCoroutine != null)
         {
             StopCoroutine(countdownCoroutine);
             countdownCoroutine = null;
         }
 
-        // Reset back to not ready state
+        //reset back to not ready state
         notReadyState.SetActive(true);
         readyState.SetActive(false);
         countdownText.text = "";
@@ -140,7 +143,7 @@ public class GameStateManager : MonoBehaviour
 
     void StartGameplay()
     {
-        // Hide lobby, show gameplay
+        //hide lobby, show gameplay
         LobbyScreen.SetActive(false);
 
         if (useVersionA)
@@ -159,16 +162,16 @@ public class GameStateManager : MonoBehaviour
 
     IEnumerator GameplayFlow()
     {
-        // Show tutorial for 5 seconds
+        //show tutorial for a couple of seconds
         yield return new WaitForSeconds(tutorialDuration);
 
         Tutorial_A.SetActive(false);
         Tutorial_B.SetActive(false);
 
-        // Run oxygen timer
+        //run oxygen timer
         yield return StartCoroutine(OxygenTimer());
 
-        // Timer finished, end round
+        //timer finished round ended
         EndRound();
     }
 
@@ -176,11 +179,15 @@ public class GameStateManager : MonoBehaviour
     {
         float timeRemaining = oxygenDuration;
 
+        //picking version timer
+        TextMeshProUGUI activeTimerText = useVersionA ? oxygenTimerText_A : oxygenTimerText_B;
+
+
         while (timeRemaining > 0)
         {
             int minutes = Mathf.FloorToInt(timeRemaining / 60);
             int seconds = Mathf.FloorToInt(timeRemaining % 60);
-            oxygenTimerText.text = $"{minutes:00}:{seconds:00}";
+            activeTimerText.text = $"{minutes:00}:{seconds:00}";
 
             timeRemaining -= Time.deltaTime;
             yield return null;
@@ -189,7 +196,7 @@ public class GameStateManager : MonoBehaviour
 
     void EndRound()
     {
-        // Hide gameplay, show round over
+        //hide gameplay, show round over
         GameplayScreen_A.SetActive(false);
         GameplayScreen_B.SetActive(false);
         RoundOver.SetActive(true);
@@ -206,11 +213,10 @@ public class GameStateManager : MonoBehaviour
         finalScoreText.text = currentScore.ToString();
     }
 
-    // Called by Continue button
     public void OnContinuePressed()
     {
-        currentScore = 0;
-        ShowLobby();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
     }
 
     void UpdateScore(int newScore)
