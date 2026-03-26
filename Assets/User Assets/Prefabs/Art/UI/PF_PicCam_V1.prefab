@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1215772158809390890}
   - component: {fileID: 5610562403927365753}
+  - component: {fileID: 4646851587036567966}
   - component: {fileID: 8154933054275168033}
   m_Layer: 0
   m_Name: PF_PicCam_V1
@@ -47,10 +48,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   w: 192
   h: 108
-  texture2DValue: {fileID: 11400000, guid: b6d8801328967c34da7dc4a0564907a8, type: 2}
-  renderTextureValue: {fileID: 11400000, guid: 9c010fb32a887b1458dcd18375acb0d4, type: 2}
-  onPictureTaken: {fileID: 11400000, guid: 947afec175d42214891c9acf0d498651, type: 2}
-  flashImage: {fileID: 0}
+--- !u!114 &4646851587036567966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4758421506704602169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1546adcd85ea7014ebd7c666292a81ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PhotoInput
+  photoKey: 32
 --- !u!114 &8154933054275168033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,10 +108,10 @@ MonoBehaviour:
     m_ActionName: 'Player/Crouch[/Keyboard/c]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5610562403927365753}
-        m_TargetAssemblyTypeName: TakePicture, Assembly-CSharp
-        m_MethodName: Capture
-        m_Mode: 1
+      - m_Target: {fileID: 4646851587036567966}
+        m_TargetAssemblyTypeName: PhotoInput, Assembly-CSharp
+        m_MethodName: TakePhoto
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
