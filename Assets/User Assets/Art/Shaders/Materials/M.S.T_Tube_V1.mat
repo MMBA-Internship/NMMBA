@@ -222,7 +222,7 @@ Material:
     - _Metallic: 0
     - _MetallicRemapMax: 1
     - _MetallicRemapMin: 0
-    - _Noise: 0.1
+    - _Noise: 0
     - _NormalMapSpace: 0
     - _NormalScale: 1
     - _ObjectSpaceUVMapping: 0
@@ -261,6 +261,7 @@ Material:
     - _SubsurfaceMask: 1
     - _SupportDecals: 1
     - _SurfaceType: 1
+    - _TURN_IT_OFFF: 0
     - _TexWorldScale: 1
     - _TexWorldScaleEmissive: 1
     - _Thickness: 1
@@ -279,8 +280,8 @@ Material:
     - _U_speed: 0.12
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
-    - _Wave_Strength: 0.02
-    - _Wave_speed: 1.51
+    - _Wave_Strength: 0
+    - _Wave_speed: 0
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
