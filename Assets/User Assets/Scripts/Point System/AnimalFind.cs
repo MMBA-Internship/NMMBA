@@ -7,7 +7,7 @@ public class AnimalFind : MonoBehaviour
     [SerializeField] private Camera viewPoint;
     [SerializeField] private string fishTag = "Fish";
     [SerializeField] private LayerMask obstructionLayers;
-    [SerializeField] private GameObject playerObj;
+    [SerializeField] private GameObject playerCamera;
     [SerializeField] private float cameraDistance = 30f;
 
     private void Awake()
@@ -15,25 +15,25 @@ public class AnimalFind : MonoBehaviour
         if (viewPoint == null)
             viewPoint = Camera.main;
 
-        if (playerObj == null && viewPoint != null)
-            playerObj = viewPoint.gameObject;
+        if (playerCamera == null && viewPoint != null)
+            playerCamera = viewPoint.gameObject;
     }
-    //
-    public List<AnimalVisibilityInfo> GetFishVisibilityData()
+    
+    public List<AnimalFIndInfo> GetFishVisibilityData()
     {
-        List<AnimalVisibilityInfo> visibleFishData = new List<AnimalVisibilityInfo>();
+        List<AnimalFIndInfo> visibleFishData = new List<AnimalFIndInfo>();
 
-        if (playerObj == null || viewPoint == null)
+        if (playerCamera == null || viewPoint == null)
         {
             Debug.LogError("AnimalFind: playerObj or viewPoint is missing.");
             return visibleFishData;
         }
 
-        Collider[] availableTargets = Physics.OverlapSphere(playerObj.transform.position, cameraDistance);
+        Collider[] availableTargets = Physics.OverlapSphere(playerCamera.transform.position, cameraDistance);
 
         foreach (Collider target in availableTargets)
         {
-            if (!target.gameObject.CompareTag("Fish"))
+            if (!target.gameObject.CompareTag(fishTag))
                 continue;
 
             Vector3 directionToTarget = (target.transform.position - viewPoint.transform.position).normalized;
@@ -52,7 +52,7 @@ public class AnimalFind : MonoBehaviour
 
             FishData fishData = target.GetComponent<FishData>();
 
-            AnimalVisibilityInfo info = new AnimalVisibilityInfo
+            AnimalFIndInfo info = new AnimalFIndInfo
             {
                 fishObject = target.gameObject,
                 fishData = fishData,

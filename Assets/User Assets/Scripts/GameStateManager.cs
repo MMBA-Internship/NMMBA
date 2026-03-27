@@ -196,6 +196,8 @@ public class GameStateManager : MonoBehaviour
 
     void EndRound()
     {
+        GameEvents.RaiseRoundEnded();
+
         //hide gameplay, show round over
         GameplayScreen_A.SetActive(false);
         GameplayScreen_B.SetActive(false);
@@ -208,7 +210,7 @@ public class GameStateManager : MonoBehaviour
     {
         yield return new WaitForSeconds(roundOverDuration);
         Debug.Log("requesting score");
-        int score = GameEvents.RaiseScoreRequest();
+        int score = GameEvents.RaiseScoreRequested();
         Debug.Log(score);
         RoundOver.SetActive(false);
         EndScore.SetActive(true);
