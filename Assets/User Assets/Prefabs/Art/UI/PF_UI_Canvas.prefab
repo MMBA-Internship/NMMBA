@@ -2152,9 +2152,9 @@ MonoBehaviour:
   oxygenTimerText_A: {fileID: 9006191515974893654}
   oxygenTimerText_B: {fileID: 4799527989296025326}
   finalScoreText: {fileID: 7720127904379596709}
-  countdownDuration: 10
-  tutorialDuration: 7
-  oxygenDuration: 10
+  countdownDuration: 5
+  tutorialDuration: 5
+  oxygenDuration: 20
   roundOverDuration: 7
 --- !u!1 &1782650386892947717
 GameObject:
