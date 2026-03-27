@@ -207,7 +207,9 @@ public class GameStateManager : MonoBehaviour
     IEnumerator ShowScoreAfterDelay()
     {
         yield return new WaitForSeconds(roundOverDuration);
-
+        Debug.Log("requesting score");
+        int score = GameEvents.RaiseScoreRequest();
+        Debug.Log(score);
         RoundOver.SetActive(false);
         EndScore.SetActive(true);
         finalScoreText.text = currentScore.ToString();

@@ -12,18 +12,16 @@ public class AnimalFind : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("AnimalFind Awake: Initializing viewPoint and playerObj.");
-
         if (viewPoint == null)
             viewPoint = Camera.main;
 
         if (playerObj == null && viewPoint != null)
             playerObj = viewPoint.gameObject;
     }
-
-    public List<AnimalFIndInfo> GetFishVisibilityData()
+    //
+    public List<AnimalVisibilityInfo> GetFishVisibilityData()
     {
-        List<AnimalFIndInfo> visibleFishData = new List<AnimalFIndInfo>();
+        List<AnimalVisibilityInfo> visibleFishData = new List<AnimalVisibilityInfo>();
 
         if (playerObj == null || viewPoint == null)
         {
@@ -35,7 +33,7 @@ public class AnimalFind : MonoBehaviour
 
         foreach (Collider target in availableTargets)
         {
-            if (!target.gameObject.CompareTag(fishTag))
+            if (!target.gameObject.CompareTag("Fish"))
                 continue;
 
             Vector3 directionToTarget = (target.transform.position - viewPoint.transform.position).normalized;
@@ -54,7 +52,7 @@ public class AnimalFind : MonoBehaviour
 
             FishData fishData = target.GetComponent<FishData>();
 
-            AnimalFIndInfo info = new AnimalFIndInfo
+            AnimalVisibilityInfo info = new AnimalVisibilityInfo
             {
                 fishObject = target.gameObject,
                 fishData = fishData,

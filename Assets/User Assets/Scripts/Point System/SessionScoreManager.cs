@@ -13,11 +13,13 @@ public class SessionScoreManager : MonoBehaviour
     {
         // CHANGED
         GameEvents.OnPhotoScored += AddPhotoResult;
+        GameEvents.OnScoreRequested += GetTotalSessionScore;
     }
 
     private void OnDisable()
     {
         GameEvents.OnPhotoScored -= AddPhotoResult;
+        GameEvents.OnScoreRequested -= GetTotalSessionScore;
     }
 
     // CHANGED
@@ -39,5 +41,15 @@ public class SessionScoreManager : MonoBehaviour
     public List<SinglePhotoScoreResult> GetAllPhotoResults()
     {
         return photoResults;
+    }
+
+    public int GetTotalSessionScore()
+    {
+        Debug.Log("return score from score manager");
+        int result = 0;
+        photoResults.ForEach( a => {
+            result += a.totalScore;
+        });
+        return result;
     }
 }
