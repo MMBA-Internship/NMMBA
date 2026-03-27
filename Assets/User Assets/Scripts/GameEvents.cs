@@ -19,6 +19,9 @@ public static class GameEvents
     // fired whenever total session score changes
     public static event Action<int> OnSessionScoreChanged;
 
+    // request score
+    public static event Func<int> OnScoreRequested;
+
     // scene flow
     public static event Action<string> OnSceneChangeRequested;
     public static event Action<string, float> OnSceneChangeRequestedAfterCountdown;
@@ -37,4 +40,6 @@ public static class GameEvents
 
     public static void RaiseSceneCountdownUpdated(float timeRemaining)
         => OnSceneCountdownUpdated?.Invoke(timeRemaining);
+
+    public static int RaiseScoreRequest() => OnScoreRequested?.Invoke() ?? 0;
 }

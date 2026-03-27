@@ -5,7 +5,7 @@ public class AnimalFind : MonoBehaviour
 {
     [Range(0, 360)] public float fovAngle = 60f;
     [SerializeField] private Camera viewPoint;
-    [SerializeField] private string fishTag = "Enemy";
+    [SerializeField] private string fishTag = "Fish";
     [SerializeField] private LayerMask obstructionLayers;
     [SerializeField] private GameObject playerObj;
     [SerializeField] private float cameraDistance = 30f;
@@ -18,7 +18,7 @@ public class AnimalFind : MonoBehaviour
         if (playerObj == null && viewPoint != null)
             playerObj = viewPoint.gameObject;
     }
-
+    //
     public List<AnimalVisibilityInfo> GetFishVisibilityData()
     {
         List<AnimalVisibilityInfo> visibleFishData = new List<AnimalVisibilityInfo>();
@@ -33,7 +33,7 @@ public class AnimalFind : MonoBehaviour
 
         foreach (Collider target in availableTargets)
         {
-            if (!target.gameObject.CompareTag(fishTag))
+            if (!target.gameObject.CompareTag("Fish"))
                 continue;
 
             Vector3 directionToTarget = (target.transform.position - viewPoint.transform.position).normalized;
