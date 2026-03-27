@@ -7,6 +7,10 @@ public class PhotoScoreCalculator : MonoBehaviour
 
     private int pictureCounter = 0;
 
+    // move fish score to here
+    // base score is 100, half if its obstructed, 0 if not in frame
+    // multiply by raity from fish data
+
     private void Awake()
     {
         if (animalFind == null)
@@ -28,20 +32,23 @@ public class PhotoScoreCalculator : MonoBehaviour
 
     private void ScorePhoto(RenderTexture photo)
     {
+        Debug.Log("ScorePhoto started");
+
+
         if (animalFind == null)
         {
             Debug.LogError("PhotoScoreCalculator: AnimalFind reference is missing.");
             return;
         }
 
-        List<AnimalVisibilityInfo> fishVisibilityData = animalFind.GetFishVisibilityData();
+        List<AnimalFIndInfo> fishVisibilityData = animalFind.GetFishVisibilityData();
 
         pictureCounter++;
         string pictureName = "Picture" + pictureCounter;
 
         int total = 0;
 
-        foreach (AnimalVisibilityInfo info in fishVisibilityData)
+        foreach (AnimalFIndInfo info in fishVisibilityData)
         {
             if (info.fishData == null)
                 continue;
@@ -73,5 +80,8 @@ public class PhotoScoreCalculator : MonoBehaviour
         Debug.Log($"{pictureName} total score = {total}");
 
         GameEvents.RaisePhotoScored(result);
+        Debug.Log("ScorePhoto ended");
+
     }
+
 }

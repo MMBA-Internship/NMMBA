@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public class AnimalVisibilityInfo
+public class AnimalFIndInfo
 {
     public GameObject fishObject;
     public FishData fishData;

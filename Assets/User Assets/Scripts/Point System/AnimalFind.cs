@@ -5,13 +5,15 @@ public class AnimalFind : MonoBehaviour
 {
     [Range(0, 360)] public float fovAngle = 60f;
     [SerializeField] private Camera viewPoint;
-    [SerializeField] private string fishTag = "Enemy";
+    [SerializeField] private string fishTag = "Fish";
     [SerializeField] private LayerMask obstructionLayers;
     [SerializeField] private GameObject playerObj;
     [SerializeField] private float cameraDistance = 30f;
 
     private void Awake()
     {
+        Debug.Log("AnimalFind Awake: Initializing viewPoint and playerObj.");
+
         if (viewPoint == null)
             viewPoint = Camera.main;
 
@@ -19,9 +21,9 @@ public class AnimalFind : MonoBehaviour
             playerObj = viewPoint.gameObject;
     }
 
-    public List<AnimalVisibilityInfo> GetFishVisibilityData()
+    public List<AnimalFIndInfo> GetFishVisibilityData()
     {
-        List<AnimalVisibilityInfo> visibleFishData = new List<AnimalVisibilityInfo>();
+        List<AnimalFIndInfo> visibleFishData = new List<AnimalFIndInfo>();
 
         if (playerObj == null || viewPoint == null)
         {
@@ -52,7 +54,7 @@ public class AnimalFind : MonoBehaviour
 
             FishData fishData = target.GetComponent<FishData>();
 
-            AnimalVisibilityInfo info = new AnimalVisibilityInfo
+            AnimalFIndInfo info = new AnimalFIndInfo
             {
                 fishObject = target.gameObject,
                 fishData = fishData,
