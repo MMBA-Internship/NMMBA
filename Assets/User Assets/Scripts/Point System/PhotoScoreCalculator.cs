@@ -32,23 +32,20 @@ public class PhotoScoreCalculator : MonoBehaviour
 
     private void ScorePhoto(RenderTexture photo)
     {
-        Debug.Log("ScorePhoto started");
-
-
         if (animalFind == null)
         {
             Debug.LogError("PhotoScoreCalculator: AnimalFind reference is missing.");
             return;
         }
 
-        List<AnimalFIndInfo> fishVisibilityData = animalFind.GetFishVisibilityData();
+        List<AnimalFindInfo> fishVisibilityData = animalFind.GetFishVisibilityData();
 
         pictureCounter++;
         string pictureName = "Picture" + pictureCounter;
 
         int total = 0;
 
-        foreach (AnimalFIndInfo info in fishVisibilityData)
+        foreach (AnimalFindInfo info in fishVisibilityData)
         {
             if (info.fishData == null)
                 continue;
@@ -67,7 +64,7 @@ public class PhotoScoreCalculator : MonoBehaviour
             total += fishScore;
 
             Debug.Log(
-                $"{pictureName} | Fish: {info.fishObject.name} | InFrame: {info.isInFrame} | Obstructed: {info.isObstructed} | Score: {fishScore}"
+                $"{pictureName} | Fish: {info.fishData.reference} | InFrame: {info.isInFrame} | Obstructed: {info.isObstructed} | Score: {fishScore}"
             );
         }
 
@@ -80,8 +77,5 @@ public class PhotoScoreCalculator : MonoBehaviour
         Debug.Log($"{pictureName} total score = {total}");
 
         GameEvents.RaisePhotoScored(result);
-        Debug.Log("ScorePhoto ended");
-
     }
-
 }

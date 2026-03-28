@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,17 +8,30 @@ public class PhotoInput : MonoBehaviour
 {
     [SerializeField] private KeyCode photoKey = KeyCode.Space;
     [SerializeField] private float photoCooldown = 3f;
+    [SerializeField] private InputAction doubleTap;
     bool disableInput = false;
+    bool versionA = true;
 
     private void OnEnable()
     {
         GameEvents.OnRoundEnded += OnRoundEnded;
+        GameEvents.OnControlVersionChanged += UpdateControls;
+        doubleTap.Enable();
+        doubleTap.performed += TakePhoto;
     }
 
-    private void OnDisable()
+	private void OnDisable()
     {
         GameEvents.OnRoundEnded -= OnRoundEnded;
+        GameEvents.OnControlVersionChanged -= UpdateControls;
+        doubleTap.performed -= TakePhoto;
+        doubleTap.Disable();
     }
+
+	private void UpdateControls(bool versionA)
+	{
+		this.versionA = versionA;
+	}
 
     private void OnRoundEnded()
     {
@@ -25,15 +40,15 @@ public class PhotoInput : MonoBehaviour
 
     public void TakePhoto(InputAction.CallbackContext ctx)
     {
-        if (ctx.started)
+        if (ctx.performed && !versionA)
         {
+            Debug.Log("Double clicked");
             TakePhoto();
         }
     }
 
     private IEnumerator PhotoCooldown_Co()
     {
-
         disableInput = true;
         yield return new WaitForSeconds(photoCooldown);
         disableInput = false;
@@ -41,20 +56,10 @@ public class PhotoInput : MonoBehaviour
 
     public void TakePhoto()
     {
-        Debug.Log("PhotoInput: TakePhoto called");
         if (!disableInput)
         {
-            Debug.Log("PhotoInput: TakePhoto called");
             GameEvents.RaisePhotoInputPressed();
             StartCoroutine(PhotoCooldown_Co()); ;
         }
-        Debug.Log("PhotoInput: TakePhoto finished");
     }
-
-
-    public void debug()
-    {
-        Debug.Log("PhotoInput: debug method called");
-    }
-
 }

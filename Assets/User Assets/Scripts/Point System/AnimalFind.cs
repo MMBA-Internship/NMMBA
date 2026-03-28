@@ -19,9 +19,9 @@ public class AnimalFind : MonoBehaviour
             playerCamera = viewPoint.gameObject;
     }
     
-    public List<AnimalFIndInfo> GetFishVisibilityData()
+    public List<AnimalFindInfo> GetFishVisibilityData()
     {
-        List<AnimalFIndInfo> visibleFishData = new List<AnimalFIndInfo>();
+        List<AnimalFindInfo> visibleFishData = new List<AnimalFindInfo>();
 
         if (playerCamera == null || viewPoint == null)
         {
@@ -52,7 +52,7 @@ public class AnimalFind : MonoBehaviour
 
             FishData fishData = target.GetComponent<FishData>();
 
-            AnimalFIndInfo info = new AnimalFIndInfo
+            AnimalFindInfo info = new AnimalFindInfo
             {
                 fishObject = target.gameObject,
                 fishData = fishData,

@@ -56,6 +56,7 @@ public class GameStateManager : MonoBehaviour
     public void ToggleVersion()
     {
         useVersionA = !useVersionA;
+        GameEvents.RaiseControlVersionChanged(useVersionA);
         UpdateVersionDisplay();
     }
 
