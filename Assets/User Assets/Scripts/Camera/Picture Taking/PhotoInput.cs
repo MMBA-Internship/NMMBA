@@ -52,6 +52,7 @@ public class PhotoInput : MonoBehaviour
         disableInput = true;
         yield return new WaitForSeconds(photoCooldown);
         disableInput = false;
+        GameEvents.RaisePhotoCooldownEnded();
     }
 
     public void TakePhoto()
@@ -59,7 +60,7 @@ public class PhotoInput : MonoBehaviour
         if (!disableInput)
         {
             GameEvents.RaisePhotoInputPressed();
-            StartCoroutine(PhotoCooldown_Co()); ;
+            StartCoroutine(PhotoCooldown_Co());
         }
     }
 }

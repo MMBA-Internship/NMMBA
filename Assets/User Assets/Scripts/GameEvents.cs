@@ -12,6 +12,13 @@ public static class GameEvents
 
 
     /// <summary>
+    /// Fires when the photo cooldown is over and the player can take another photo
+    /// </summary>
+    public static event Action OnPhotoCooldownEnded;
+    public static void RaisePhotoCooldownEnded() => OnPhotoCooldownEnded?.Invoke();
+
+
+    /// <summary>
     /// when a photo capture is actually accepted,
     /// flash is listening
     /// </summary>
