@@ -20060,14 +20060,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4646851587036567966, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
       propertyPath: doubleTap.m_SingletonActionBindings.Array.data[0].m_Id
-      value: f0303f0a-c802-4b02-893e-4d0c007c6476
+      value: c0f114c2-0309-4e9d-bc79-9fb232e72b2d
+      objectReference: {fileID: 0}
+    - target: {fileID: 4646851587036567966, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
+      propertyPath: doubleTap.m_SingletonActionBindings.Array.data[1].m_Id
+      value: c0f114c2-0309-4e9d-bc79-9fb232e72b2d
       objectReference: {fileID: 0}
     - target: {fileID: 4646851587036567966, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
       propertyPath: doubleTap.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Mouse>/leftButton
+      value: <Pointer>/press
       objectReference: {fileID: 0}
     - target: {fileID: 4646851587036567966, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
       propertyPath: doubleTap.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Double Tap
+      objectReference: {fileID: 0}
+    - target: {fileID: 4646851587036567966, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
+      propertyPath: doubleTap.m_SingletonActionBindings.Array.data[1].m_Action
       value: Double Tap
       objectReference: {fileID: 0}
     - target: {fileID: 4646851587036567966, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
