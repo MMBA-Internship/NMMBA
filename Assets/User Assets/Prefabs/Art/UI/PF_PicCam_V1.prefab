@@ -61,6 +61,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PhotoInput
   photoKey: 32
+  photoCooldown: 3
+  doubleTap:
+    m_Name: Double Tap
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1cb15d91-a0ea-403d-adb1-a752762be550
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!114 &8154933054275168033
 MonoBehaviour:
   m_ObjectHideFlags: 0

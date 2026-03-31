@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5526826712680124851}
   - component: {fileID: 5480038609421189283}
   m_Layer: 0
-  m_Name: PF.Kelp
+  m_Name: PF_Kelp.1_V1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
