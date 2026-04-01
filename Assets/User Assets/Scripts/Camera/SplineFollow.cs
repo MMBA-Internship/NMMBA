@@ -10,7 +10,16 @@ public class SplineFollow : MonoBehaviour
 
 	private float t = 0f;
 
-	void Update()
+    void Start()
+    {
+        if (path != null)
+        {
+            float splineLength = path.Spline.GetLength();
+            Debug.Log($"Spline length: {splineLength} units");
+        }
+
+    }
+    void Update()
 	{
 		if (path == null) return;
 
