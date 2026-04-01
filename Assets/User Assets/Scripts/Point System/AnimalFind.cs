@@ -18,7 +18,7 @@ public class AnimalFind : MonoBehaviour
         if (playerCamera == null && viewPoint != null)
             playerCamera = viewPoint.gameObject;
     }
-    
+
     public List<AnimalFindInfo> GetFishVisibilityData()
     {
         List<AnimalFindInfo> visibleFishData = new List<AnimalFindInfo>();
@@ -38,8 +38,11 @@ public class AnimalFind : MonoBehaviour
 
             Vector3 directionToTarget = (target.transform.position - viewPoint.transform.position).normalized;
             float angle = Vector3.Angle(viewPoint.transform.forward, directionToTarget);
+            // if angle is 0 => in front
 
-            bool isInFrame = angle <= fovAngle * 0.5f;
+            float distanceToTarget = Vector3.Distance(viewPoint.transform.position, target.transform.position);
+
+            bool isInFrame = (angle <= (fovAngle * 0.5f));
             if (!isInFrame)
                 continue;
 
@@ -57,7 +60,10 @@ public class AnimalFind : MonoBehaviour
                 fishObject = target.gameObject,
                 fishData = fishData,
                 isInFrame = isInFrame,
-                isObstructed = isObstructed
+                isObstructed = isObstructed,
+                angle = angle,
+                distance = distanceToTarget
+
             };
 
             visibleFishData.Add(info);
