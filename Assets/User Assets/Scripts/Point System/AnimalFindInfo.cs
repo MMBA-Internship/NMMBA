@@ -7,4 +7,6 @@ public class AnimalFindInfo
     public FishData fishData;
     public bool isInFrame;
     public bool isObstructed;
+    public float angle;
+    public float distance;
 }
