@@ -5626,7 +5626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineFollow
   path: {fileID: 2023883129}
-  speed: 0.025
+  speed: 0.02
 --- !u!73398921 &1460764997
 VFXRenderer:
   serializedVersion: 1
