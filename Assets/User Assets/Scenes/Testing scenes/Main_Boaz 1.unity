@@ -1333,7 +1333,6 @@ MonoBehaviour:
   reference: Turtle
   speed: 0
   rarity: 2
-  scoreAmount: 100
 --- !u!1 &250170926 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 908273074614208368, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
@@ -1398,7 +1397,6 @@ MonoBehaviour:
   reference: Turtle
   speed: 0
   rarity: 2
-  scoreAmount: 100
 --- !u!1 &264465036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1856,7 +1854,6 @@ MonoBehaviour:
   reference: Eagle Ray
   speed: 0
   rarity: 0
-  scoreAmount: 10
 --- !u!1 &331302401
 GameObject:
   m_ObjectHideFlags: 0
@@ -2090,7 +2087,6 @@ MonoBehaviour:
   reference: Moorish
   speed: 0
   rarity: 1
-  scoreAmount: 50
 --- !u!1001 &393504134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2390,7 +2386,6 @@ MonoBehaviour:
   reference: Crab
   speed: 0
   rarity: 2
-  scoreAmount: 200
 --- !u!4 &427547192 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1586729485221774320, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
@@ -2737,7 +2732,6 @@ MonoBehaviour:
   reference: Turtle
   speed: 0
   rarity: 2
-  scoreAmount: 100
 --- !u!1 &454395962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2958,7 +2952,6 @@ MonoBehaviour:
   reference: Moorish
   speed: 0
   rarity: 1
-  scoreAmount: 50
 --- !u!4 &614370977 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2138180454571250526, guid: fa77a7fcd8ab1404788d89a9db9fc22f, type: 3}
@@ -9686,7 +9679,6 @@ MonoBehaviour:
   reference: Crab
   speed: 0
   rarity: 2
-  scoreAmount: 200
 --- !u!4 &789929080 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 72127f2cc107151439ec8e839e7d81a6, type: 3}
@@ -10085,7 +10077,6 @@ MonoBehaviour:
   reference: Moorish
   speed: 0
   rarity: 1
-  scoreAmount: 50
 --- !u!1001 &830848494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10940,7 +10931,6 @@ MonoBehaviour:
   reference: Crab
   speed: 0
   rarity: 2
-  scoreAmount: 200
 --- !u!65 &942339602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11259,7 +11249,6 @@ MonoBehaviour:
   reference: Crab
   speed: 0
   rarity: 2
-  scoreAmount: 200
 --- !u!1 &1035714927
 GameObject:
   m_ObjectHideFlags: 0
@@ -11338,7 +11327,6 @@ MonoBehaviour:
   reference: Crab
   speed: 0
   rarity: 2
-  scoreAmount: 200
 --- !u!1001 &1074102389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12427,7 +12415,6 @@ MonoBehaviour:
   reference: Turtle
   speed: 0
   rarity: 2
-  scoreAmount: 100
 --- !u!1 &1238453359
 GameObject:
   m_ObjectHideFlags: 0
@@ -13624,7 +13611,6 @@ MonoBehaviour:
   reference: Eagle Ray
   speed: 0
   rarity: 0
-  scoreAmount: 10
 --- !u!1 &1669834105 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2111874468278704458, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
@@ -13671,7 +13657,6 @@ MonoBehaviour:
   reference: Zebra Shark
   speed: 0
   rarity: 2
-  scoreAmount: 200
 --- !u!114 &1669834109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13764,7 +13749,6 @@ MonoBehaviour:
   reference: Zebra Shark
   speed: 0
   rarity: 2
-  scoreAmount: 200
 --- !u!1 &1702885285
 GameObject:
   m_ObjectHideFlags: 0
@@ -13850,7 +13834,6 @@ MonoBehaviour:
   reference: Crab
   speed: 0
   rarity: 2
-  scoreAmount: 200
 --- !u!4 &1760549327 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3275560201883911215, guid: 7781a25e46f9570498e155943432f36c, type: 3}
@@ -13954,7 +13937,6 @@ MonoBehaviour:
   reference: Zebra Shark
   speed: 0
   rarity: 2
-  scoreAmount: 200
 --- !u!1001 &1805019446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14481,7 +14463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CamerDragRotation
   point:
     m_Name: Point
-    m_Type: 0
+    m_Type: 2
     m_ExpectedControlType: 
     m_Id: 82a1109b-47dd-443e-9d74-66e0829ade01
     m_Processors: 
@@ -14498,7 +14480,7 @@ MonoBehaviour:
     m_Flags: 0
   delta:
     m_Name: Delta
-    m_Type: 0
+    m_Type: 2
     m_ExpectedControlType: 
     m_Id: 9582790b-078f-45c7-9d8f-924273d8ad56
     m_Processors: 
@@ -14515,7 +14497,7 @@ MonoBehaviour:
     m_Flags: 0
   press:
     m_Name: Press
-    m_Type: 0
+    m_Type: 2
     m_ExpectedControlType: 
     m_Id: 3eae1d9f-0af5-496e-9000-2e8401e10234
     m_Processors: 
@@ -14581,7 +14563,6 @@ MonoBehaviour:
   reference: Crab
   speed: 0
   rarity: 2
-  scoreAmount: 200
 --- !u!1 &1859305209 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1789364321828117077, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
@@ -14628,7 +14609,6 @@ MonoBehaviour:
   reference: Eagle Ray
   speed: 0
   rarity: 0
-  scoreAmount: 10
 --- !u!114 &1859305213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19645,7 +19625,6 @@ MonoBehaviour:
   reference: Zebra Shark
   speed: 0
   rarity: 2
-  scoreAmount: 200
 --- !u!1001 &1958486293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19985,7 +19964,6 @@ MonoBehaviour:
   reference: Crab
   speed: 0
   rarity: 2
-  scoreAmount: 200
 --- !u!1001 &2034196199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20164,7 +20142,6 @@ MonoBehaviour:
   reference: Eagle Ray
   speed: 0
   rarity: 0
-  scoreAmount: 10
 --- !u!1001 &578525426215868598
 PrefabInstance:
   m_ObjectHideFlags: 0
