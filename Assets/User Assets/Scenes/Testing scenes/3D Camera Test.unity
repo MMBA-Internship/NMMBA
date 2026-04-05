@@ -411,6 +411,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Distance
       objectReference: {fileID: 0}
+    - target: {fileID: 8941422416114711552, guid: bbbd15c54fa2c6e4f929e565a85e5f8d, type: 3}
+      propertyPath: maxDepth
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

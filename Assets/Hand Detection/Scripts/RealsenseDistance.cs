@@ -6,26 +6,32 @@ public class RealsenseDistance : MonoBehaviour
     private Pipeline pipeline;
 
     // Depth range
-    public float minDepth = 0.3f;
+    // TODO: make configurable on startup of game
+    public float minDepth = 0.2f;
     public float maxDepth = 2f;
 
     // Depth  Unity Y mapping
-    public float minY = 0f;  // closest hand  lower Y
-    public float maxY = 4f;  // farthest hand  higher Y
+    //public float minY = 0f;  // closest hand  lower Y
+    //public float maxY = 4f;  // farthest hand  higher Y
 
     // Detection region (top of camera)
-    [Range(0f, 1f)]
-    public float topRegionStart = 0.0f;
-    [Range(0f, 1f)]
-    public float topRegionEnd = 0.25f;
+    [Range(0f, 1f)] [SerializeField]
+    private float topRegionStart = 0.45f;
+    [Range(0f, 1f)] [SerializeField]
+    private float topRegionEnd = 0.55f;
 
     // Hand marker
-    public GameObject handMarkerPrefab;
-    private GameObject handMarkerInstance;
-    public float handColliderRadius = 0.05f;
+    //[SerializeField] private GameObject handMarkerPrefab;
+    //private GameObject handMarkerInstance;
 
     // Output position
-    public Vector3 handPosition;
+    //[SerializeField] private Vector3 handPosition;
+
+    private bool handDetected = false;
+
+    [SerializeField] private float requiredDetectionTime = 0.2f;
+    [SerializeField] private float detectionTime = 0f;
+    [SerializeField] private float accumulatedTime = 0f;
 
     void Start()
     {
@@ -36,19 +42,18 @@ public class RealsenseDistance : MonoBehaviour
         pipeline.Start(config);
 
         // Always spawn marker
-        if (handMarkerPrefab != null)
-        {
-            handMarkerInstance = Instantiate(handMarkerPrefab);
-            var sphere = handMarkerInstance.GetComponent<SphereCollider>();
-            if (sphere != null)
-                sphere.radius = handColliderRadius;
-        }
+        //if (handMarkerPrefab != null)
+        //{
+        //    handMarkerInstance = Instantiate(handMarkerPrefab);
+        //}
     }
 
     void Update()
     {
-        if (pipeline == null || handMarkerInstance == null)
-            return;
+        accumulatedTime += Time.deltaTime;
+
+        //if (pipeline == null || handMarkerInstance == null)
+        //    return;
 
         if (!pipeline.PollForFrames(out FrameSet frames))
             return;
@@ -96,31 +101,55 @@ public class RealsenseDistance : MonoBehaviour
                     }
                 }
 
-                float mappedY;
-                float mappedX;
+                //float mappedY;
+                //float mappedX;
 
                 if (count > 10)
                 {
-                    float avgDepth = sumDepth / count;
-                    float avgX = sumX / count;
-
-                    // Depth  Y mapping (further away = higher Y)
-                    float t = (avgDepth - minDepth) / (maxDepth - minDepth);
-                    mappedY = Mathf.Lerp(minY, maxY, t);  // flipped
-
-                    mappedX = -avgX;
+                    detectionTime += accumulatedTime;
+                    accumulatedTime = 0f;
                 }
                 else
                 {
-                    // No detection: fallback
-                    mappedY = minY;
-                    mappedX = 0f;
+                    detectionTime -= accumulatedTime;
+                    accumulatedTime = 0f;
                 }
 
-                handPosition = new Vector3(mappedX * 10, mappedY * 10, 0f);
-                handMarkerInstance.transform.position = handPosition;
+                detectionTime = Mathf.Clamp(detectionTime, 0f, requiredDetectionTime);
+                bool detectedThisFrame = detectionTime >= requiredDetectionTime;
 
-                Debug.Log($"Depth avg: {sumDepth / Mathf.Max(1, count):F2} to Y: {mappedY:F2} | X: {mappedX:F2}");
+                //if (detectedThisFrame)
+                //{
+                //    float avgDepth = sumDepth / count;
+                //    float avgX = sumX / count;
+
+                //    // Depth  Y mapping (further away = higher Y)
+                //    float t = (avgDepth - minDepth) / (maxDepth - minDepth);
+                //    mappedY = Mathf.Lerp(minY, maxY, t);  // flipped
+
+                //    mappedX = -avgX;
+                //}
+                //else
+                //{
+                //    mappedY = minY;
+                //    mappedX = 0f;
+                //}
+
+                //handPosition = new Vector3(mappedX * 10, mappedY * 10, 0f);
+                //handMarkerInstance.transform.position = handPosition;
+
+                //Debug.Log($"Depth avg: {sumDepth / Mathf.Max(1, count):F2} to Y: {mappedY:F2} | X: {mappedX:F2}");
+
+                if (detectedThisFrame && !handDetected)
+                {
+                    handDetected = true;
+                    GameEvents.RaiseHandEntered();
+                }
+                else if (!detectedThisFrame && handDetected && detectionTime == 0f)
+                {
+                    handDetected = false;
+                    GameEvents.RaiseHandExited();
+                }
             }
         }
     }

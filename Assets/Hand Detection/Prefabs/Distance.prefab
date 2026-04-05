@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: -876546973899608171, guid: 89daf81f8e8f6634da726cbca859ca38, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,7 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1455975717929387694}
-  - component: {fileID: 1612463726334551350}
+  - component: {fileID: 8941422416114711552}
   m_Layer: 0
   m_Name: Distance
   m_TagString: Untagged
@@ -145,7 +145,7 @@ Transform:
   - {fileID: 4375557740875923757}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1612463726334551350
+--- !u!114 &8941422416114711552
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,12 +157,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47367ee509ec90d4f8a59fa5e9171c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RealsenseDistance
-  minDepth: 0.3
+  minDepth: 0.2
   maxDepth: 2
-  minY: 0
-  maxY: 4
-  topRegionStart: 0
-  topRegionEnd: 0.25
-  handMarkerPrefab: {fileID: 1863725450903738165}
-  handColliderRadius: 0.05
-  handPosition: {x: 0, y: 0, z: 0}
+  topRegionStart: 0.45
+  topRegionEnd: 0.55
+  requiredDetectionTime: 0.2
+  detectionTime: 0
+  accumulatedTime: 0

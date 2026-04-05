@@ -4,6 +4,22 @@ using UnityEngine;
 public static class GameEvents
 {
     /// <summary>
+    /// Fires when something enters the vision of the 3D camera
+    /// </summary>
+    public static event Action OnHandEntered;
+    public static void RaiseHandEntered() => OnHandEntered?.Invoke();
+
+
+
+    /// <summary>
+    /// Fires when the 3D camera no longer detects anything in it's cone of visibility.
+    /// </summary>
+    public static event Action OnHandExited;
+    public static void RaiseHandExited() => OnHandExited?.Invoke();
+
+
+
+    /// <summary>
     /// Input asks for a photo through the bus
     /// </summary>
     public static event Action OnPhotoInputPressed;
@@ -19,7 +35,7 @@ public static class GameEvents
 
 
     /// <summary>
-    /// when a photo capture is actually accepted,
+    /// Fires when a photo capture is actually accepted,
     /// flash is listening
     /// </summary>
     public static event Action OnPhotoCaptureStarted;
@@ -28,7 +44,7 @@ public static class GameEvents
 
 
     /// <summary>
-    /// When the render texture is ready
+    /// Fires when the render texture is ready
     /// </summary>
     public static event Action<RenderTexture> OnPictureTaken;
     public static void RaisePictureTaken(RenderTexture picture) => OnPictureTaken?.Invoke(picture);
@@ -36,7 +52,7 @@ public static class GameEvents
 
 
     /// <summary>
-    /// After score calculation for one picture
+    /// Fires after score calculation for one picture
     /// </summary>
     public static event Action<SinglePhotoScoreResult> OnPhotoScored;
     public static void RaisePhotoScored(SinglePhotoScoreResult result) => OnPhotoScored?.Invoke(result);
@@ -84,6 +100,7 @@ public static class GameEvents
     /// </summary>
     public static event Action OnRoundEnded;
     public static void RaiseRoundEnded() => OnRoundEnded?.Invoke();
+
 
 
     /// <summary>
