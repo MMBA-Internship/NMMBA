@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8018181755518162613}
   - component: {fileID: 3435976339130986225}
   - component: {fileID: 4898016604868050642}
+  - component: {fileID: 3963285170470641429}
+  - component: {fileID: 3611045305730521458}
   m_Layer: 0
   m_Name: -Managers-
   m_TagString: Untagged
@@ -52,7 +54,7 @@ MonoBehaviour:
   obstructionLayers:
     serializedVersion: 2
     m_Bits: 0
-  playerObj: {fileID: 0}
+  playerCamera: {fileID: 0}
   cameraDistance: 30
 --- !u!114 &3435976339130986225
 MonoBehaviour:
@@ -80,3 +82,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SessionScoreManager
   photoResults: []
+--- !u!114 &3963285170470641429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2861621255647572046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce89d4257ff416247a5e787ba0d12518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishScarer
+  animalFind: {fileID: 8018181755518162613}
+  scareCooldown: 5
+--- !u!114 &3611045305730521458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2861621255647572046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47367ee509ec90d4f8a59fa5e9171c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RealsenseDistance
+  minDepth: 0.2
+  maxDepth: 2
+  topRegionStart: 0.45
+  topRegionEnd: 0.55
+  requiredDetectionTime: 0.2
+  detectionTime: 0
+  accumulatedTime: 0

@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 
 public class PhotoInput : MonoBehaviour
 {
-    [SerializeField] private KeyCode photoKey = KeyCode.Space;
     [SerializeField] private float photoCooldown = 3f;
     [SerializeField] private InputAction doubleTap;
     bool disableInput = false;
