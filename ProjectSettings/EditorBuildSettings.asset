@@ -9,5 +9,7 @@ EditorBuildSettings:
     path: Assets/User Assets/Scenes/Testing scenes/Main_Boaz.unity
     guid: 31dc83a7881f2574fa5263e80947ae5b
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 32718c5fde3f42242a70ddf7632b96c0, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 35845fe01580c41289b024647b1d1c53, type: 3}
+    com.unity.localization.settings: {fileID: 11400000, guid: 861a7ae6ddf38314d9c64f80ac3605d2, type: 2}
   m_UseUCBPForAssetBundles: 0

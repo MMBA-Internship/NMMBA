@@ -19658,9 +19658,9 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3423215537561906567, guid: 797eaa4cb46768d4888707297cde1310, type: 3}
-      propertyPath: oxygenDuration
-      value: 50
+    - target: {fileID: 3353022189226194341, guid: 797eaa4cb46768d4888707297cde1310, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TMPro.TextMeshProUGUI, Unity.TextMeshPro
       objectReference: {fileID: 0}
     - target: {fileID: 4646915562974927936, guid: 797eaa4cb46768d4888707297cde1310, type: 3}
       propertyPath: m_Enabled
@@ -19766,9 +19766,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_UI_Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7171266830048228931, guid: 797eaa4cb46768d4888707297cde1310, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587534828712537257, guid: 797eaa4cb46768d4888707297cde1310, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
     - target: {fileID: 8069898561054597279, guid: 797eaa4cb46768d4888707297cde1310, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152303104029096580, guid: 797eaa4cb46768d4888707297cde1310, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TMPro.TextMeshProUGUI, Unity.TextMeshPro
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
