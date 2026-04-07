@@ -24,9 +24,9 @@ public class FishScarer : MonoBehaviour
 
 		foreach (AnimalFindInfo fish in fishes)
 		{
-			Debug.Log(fish.fishObject.name);
 			FishManager fManager = fish.fishObject.GetComponent<FishManager>();
-			fManager.Scare();
+			if (fManager)
+				fManager.Scare();
 		}
 	}
 }
