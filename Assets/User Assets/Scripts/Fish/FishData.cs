@@ -6,6 +6,5 @@ public class FishData : MonoBehaviour
     public float speed; // used when scaring away the fish
     public int rarity;
 
-    // ADDED: scorer needs this
-    public int scoreAmount = 10;
+    //public int scoreAmount = 10;
 }
