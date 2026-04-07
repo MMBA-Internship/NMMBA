@@ -114,8 +114,8 @@ Material:
     - _WaveIntensity: -3.2
     - _WaveSpeed: 1.8
     - _WaveStrength: 0.061
-    - _Waves_X: 2.34
-    - _Waves_Z: 4
+    - _Waves_X: 4
+    - _Waves_Z: 0
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestTransparent: 4
     - _ZWrite: 0
