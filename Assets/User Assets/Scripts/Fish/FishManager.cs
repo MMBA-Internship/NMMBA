@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Splines;
 
-[RequireComponent(typeof(FishData))]
+[RequireComponent(typeof(FishData), typeof(Animator))]
 public class FishManager : MonoBehaviour
 {
-	[SerializeField] private float speedMultiplier = 5f;
+	[SerializeField] private float speedMultiplier = 3.5f;
 	private float originalSpeed;
+
 	[SerializeField] private List<Spline> splines;
-	[SerializeField] private SplineAnimate splineAnimate;
-	private FishData fishData;
+	private SplineAnimate splineAnimate;
 	private Coroutine speedRoutine;
 
+	//[SerializeField] private AnimationClip scareClip;
+	[SerializeField] private string triggerName;
+	private Animator animator;
 
 	private void OnEnable()
 	{
-		fishData = GetComponent<FishData>();
+		animator = GetComponent<Animator>();
 		splineAnimate = GetComponent<SplineAnimate>();
 		if (splineAnimate)
 			originalSpeed = splineAnimate.MaxSpeed;
@@ -24,16 +27,23 @@ public class FishManager : MonoBehaviour
 
 	public void Scare()
 	{
-		if (!splineAnimate) return;
+		if (animator && !string.IsNullOrEmpty(triggerName))
+		{
+			Debug.Log($"playing anim: {triggerName}");
+			animator.SetTrigger(triggerName);
+		}
 
-		if (speedRoutine != null)
-			StopCoroutine(speedRoutine);
+		if (splineAnimate)
+		{
+			if (speedRoutine != null)
+				StopCoroutine(speedRoutine);
 
-		float boostedSpeed = originalSpeed * speedMultiplier;
+			float boostedSpeed = originalSpeed * speedMultiplier;
 
-		speedRoutine = StartCoroutine(EaseSpeed(boostedSpeed, 0.3f));
+			speedRoutine = StartCoroutine(EaseSpeed(boostedSpeed, 0.3f));
 
-		Invoke(nameof(RevertSpeed), 3f);
+			Invoke(nameof(RevertSpeed), 3f);
+		}
 	}
 
 	private void RevertSpeed()

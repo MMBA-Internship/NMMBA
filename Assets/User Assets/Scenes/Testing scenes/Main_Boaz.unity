@@ -945,6 +945,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6542400665649160516, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 829556964}
+    - targetCorrespondingSourceObject: {fileID: 6542400665649160516, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 829556968}
   m_SourcePrefab: {fileID: 100100000, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
 --- !u!1 &131789431
 GameObject:
@@ -1367,7 +1370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 3.5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: 
 --- !u!1 &250170926 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 908273074614208368, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
@@ -1446,7 +1449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 3.5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: 
 --- !u!1 &264465036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,31 +1576,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 564916585162889112, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.53
+      value: 14.89448
       objectReference: {fileID: 0}
     - target: {fileID: 564916585162889112, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.49
+      value: -0.07099128
       objectReference: {fileID: 0}
     - target: {fileID: 564916585162889112, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.76
+      value: 18.299572
       objectReference: {fileID: 0}
     - target: {fileID: 564916585162889112, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.91640836
+      value: 0.6952369
       objectReference: {fileID: 0}
     - target: {fileID: 564916585162889112, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.06441789
+      value: -0.052289277
       objectReference: {fileID: 0}
     - target: {fileID: 564916585162889112, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.39353886
+      value: 0.70413464
       objectReference: {fileID: 0}
     - target: {fileID: 564916585162889112, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.034252893
+      value: 0.13455841
       objectReference: {fileID: 0}
     - target: {fileID: 564916585162889112, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1635,6 +1638,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6542400665649160516, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 382190318}
+    - targetCorrespondingSourceObject: {fileID: 6542400665649160516, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 382190322}
   m_SourcePrefab: {fileID: 100100000, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
 --- !u!1 &312495174
 GameObject:
@@ -1931,7 +1937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 3.5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: trInteract1
 --- !u!1 &331302401
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,7 +2185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 3.5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: 
 --- !u!65 &382190318
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2201,6 +2207,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.7165607, y: 4.130198, z: 7.1137104}
   m_Center: {x: 0.0007275941, y: 0.006301284, z: -0.00471592}
+--- !u!95 &382190322
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382190311}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &393504134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2514,7 +2542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: 
 --- !u!4 &427547192 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1586729485221774320, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
@@ -2875,7 +2903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 3.5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: 
 --- !u!1 &454395962
 GameObject:
   m_ObjectHideFlags: 0
@@ -3110,7 +3138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 3.5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: 
 --- !u!65 &575914472
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3132,6 +3160,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.7165605, y: 4.130197, z: 7.1137094}
   m_Center: {x: 0.00073522335, y: 0.006301283, z: -0.00470829}
+--- !u!95 &575914476
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575914465}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &614370977 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2138180454571250526, guid: fa77a7fcd8ab1404788d89a9db9fc22f, type: 3}
@@ -9885,7 +9935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: 
 --- !u!4 &789929080 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 72127f2cc107151439ec8e839e7d81a6, type: 3}
@@ -10298,7 +10348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 3.5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: 
 --- !u!65 &829556964
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10320,6 +10370,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.7165614, y: 4.130197, z: 7.1137114}
   m_Center: {x: 0.0007352239, y: 0.0063012834, z: -0.0047159204}
+--- !u!95 &829556968
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829556957}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &830848494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11212,7 +11284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: 
 --- !u!1001 &945994936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11524,7 +11596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: 
 --- !u!1 &1035714927
 GameObject:
   m_ObjectHideFlags: 0
@@ -11617,7 +11689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: 
 --- !u!1001 &1074102389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12726,7 +12798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 3.5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: 
 --- !u!1 &1238453359
 GameObject:
   m_ObjectHideFlags: 0
@@ -13952,7 +14024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 3.5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: trInteract1
 --- !u!1 &1669834105 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2111874468278704458, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
@@ -14036,7 +14108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 3.5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: trInteract1
 --- !u!1 &1679786049 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2111874468278704458, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
@@ -14120,7 +14192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 3.5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: trInteract1
 --- !u!1 &1702885285
 GameObject:
   m_ObjectHideFlags: 0
@@ -14220,7 +14292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: 
 --- !u!4 &1760549327 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3275560201883911215, guid: 7781a25e46f9570498e155943432f36c, type: 3}
@@ -14338,7 +14410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 3.5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: trInteract1
 --- !u!1001 &1805019446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14982,7 +15054,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: 
 --- !u!1 &1859305209 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1789364321828117077, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
@@ -15066,7 +15138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 3.5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: trInteract1
 --- !u!1001 &1861734872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20074,7 +20146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 3.5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: trInteract1
 --- !u!1001 &1958486293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20443,7 +20515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: 
 --- !u!1001 &2034196199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20636,7 +20708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   speedMultiplier: 3.5
   splines: []
-  splineAnimate: {fileID: 0}
+  triggerName: trInteract1
 --- !u!1001 &578525426215868598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20786,6 +20858,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6542400665649160516, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 575914472}
+    - targetCorrespondingSourceObject: {fileID: 6542400665649160516, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 575914476}
   m_SourcePrefab: {fileID: 100100000, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
 --- !u!1001 &8468293405163197195
 PrefabInstance:
