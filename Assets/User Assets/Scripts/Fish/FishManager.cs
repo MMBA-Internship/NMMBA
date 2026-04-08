@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Splines;
@@ -10,6 +11,8 @@ public class FishManager : MonoBehaviour
 	[SerializeField] private List<Spline> splines;
 	[SerializeField] private SplineAnimate splineAnimate;
 	private FishData fishData;
+	private Coroutine speedRoutine;
+
 
 	private void OnEnable()
 	{
@@ -21,23 +24,45 @@ public class FishManager : MonoBehaviour
 
 	public void Scare()
 	{
-		if (splineAnimate)
-		{
-			UpdatePathSpeed(splineAnimate.MaxSpeed * speedMultiplier);
-			Invoke("RevertSpeed", 3f);
-		}
-		Debug.Log($"I'm scared {fishData.reference}");
-		/*	TODO:
-		 * Switch spline
-		 * Match point on spline based on time passed
-		 * Manage speed (ease it!)
-		 * Play animation
-		*/
+		if (!splineAnimate) return;
+
+		if (speedRoutine != null)
+			StopCoroutine(speedRoutine);
+
+		float boostedSpeed = originalSpeed * speedMultiplier;
+
+		speedRoutine = StartCoroutine(EaseSpeed(boostedSpeed, 0.3f));
+
+		Invoke(nameof(RevertSpeed), 3f);
 	}
 
 	private void RevertSpeed()
 	{
-		UpdatePathSpeed(originalSpeed);
+		if (speedRoutine != null)
+			StopCoroutine(speedRoutine);
+
+		speedRoutine = StartCoroutine(EaseSpeed(originalSpeed, 0.8f));
+	}
+
+	private IEnumerator EaseSpeed(float targetSpeed, float duration)
+	{
+		float startSpeed = splineAnimate.MaxSpeed;
+		float time = 0f;
+
+		while (time < duration)
+		{
+			time += Time.deltaTime;
+			float t = time / duration;
+
+			t = t * t * (3f - 2f * t);
+
+			float newSpeed = Mathf.Lerp(startSpeed, targetSpeed, t);
+			UpdatePathSpeed(newSpeed);
+
+			yield return null;
+		}
+
+		UpdatePathSpeed(targetSpeed);
 	}
 
 	private void UpdatePathSpeed(float newSpeed)
