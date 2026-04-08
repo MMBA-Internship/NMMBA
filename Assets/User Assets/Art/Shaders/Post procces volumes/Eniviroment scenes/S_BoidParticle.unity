@@ -5687,7 +5687,7 @@ VisualEffect:
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
-  m_AllowInstancing: 1
+  m_AllowInstancing: 0
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
@@ -5701,7 +5701,10 @@ VisualEffect:
     m_Uint:
       m_Array: []
     m_Int:
-      m_Array: []
+      m_Array:
+      - m_Value: 20
+        m_Name: Fish amount
+        m_Overridden: 1
     m_Matrix4x4f:
       m_Array: []
     m_AnimationCurve:
@@ -5709,7 +5712,16 @@ VisualEffect:
     m_Gradient:
       m_Array: []
     m_NamedObject:
-      m_Array: []
+      m_Array:
+      - m_Value: {fileID: 2800000, guid: bd68e2602b324cc4faa4a8b1b4da5a1a, type: 3}
+        m_Name: Albedo
+        m_Overridden: 1
+      - m_Value: {fileID: 2800000, guid: 112a00562c892a14bb5a64d04c572105, type: 3}
+        m_Name: Normal
+        m_Overridden: 1
+      - m_Value: {fileID: -6944954265951572821, guid: 54465bd6f6362ae4e947a8751d7493f4, type: 3}
+        m_Name: Animal
+        m_Overridden: 1
     m_Bool:
       m_Array: []
 --- !u!4 &1460764999

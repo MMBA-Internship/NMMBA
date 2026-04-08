@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Crab.1_V1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 85530c6d709e04749a633ba86e9d6dec, type: 3}
+      propertyPath: m_TagString
+      value: Fish
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 85530c6d709e04749a633ba86e9d6dec, type: 3}
       propertyPath: m_Controller
       value: 
