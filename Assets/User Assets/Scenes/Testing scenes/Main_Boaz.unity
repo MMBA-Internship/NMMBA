@@ -2977,15 +2977,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 108dbadaa176fce49b8245a86231327a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.4099665
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 108dbadaa176fce49b8245a86231327a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.331
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 108dbadaa176fce49b8245a86231327a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 6.331
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 108dbadaa176fce49b8245a86231327a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3029,7 +3029,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 108dbadaa176fce49b8245a86231327a, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 108dbadaa176fce49b8245a86231327a, type: 3}
       propertyPath: m_CastShadows
@@ -8874,15 +8874,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 108dbadaa176fce49b8245a86231327a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.4099665
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 108dbadaa176fce49b8245a86231327a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.331
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 108dbadaa176fce49b8245a86231327a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 4.3322396
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 108dbadaa176fce49b8245a86231327a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8926,7 +8926,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 108dbadaa176fce49b8245a86231327a, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 108dbadaa176fce49b8245a86231327a, type: 3}
       propertyPath: m_CastShadows
