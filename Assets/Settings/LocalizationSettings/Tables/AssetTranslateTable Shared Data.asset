@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: AssetTranslateTable Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: AssetTranslateTable
+  m_TableCollectionNameGuidString: b4ca20071edb8184fbc9ee6f942c5e1f
+  m_Entries:
+  - m_Id: 15764586496
+    m_Key: 1stPlace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80411394048
+    m_Key: 2ndPlace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87264886784
+    m_Key: 3rdPlace
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items:
+    - rid: 9001050953767452906
+    - rid: 9001050953767452911
+  m_KeyGenerator:
+    rid: 9001050953767452905
+  references:
+    version: 2
+    RefIds:
+    - rid: 9001050953767452905
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1775568866616
+    - rid: 9001050953767452906
+      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries:
+        - m_KeyId: 15764586496
+          m_TableCodes:
+          - en
+          - zh-TW
+        - m_KeyId: 80411394048
+          m_TableCodes:
+          - en
+          - zh-TW
+        - m_KeyId: 87264886784
+          m_TableCodes:
+          - en
+          - zh-TW
+        m_TypeString: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+    - rid: 9001050953767452911
+      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries:
+        - m_KeyId: 87264886784
+          m_TableCodes:
+          - zh-TW
+        m_TypeString: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null

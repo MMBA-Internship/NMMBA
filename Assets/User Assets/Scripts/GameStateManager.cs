@@ -2,6 +2,8 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 
 public class GameStateManager : MonoBehaviour
@@ -37,6 +39,8 @@ public class GameStateManager : MonoBehaviour
     private int currentScore = 0;
     private bool useVersionA = true;
     private Coroutine countdownCoroutine;
+
+    private bool isChanging = false;
 
     void Start()
     {
@@ -228,4 +232,35 @@ public class GameStateManager : MonoBehaviour
     {
         currentScore = newScore;
     }
+
+    public void SetEnglish()
+    {
+        ChangeLanguageByCode("en");
+    }
+
+    public void SetTraditionalChinese()
+    {
+        ChangeLanguageByCode("zh-TW"); 
+    }
+
+    private void ChangeLanguageByCode(string localeCode)
+    {
+        if (isChanging) return;
+        StartCoroutine(ChangeLanguageByCodeCoroutine(localeCode));
+    }
+
+    private IEnumerator ChangeLanguageByCodeCoroutine(string localeCode)
+    {
+        isChanging = true;
+        yield return LocalizationSettings.InitializationOperation;
+
+        Locale selectedLocale = LocalizationSettings.AvailableLocales.GetLocale(localeCode);
+        if (selectedLocale != null)
+        {
+            LocalizationSettings.SelectedLocale = selectedLocale;
+        }
+
+        isChanging = false;
+    }
 }
+
