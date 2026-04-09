@@ -82,29 +82,22 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f4278d0977086714cb60b265f70e3b4b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1868336449516745953}
+      addedObject: {fileID: 6631419576000012490}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f4278d0977086714cb60b265f70e3b4b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6631419576000012490}
+      addedObject: {fileID: 191232459115813222}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f4278d0977086714cb60b265f70e3b4b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 460435706272322564}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f4278d0977086714cb60b265f70e3b4b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5524531006549775312}
   m_SourcePrefab: {fileID: 100100000, guid: f4278d0977086714cb60b265f70e3b4b, type: 3}
 --- !u!1 &2111874468278704458 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f4278d0977086714cb60b265f70e3b4b, type: 3}
   m_PrefabInstance: {fileID: 1265383342727308315}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1868336449516745953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111874468278704458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a721f2f2064893428ed4c9f531fc2d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::animDebug
-  interact1: 0
 --- !u!136 &6631419576000012490
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -128,3 +121,56 @@ CapsuleCollider:
   m_Height: 2.056612
   m_Direction: 2
   m_Center: {x: 0.026955247, y: 0.40047997, z: -0.0271492}
+--- !u!114 &191232459115813222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111874468278704458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b2b707f5487194c8ce851a23fabd91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishData
+  reference: 
+  speed: 0
+  rarity: 0
+--- !u!114 &460435706272322564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111874468278704458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0cc3be9f5d7434c8aa107a689a885f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishManager
+  speedMultiplier: 3.5
+  splines: []
+  triggerName: 
+--- !u!114 &5524531006549775312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111874468278704458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
+  m_Target: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_LoopMode: 1
+  m_Method: 0
+  m_Duration: 1
+  m_MaxSpeed: 10
+  m_EasingMode: 0
+  m_AlignmentMode: 1
+  m_ObjectForwardAxis: 2
+  m_ObjectUpAxis: 1
+  m_StartOffset: 0

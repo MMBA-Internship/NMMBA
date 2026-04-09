@@ -236,6 +236,8 @@ GameObject:
   - component: {fileID: 5007691790671616661}
   - component: {fileID: 1249054101766156162}
   - component: {fileID: 4505124078229454437}
+  - component: {fileID: 2796192894167337163}
+  - component: {fileID: 4839587934250702264}
   m_Layer: 0
   m_Name: PF_EagleRay_V1
   m_TagString: Fish
@@ -297,7 +299,6 @@ MonoBehaviour:
   reference: 
   speed: 0
   rarity: 0
-  scoreAmount: 10
 --- !u!65 &4505124078229454437
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -319,6 +320,44 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.696351, y: 0.4184739, z: 1.8703696}
   m_Center: {x: -0.04770122, y: 0.29076323, z: -0.034861717}
+--- !u!114 &2796192894167337163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789364321828117077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
+  m_Target: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_LoopMode: 1
+  m_Method: 0
+  m_Duration: 1
+  m_MaxSpeed: 10
+  m_EasingMode: 0
+  m_AlignmentMode: 1
+  m_ObjectForwardAxis: 2
+  m_ObjectUpAxis: 1
+  m_StartOffset: 0
+--- !u!114 &4839587934250702264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789364321828117077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0cc3be9f5d7434c8aa107a689a885f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishManager
+  speedMultiplier: 3.5
+  splines: []
+  triggerName: 
 --- !u!1 &2292497798847664867
 GameObject:
   m_ObjectHideFlags: 0
