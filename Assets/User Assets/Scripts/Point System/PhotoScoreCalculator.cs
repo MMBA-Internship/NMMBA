@@ -11,7 +11,7 @@ public class PhotoScoreCalculator : MonoBehaviour
     [SerializeField] private float baseScoreCentering = 30f;
     [SerializeField] private float baseScoreObstruction = 30f;
 
-     private static int pictureCounter = 0;
+    private static int pictureCounter = 0;
     private List<string> foundFishReferences = new List<string>();
 
     //Measure distance from centre of frame -  Linear falloff of points based on distance from centre
@@ -105,7 +105,7 @@ public class PhotoScoreCalculator : MonoBehaviour
 
         SinglePhotoScoreResult result = new SinglePhotoScoreResult();
         result.pictureName = pictureName;
-        result.pictureTexture = null;
+        result.pictureTexture = photo;
         result.picturePath = "";
         result.totalScore = totalPictureScore;
 

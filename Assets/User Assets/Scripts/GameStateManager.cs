@@ -4,6 +4,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
+using UnityEngine.UI;
 
 
 public class GameStateManager : MonoBehaviour
@@ -16,6 +17,7 @@ public class GameStateManager : MonoBehaviour
     public GameObject Tutorial_B;
     public GameObject RoundOver;
     public GameObject EndScore;
+    public GameObject Gallery;
 
     [Header("Lobby UI Elements")]
     public GameObject notReadyState;
@@ -30,11 +32,16 @@ public class GameStateManager : MonoBehaviour
     public TextMeshProUGUI oxygenTimerText_B;
     public TextMeshProUGUI finalScoreText;
 
+    //public RawImage highscorePhotoDisplay;
+    //public TextMeshProUGUI highscoreLabel;
+
     [Header("Settings")]
     public float countdownDuration = 10f;
     public float tutorialDuration = 5f;
     public float oxygenDuration = 180f;
     public float roundOverDuration = 5f;
+
+    //public SessionScoreManager scoreManager;
 
     private int currentScore = 0;
     private bool useVersionA = true;
@@ -50,6 +57,7 @@ public class GameStateManager : MonoBehaviour
     void OnEnable()
     {
         GameEvents.OnSessionScoreChanged += UpdateScore;
+
     }
 
     void OnDisable()
@@ -220,12 +228,22 @@ public class GameStateManager : MonoBehaviour
         RoundOver.SetActive(false);
         EndScore.SetActive(true);
         finalScoreText.text = currentScore.ToString();
+        //highscorePhotoDisplay.texture = scoreManager.GetFinalPhotoDisplay().pictureTexture;
+        //highscoreLabel.text = scoreManager.GetFinalPhotoDisplay().totalScore.ToString();
+
     }
 
     public void OnContinuePressed()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
+    }
+
+    public void OnGalleryPressed()
+    {
+        EndScore.SetActive(false);
+        Gallery.SetActive(true);
+        GameEvents.RaiseGalleryScreenActivated();
     }
 
     void UpdateScore(int newScore)

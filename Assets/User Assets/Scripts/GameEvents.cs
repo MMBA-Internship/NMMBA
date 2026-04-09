@@ -108,4 +108,12 @@ public static class GameEvents
     /// </summary>
     public static event Action<bool> OnControlVersionChanged;
     public static void RaiseControlVersionChanged(bool versionA) => OnControlVersionChanged?.Invoke(versionA);
+
+
+    /// <summary>
+    /// Fires when Gallery Screen gets activated
+    /// </summary>
+    public static event Action OnGalleryScreenActivated;
+    public static void RaiseGalleryScreenActivated() => OnGalleryScreenActivated?.Invoke();
+
 }

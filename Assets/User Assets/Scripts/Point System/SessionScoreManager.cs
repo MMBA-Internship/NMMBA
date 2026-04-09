@@ -3,11 +3,13 @@ using UnityEngine;
 
 public class SessionScoreManager : MonoBehaviour
 {
-    [SerializeField] private List<SinglePhotoScoreResult> photoResults = new List<SinglePhotoScoreResult>();
+    public List<SinglePhotoScoreResult> photoResults = new List<SinglePhotoScoreResult>();
 
     public int TotalSessionScore { get; private set; } // CHANGED
     public string HighestScoringPictureName { get; private set; } = "None"; // ADDED
     public int HighestPictureScore { get; private set; } = 0; // ADDED
+
+    private SinglePhotoScoreResult highestScorePicture;
 
     private void OnEnable()
     {
@@ -30,8 +32,7 @@ public class SessionScoreManager : MonoBehaviour
 
         if (result.totalScore > HighestPictureScore)
         {
-            HighestPictureScore = result.totalScore;
-            HighestScoringPictureName = result.pictureName;
+            highestScorePicture = result;
         }
 
         GameEvents.RaiseSessionScoreChanged(TotalSessionScore);
@@ -47,9 +48,15 @@ public class SessionScoreManager : MonoBehaviour
     {
         Debug.Log("return score from score manager");
         int result = 0;
-        photoResults.ForEach( a => {
+        photoResults.ForEach(a =>
+        {
             result += a.totalScore;
         });
         return result;
+    }
+
+    public SinglePhotoScoreResult GetFinalPhotoDisplay()
+    {
+        return highestScorePicture;
     }
 }
