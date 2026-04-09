@@ -20,13 +20,6 @@ public class TakePicture : MonoBehaviour
         GameEvents.OnPhotoInputPressed -= TryCapture;
     }
 
-    private void Start()
-    {
-        int width = w > 0 ? w : Screen.width / 10;
-        int height = h > 0 ? h : Screen.height / 10;
-
-        renderTexture = new RenderTexture(width, height, 24);
-    }
 
     private void TryCapture()
     {
@@ -38,6 +31,11 @@ public class TakePicture : MonoBehaviour
 
     private IEnumerator CapturePhoto_Co()
     {
+        int width = w > 0 ? w : Screen.width /5;
+        int height = h > 0 ? h : Screen.height /5;
+
+        renderTexture = new RenderTexture(width, height, 24);
+
         isCapturing = true;
 
         GameEvents.RaisePhotoCaptureStarted();

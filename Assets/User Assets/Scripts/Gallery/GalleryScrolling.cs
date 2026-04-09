@@ -71,10 +71,16 @@ public class GalleryScrolling : MonoBehaviour
 
     private void SetPhotoAndScore(int index)
     {
+
+        var tex = allPhotos[index].pictureTexture;
+
+        Debug.Log($"Index: {index}, Name: {allPhotos[index].pictureName}, Texture: {tex}, InstanceID: {tex.GetInstanceID()}");
+
+
         photoDisplay.texture = allPhotos[index].pictureTexture;
         scoreLabel.text = allPhotos[index].totalScore.ToString();
 
-        Debug.Log($"Currently displaying picture {currentPhotoIndex} -> Name: {allPhotos[currentPhotoIndex].pictureName}, Score: {allPhotos[currentPhotoIndex].totalScore}");
+        //Debug.Log($"Currently displaying picture {currentPhotoIndex} -> Name: {allPhotos[currentPhotoIndex].pictureName}, Score: {allPhotos[currentPhotoIndex].totalScore}");
     }
 
 
