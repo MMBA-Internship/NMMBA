@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M.S.Kelp_Var1
+  m_Name: M.S.Kelp_Var4
   m_Shader: {fileID: -6465566751694194690, guid: 95dc1654387646845b1ebdee651ae078, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -16,8 +16,8 @@ Material:
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
   - _DOUBLESIDED_ON
-  m_LightmapFlags: 0
-  m_EnableInstancingVariants: 1
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
   m_CustomRenderQueue: 3000
   stringTagMap:
@@ -84,12 +84,12 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 0
     - _EnableFogOnTransparent: 1
     - _ExcludeFromTUAndAA: 0
-    - _GradientHeight: 0.47
-    - _GradientValue: 0.77
-    - _Leaf_Amount: 1.13
+    - _GradientHeight: 0.14
+    - _GradientValue: 0.46
+    - _Leaf_Amount: 1.75
     - _Leaf_Variation: 0
-    - _Leaf_VerticalOffset: 1.06
-    - _Opacity: 3.2
+    - _Leaf_VerticalOffset: 0
+    - _Opacity: -1.4
     - _OpaqueCullMode: 2
     - _PerPixelSorting: 0
     - _RenderQueueType: 4
@@ -111,11 +111,11 @@ Material:
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
     - _UseShadowThreshold: 0
-    - _WaveIntensity: -1.2
-    - _WaveSpeed: 1.4
-    - _WaveStrength: 0.05
-    - _Waves_X: 2.93
-    - _Waves_Z: 3.11
+    - _WaveIntensity: -1.7
+    - _WaveSpeed: 1.8
+    - _WaveStrength: 0.061
+    - _Waves_X: 3.34
+    - _Waves_Z: 2.66
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestTransparent: 4
     - _ZWrite: 0
@@ -125,7 +125,7 @@ Material:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _Leaf_Variation: {r: -0.11, g: -0.31, b: 0, a: 0}
-    - _OverlayColor: {r: 0.7075472, g: 0.42042515, b: 0.25698647, a: 1}
+    - _OverlayColor: {r: 1, g: 0.8522568, b: 0.7688679, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &1989217957591283965

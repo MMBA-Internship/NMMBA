@@ -16,8 +16,8 @@ Material:
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
   - _DOUBLESIDED_ON
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 1
   m_CustomRenderQueue: 3000
   stringTagMap:
@@ -84,12 +84,12 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 0
     - _EnableFogOnTransparent: 1
     - _ExcludeFromTUAndAA: 0
-    - _GradientHeight: 0.14
-    - _GradientValue: 0.55
-    - _Leaf_Amount: 1.24
-    - _Leaf_Variation: 2.16
-    - _Leaf_VerticalOffset: 0
-    - _Opacity: -1.3
+    - _GradientHeight: 0.8
+    - _GradientValue: 0
+    - _Leaf_Amount: 1.47
+    - _Leaf_Variation: 0
+    - _Leaf_VerticalOffset: 0.47
+    - _Opacity: 0.1
     - _OpaqueCullMode: 2
     - _PerPixelSorting: 0
     - _RenderQueueType: 4
@@ -111,11 +111,11 @@ Material:
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
     - _UseShadowThreshold: 0
-    - _WaveIntensity: -3.2
-    - _WaveSpeed: 1.8
-    - _WaveStrength: 0.061
-    - _Waves_X: 4
-    - _Waves_Z: 0
+    - _WaveIntensity: -2.1
+    - _WaveSpeed: 1.4
+    - _WaveStrength: 0.04
+    - _Waves_X: 2.93
+    - _Waves_Z: 3.11
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestTransparent: 4
     - _ZWrite: 0
@@ -125,7 +125,7 @@ Material:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _Leaf_Variation: {r: -0.11, g: -0.31, b: 0, a: 0}
-    - _OverlayColor: {r: 1, g: 0.3627451, b: 0, a: 1}
+    - _OverlayColor: {r: 1, g: 0.8228988, b: 0.7216981, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &1989217957591283965
