@@ -31,15 +31,16 @@ public class GalleryScrolling : MonoBehaviour
 
         allPhotos.Sort((a, b) => b.totalScore.CompareTo(a.totalScore));
 
-        /*Debug.Log("All photos and their scores:");
+        Debug.Log("All photos and their scores:");
         foreach (SinglePhotoScoreResult photo in allPhotos)
         {
             Debug.Log($"Photo: {photo.pictureName}, Score: {photo.totalScore}");
-        }*/
+        }
+
         // WATCH OUT IF PPL DONT TAKE ANY PHOTOS, THIS WILL CRASH !!!!!!
-        
-        SetPhotoAndScore(0);
+
         currentPhotoIndex = 0;
+        SetPhotoAndScore(currentPhotoIndex);
 
     }
 
@@ -52,6 +53,7 @@ public class GalleryScrolling : MonoBehaviour
         {
             currentPhotoIndex = 0;
         }
+
         SetPhotoAndScore(currentPhotoIndex);
 
     }
@@ -71,6 +73,8 @@ public class GalleryScrolling : MonoBehaviour
     {
         photoDisplay.texture = allPhotos[index].pictureTexture;
         scoreLabel.text = allPhotos[index].totalScore.ToString();
+
+        Debug.Log($"Currently displaying picture {currentPhotoIndex} -> Name: {allPhotos[currentPhotoIndex].pictureName}, Score: {allPhotos[currentPhotoIndex].totalScore}");
     }
 
 
