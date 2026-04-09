@@ -67,6 +67,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 85530c6d709e04749a633ba86e9d6dec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6200760497829645776}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 85530c6d709e04749a633ba86e9d6dec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5165130445137341586}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 85530c6d709e04749a633ba86e9d6dec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -101976042288548952}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 85530c6d709e04749a633ba86e9d6dec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4580708968142287648}
   m_SourcePrefab: {fileID: 100100000, guid: 85530c6d709e04749a633ba86e9d6dec, type: 3}
 --- !u!1 &2489291201480407455 stripped
 GameObject:
@@ -94,3 +103,56 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.23576716, y: 0.1568691, z: 0.36643368}
   m_Center: {x: -0.013274357, y: 0.06579851, z: 0.002789855}
+--- !u!114 &-5165130445137341586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2489291201480407455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
+  m_Target: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_LoopMode: 1
+  m_Method: 0
+  m_Duration: 1
+  m_MaxSpeed: 10
+  m_EasingMode: 0
+  m_AlignmentMode: 1
+  m_ObjectForwardAxis: 2
+  m_ObjectUpAxis: 1
+  m_StartOffset: 0
+--- !u!114 &-101976042288548952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2489291201480407455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b2b707f5487194c8ce851a23fabd91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishData
+  reference: 
+  speed: 0
+  rarity: 0
+--- !u!114 &4580708968142287648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2489291201480407455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0cc3be9f5d7434c8aa107a689a885f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishManager
+  speedMultiplier: 3.5
+  splines: []
+  triggerName: 
