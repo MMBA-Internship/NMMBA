@@ -86,7 +86,7 @@ Material:
     - _ExcludeFromTUAndAA: 0
     - _GradientHeight: 0.8
     - _GradientValue: 0
-    - _Leaf_Amount: 1.47
+    - _Leaf_Amount: 4.53
     - _Leaf_Variation: 0
     - _Leaf_VerticalOffset: 0.47
     - _Opacity: 0.1
