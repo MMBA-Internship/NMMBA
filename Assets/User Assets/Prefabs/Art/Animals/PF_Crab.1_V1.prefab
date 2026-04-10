@@ -76,6 +76,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 85530c6d709e04749a633ba86e9d6dec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4580708968142287648}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 85530c6d709e04749a633ba86e9d6dec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 115417886742956186}
   m_SourcePrefab: {fileID: 100100000, guid: 85530c6d709e04749a633ba86e9d6dec, type: 3}
 --- !u!1 &2489291201480407455 stripped
 GameObject:
@@ -156,3 +159,17 @@ MonoBehaviour:
   speedMultiplier: 3.5
   splines: []
   triggerName: 
+--- !u!114 &115417886742956186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2489291201480407455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a721f2f2064893428ed4c9f531fc2d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::animDebug
+  interact1: 0
+  interact2: 0
