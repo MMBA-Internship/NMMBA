@@ -4,6 +4,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
+using System;
 using UnityEngine.UI;
 
 
@@ -26,6 +27,7 @@ public class GameStateManager : MonoBehaviour
 	public TMP_InputField MinCameraDepth;
 	public TMP_InputField CameraRegionStart;
 	public TMP_InputField CameraRegionEnd;
+	public TextMeshProUGUI CameraErrorText;
 
 	[Header("Lobby UI Elements")]
 	public GameObject notReadyState;
@@ -62,13 +64,23 @@ public class GameStateManager : MonoBehaviour
 		GameEvents.OnSessionScoreChanged += UpdateScore;
 		GameEvents.OnHandEntered += ShowHandUI;
 		GameEvents.OnHandExited += HideHandUI;
+		GameEvents.On3DCameraConnectionError += ShowCameraError;
 	}
+
 
 	void OnDisable()
 	{
 		GameEvents.OnSessionScoreChanged -= UpdateScore;
 		GameEvents.OnHandEntered -= ShowHandUI;
 		GameEvents.OnHandExited -= HideHandUI;
+		GameEvents.On3DCameraConnectionError -= ShowCameraError;
+	}
+
+	private void ShowCameraError(Exception exception)
+	{
+		CameraErrorText.gameObject.SetActive(true);
+		CameraErrorText.text = "Error: " + exception.Message;
+		
 	}
 
 	private void HideHandUI()
@@ -79,6 +91,12 @@ public class GameStateManager : MonoBehaviour
 	private void ShowHandUI()
 	{
 		HandDetectedUI.SetActive(true);
+	}
+
+	public void Try3DCameraConnect()
+	{
+		CameraErrorText.gameObject.SetActive(false);
+		GameEvents.RaiseTry3DCameraConnect();
 	}
 
 	public void ToggleVersion()

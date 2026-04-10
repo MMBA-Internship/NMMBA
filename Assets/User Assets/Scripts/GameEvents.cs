@@ -19,12 +19,28 @@ public static class GameEvents
 
 
 
+	/// <summary>
+	/// Fires when settings are updated and saved from the config menu of the wall
+	/// </summary>
 	public static event Action<float, float, float, float> On3DCameraSettingsSaved;
 	public static void Raise3DCameraSettingsSaved(
 		float maxDepth,
 		float minDepth,
 		float regionStart,
 		float regionEnd) => On3DCameraSettingsSaved?.Invoke(maxDepth, minDepth, regionStart, regionEnd);
+
+
+
+	/// <summary>
+	/// Fires when 3D Realsense camera throws an exception
+	/// </summary>
+	public static event Action<Exception> On3DCameraConnectionError;
+	public static void Raise3DCameraConnectionError(Exception e) => On3DCameraConnectionError?.Invoke(e);
+
+
+
+	public static event Action OnTry3DCameraConnect;
+	public static void RaiseTry3DCameraConnect() => OnTry3DCameraConnect?.Invoke();
 
 
 

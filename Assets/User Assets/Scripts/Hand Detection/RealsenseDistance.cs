@@ -8,13 +8,8 @@ public class RealsenseDistance : MonoBehaviour
 	private Pipeline pipeline;
 
 	// Depth range
-	// TODO: make configurable on startup of game
 	public float minDepth = 0.2f;
 	public float maxDepth = 2f;
-
-	// Depth  Unity Y mapping
-	//public float minY = 0f;  // closest hand  lower Y
-	//public float maxY = 4f;  // farthest hand  higher Y
 
 	// Detection region (top of camera)
 	[Range(0f, 1f)]
@@ -24,13 +19,6 @@ public class RealsenseDistance : MonoBehaviour
 	[SerializeField]
 	private float topRegionEnd = 0.55f;
 
-	// Hand marker
-	//[SerializeField] private GameObject handMarkerPrefab;
-	//private GameObject handMarkerInstance;
-
-	// Output position
-	//[SerializeField] private Vector3 handPosition;
-
 	private bool handDetected = false;
 
 	[SerializeField] private float requiredDetectionTime = 0.2f;
@@ -39,19 +27,31 @@ public class RealsenseDistance : MonoBehaviour
 
 	void Start()
 	{
+		TryConnect();
+		GameEvents.On3DCameraSettingsSaved += UpdateSettings;
+		GameEvents.OnTry3DCameraConnect += TryConnect;
+	}
+
+	private void TryConnect()
+	{
 		pipeline = new Pipeline();
 
-		var config = new Config();
-		config.EnableStream(Stream.Depth, 640, 480, Format.Z16, 30);
-		pipeline.Start(config);
+		try
+		{
+			var config = new Config();
+			config.EnableStream(Stream.Depth, 640, 480, Format.Z16, 30);
+			pipeline.Start(config);
+			enabled = true;
+		}
+		catch (Exception e)
+		{
+			Debug.LogError("RealSense camera not found or failed to start: " + e.Message);
+			GameEvents.Raise3DCameraConnectionError(e);
+			pipeline = null;
 
-		// Always spawn marker
-		//if (handMarkerPrefab != null)
-		//{
-		//    handMarkerInstance = Instantiate(handMarkerPrefab);
-		//}
-
-		GameEvents.On3DCameraSettingsSaved += UpdateSettings;
+			// Don't run update
+			enabled = false;
+		}
 	}
 
 	private void UpdateSettings(float maxDepth, float minDepth, float regionStart, float regionEnd)
@@ -65,9 +65,6 @@ public class RealsenseDistance : MonoBehaviour
 	void Update()
 	{
 		accumulatedTime += Time.deltaTime;
-
-		//if (pipeline == null || handMarkerInstance == null)
-		//    return;
 
 		if (!pipeline.PollForFrames(out FrameSet frames))
 			return;
@@ -115,9 +112,6 @@ public class RealsenseDistance : MonoBehaviour
 					}
 				}
 
-				//float mappedY;
-				//float mappedX;
-
 				if (count > 10)
 				{
 					detectionTime += accumulatedTime;
@@ -131,28 +125,6 @@ public class RealsenseDistance : MonoBehaviour
 
 				detectionTime = Mathf.Clamp(detectionTime, 0f, requiredDetectionTime);
 				bool detectedThisFrame = detectionTime >= requiredDetectionTime;
-
-				//if (detectedThisFrame)
-				//{
-				//    float avgDepth = sumDepth / count;
-				//    float avgX = sumX / count;
-
-				//    // Depth  Y mapping (further away = higher Y)
-				//    float t = (avgDepth - minDepth) / (maxDepth - minDepth);
-				//    mappedY = Mathf.Lerp(minY, maxY, t);  // flipped
-
-				//    mappedX = -avgX;
-				//}
-				//else
-				//{
-				//    mappedY = minY;
-				//    mappedX = 0f;
-				//}
-
-				//handPosition = new Vector3(mappedX * 10, mappedY * 10, 0f);
-				//handMarkerInstance.transform.position = handPosition;
-
-				//Debug.Log($"Depth avg: {sumDepth / Mathf.Max(1, count):F2} to Y: {mappedY:F2} | X: {mappedX:F2}");
 
 				if (detectedThisFrame && !handDetected)
 				{
