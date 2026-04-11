@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -941369014746943561, guid: d041c883236c52b46bcc7cab5c7ee2f3, type: 3}
+      propertyPath: m_Method
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1137900277467783353, guid: d041c883236c52b46bcc7cab5c7ee2f3, type: 3}
       propertyPath: m_Name
       value: PF_Damsel.Flock_V1 Variant
