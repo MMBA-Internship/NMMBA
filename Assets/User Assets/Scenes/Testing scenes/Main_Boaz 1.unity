@@ -792,18 +792,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 3711109187523083180, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3787825371646609785, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3816049377087944910, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4108519007481705700, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.67
@@ -848,25 +836,14 @@ PrefabInstance:
       propertyPath: path
       value: 
       objectReference: {fileID: 1150185709}
-    - target: {fileID: 5403131646752177410, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
-      propertyPath: speed
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 5403131646752177410, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
-      propertyPath: pointRange
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5403131646752177410, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
-      propertyPath: bezierCurve
+    - target: {fileID: 9062679119993737431, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
+      propertyPath: cameraPivot
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1823688467}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2593445343295350792, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1843946202}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
 --- !u!4 &106647888 stripped
 Transform:
@@ -14948,74 +14925,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2593445343295350792, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
   m_PrefabInstance: {fileID: 104832285}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1843946202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1843946197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ad27e2881cf1d0419b9c3023f5f5f7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CamerDragRotation
-  point:
-    m_Name: Point
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 82a1109b-47dd-443e-9d74-66e0829ade01
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: a3dd054e-35c8-4b17-a1f3-3e7340ffac20
-      m_Path: <Pointer>/position
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Point
-      m_Flags: 0
-    m_Flags: 0
-  delta:
-    m_Name: Delta
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 9582790b-078f-45c7-9d8f-924273d8ad56
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 76a64c86-8e50-4cc3-a3bd-a782c5497c25
-      m_Path: <Pointer>/delta
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Delta
-      m_Flags: 0
-    m_Flags: 0
-  press:
-    m_Name: Press
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 3eae1d9f-0af5-496e-9000-2e8401e10234
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 9ad806c3-83c3-40a0-a964-53dd77974d45
-      m_Path: <Pointer>/press
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Press
-      m_Flags: 0
-    m_Flags: 0
-  cameraPivot: {fileID: 1823688467}
-  sensitivity: 0.1
-  minPitch: -60
-  maxPitch: 60
-  ignoreUI: 1
 --- !u!1 &1847452704 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2489291201480407455, guid: 6eada871c078daa48b629bcc1bf8c53d, type: 3}

@@ -124,9 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10cc6b84d3f764140ace5c3e47b388bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bezierCurve: {fileID: 0}
-  speed: 0.123333335
-  pointRange: 0.23
+  path: {fileID: 0}
+  speed: 0.01
 --- !u!114 &3711109187523083180
 MonoBehaviour:
   m_ObjectHideFlags: 0

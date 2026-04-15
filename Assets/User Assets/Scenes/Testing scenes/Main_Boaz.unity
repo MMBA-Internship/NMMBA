@@ -20564,61 +20564,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4646851587036567966, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
-      propertyPath: click.m_Name
-      value: Click
-      objectReference: {fileID: 0}
-    - target: {fileID: 4646851587036567966, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
-      propertyPath: doubleTap.m_Name
-      value: Double Tap
-      objectReference: {fileID: 0}
-    - target: {fileID: 4646851587036567966, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
-      propertyPath: click.m_SingletonActionBindings.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4646851587036567966, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
-      propertyPath: doubleTap.m_SingletonActionBindings.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4646851587036567966, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
-      propertyPath: click.m_SingletonActionBindings.Array.data[0].m_Id
-      value: e737b0b9-9050-4b84-bd8a-e7e92036a447
-      objectReference: {fileID: 0}
-    - target: {fileID: 4646851587036567966, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
-      propertyPath: click.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Click
-      objectReference: {fileID: 0}
-    - target: {fileID: 4646851587036567966, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
-      propertyPath: doubleTap.m_SingletonActionBindings.Array.data[0].m_Id
-      value: c0f114c2-0309-4e9d-bc79-9fb232e72b2d
-      objectReference: {fileID: 0}
-    - target: {fileID: 4646851587036567966, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
-      propertyPath: doubleTap.m_SingletonActionBindings.Array.data[1].m_Id
-      value: c0f114c2-0309-4e9d-bc79-9fb232e72b2d
-      objectReference: {fileID: 0}
-    - target: {fileID: 4646851587036567966, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
-      propertyPath: doubleTap.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Pointer>/press
-      objectReference: {fileID: 0}
-    - target: {fileID: 4646851587036567966, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
-      propertyPath: doubleTap.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Double Tap
-      objectReference: {fileID: 0}
-    - target: {fileID: 4646851587036567966, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
-      propertyPath: doubleTap.m_SingletonActionBindings.Array.data[1].m_Action
-      value: Double Tap
-      objectReference: {fileID: 0}
-    - target: {fileID: 4646851587036567966, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
-      propertyPath: doubleTap.m_SingletonActionBindings.Array.data[0].m_Interactions
-      value: MultiTap
-      objectReference: {fileID: 0}
     - target: {fileID: 4758421506704602169, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
       propertyPath: m_Name
       value: PicCam
-      objectReference: {fileID: 0}
-    - target: {fileID: 5610562403927365753, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
-      propertyPath: flashImage
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

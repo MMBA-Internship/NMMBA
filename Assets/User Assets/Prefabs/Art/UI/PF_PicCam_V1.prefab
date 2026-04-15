@@ -60,7 +60,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1546adcd85ea7014ebd7c666292a81ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PhotoInput
-  photoKey: 32
   photoCooldown: 3
   doubleTap:
     m_Name: Double Tap
@@ -69,7 +68,15 @@ MonoBehaviour:
     m_Id: 1cb15d91-a0ea-403d-adb1-a752762be550
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: c0f114c2-0309-4e9d-bc79-9fb232e72b2d
+      m_Path: <Pointer>/press
+      m_Interactions: MultiTap
+      m_Processors: 
+      m_Groups: 
+      m_Action: Double Tap
+      m_Flags: 0
     m_Flags: 0
 --- !u!114 &8154933054275168033
 MonoBehaviour:

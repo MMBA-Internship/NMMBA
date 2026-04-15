@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3787825371646609785}
   - component: {fileID: 5403131646752177410}
   - component: {fileID: 3711109187523083180}
+  - component: {fileID: 9062679119993737431}
   m_Layer: 0
   m_Name: PF_Camera_V1
   m_TagString: Untagged
@@ -42,7 +43,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2593445343295350792}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
   m_Name: 
@@ -85,7 +86,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2593445343295350792}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62d54399b04b4fa48a73e121d4937dd4, type: 3}
   m_Name: 
@@ -124,9 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10cc6b84d3f764140ace5c3e47b388bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bezierCurve: {fileID: 0}
-  speed: 0.123333335
-  pointRange: 0.23
+  path: {fileID: 0}
+  speed: 0.02
 --- !u!114 &3711109187523083180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2593445343295350792}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89875cdc57c54474a8a74efd9b2a3b5d, type: 3}
   m_Name: 
@@ -168,3 +168,71 @@ MonoBehaviour:
         DecelTime: 0.2
   PlayerIndex: -1
   AutoEnableInputs: 1
+--- !u!114 &9062679119993737431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2593445343295350792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad27e2881cf1d0419b9c3023f5f5f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CamerDragRotation
+  point:
+    m_Name: Point
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 82a1109b-47dd-443e-9d74-66e0829ade01
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: a3dd054e-35c8-4b17-a1f3-3e7340ffac20
+      m_Path: <Pointer>/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Point
+      m_Flags: 0
+    m_Flags: 0
+  delta:
+    m_Name: Delta
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9582790b-078f-45c7-9d8f-924273d8ad56
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 76a64c86-8e50-4cc3-a3bd-a782c5497c25
+      m_Path: <Pointer>/delta
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Delta
+      m_Flags: 0
+    m_Flags: 0
+  press:
+    m_Name: Press
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 3eae1d9f-0af5-496e-9000-2e8401e10234
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 9ad806c3-83c3-40a0-a964-53dd77974d45
+      m_Path: <Pointer>/press
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Press
+      m_Flags: 0
+    m_Flags: 0
+  cameraPivot: {fileID: 0}
+  sensitivity: 0.1
+  minPitch: -60
+  maxPitch: 60
+  ignoreUI: 1
