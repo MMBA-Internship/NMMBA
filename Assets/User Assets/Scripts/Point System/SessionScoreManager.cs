@@ -46,7 +46,6 @@ public class SessionScoreManager : MonoBehaviour
 
     public int GetTotalSessionScore()
     {
-        Debug.Log("return score from score manager");
         int result = 0;
         photoResults.ForEach(a =>
         {
