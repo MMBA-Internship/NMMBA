@@ -10,6 +10,8 @@ using UnityEngine.UI;
 
 public class GameStateManager : MonoBehaviour
 {
+	public bool WallBuild = false;
+
 	[Header("UI Screens")]
 	public GameObject ConfigScreen;
 	public GameObject LobbyScreen;
@@ -80,7 +82,7 @@ public class GameStateManager : MonoBehaviour
 	{
 		CameraErrorText.gameObject.SetActive(true);
 		CameraErrorText.text = "Error: " + exception.Message;
-		
+
 	}
 
 	private void HideHandUI()
@@ -213,17 +215,18 @@ public class GameStateManager : MonoBehaviour
 		countdownText.text = "";
 	}
 
-	void StartGameplay()
+	public void StartGameplay()
 	{
 		//hide lobby, show gameplay
 		LobbyScreen.SetActive(false);
+		ConfigScreen.SetActive(false);
 
-		if (useVersionA)
+		if (useVersionA && !WallBuild)
 		{
 			GameplayScreen_A.SetActive(true);
 			Tutorial_A.SetActive(true);
 		}
-		else
+		else if (!WallBuild)
 		{
 			GameplayScreen_B.SetActive(true);
 			Tutorial_B.SetActive(true);
@@ -261,7 +264,8 @@ public class GameStateManager : MonoBehaviour
 			int seconds = Mathf.FloorToInt(timeRemaining % 60);
 			activeTimerText.text = $"{minutes:00}:{seconds:00}";
 
-			timeRemaining -= Time.deltaTime;
+			if (!WallBuild)
+				timeRemaining -= Time.deltaTime;
 			yield return null;
 		}
 	}
@@ -292,14 +296,14 @@ public class GameStateManager : MonoBehaviour
 	{
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
-    }
+	}
 
-    public void OnGalleryPressed()
-    {
-        EndScore.SetActive(false);
-        Gallery.SetActive(true);
-        GameEvents.RaiseGalleryScreenActivated();
-    }
+	public void OnGalleryPressed()
+	{
+		EndScore.SetActive(false);
+		Gallery.SetActive(true);
+		GameEvents.RaiseGalleryScreenActivated();
+	}
 
 	void UpdateScore(int newScore)
 	{
