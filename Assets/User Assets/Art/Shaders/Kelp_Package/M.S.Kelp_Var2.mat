@@ -74,7 +74,7 @@ Material:
     - _ConservativeDepthOffsetEnable: 0
     - _CullMode: 0
     - _CullModeForward: 0
-    - _Cutoff_Position: -0.47
+    - _Cutoff_Position: -0.38
     - _DepthOffsetEnable: 0
     - _DoubleSidedEnable: 1
     - _DoubleSidedGIMode: 0
@@ -84,12 +84,12 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 0
     - _EnableFogOnTransparent: 1
     - _ExcludeFromTUAndAA: 0
-    - _GradientHeight: -0.8
+    - _GradientHeight: 0.8
     - _GradientValue: 1
     - _Leaf_Amount: 1.07
     - _Leaf_Variation: 0.34
-    - _Leaf_VerticalOffset: 0.87
-    - _Opacity: -0.2
+    - _Leaf_VerticalOffset: 0.93
+    - _Opacity: -3
     - _OpaqueCullMode: 2
     - _PerPixelSorting: 0
     - _RenderQueueType: 4
@@ -111,7 +111,7 @@ Material:
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
     - _UseShadowThreshold: 0
-    - _WaveIntensity: -2.1
+    - _WaveIntensity: -2.8
     - _WaveSpeed: 1.9
     - _WaveStrength: 0.04
     - _Waves_X: 2.52
@@ -125,7 +125,7 @@ Material:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _Leaf_Variation: {r: -0.11, g: -0.31, b: 0, a: 0}
-    - _OverlayColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OverlayColor: {r: 1, g: 0.8962264, b: 0.8962264, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &1989217957591283965
