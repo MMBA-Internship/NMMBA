@@ -101,6 +101,16 @@ MonoBehaviour:
     m_Localized: Traditional Chinese
     m_Metadata:
       m_Items: []
+  - m_Id: 3531344264028160
+    m_Localized: Photo Gallery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3533163593719808
+    m_Localized: 'You''re a real underwater
+
+      photographer!'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

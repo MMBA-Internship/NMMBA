@@ -87,6 +87,14 @@ MonoBehaviour:
     m_Key: TraditionalChineseLanguageText
     m_Metadata:
       m_Items: []
+  - m_Id: 3531344264028160
+    m_Key: GalleryText1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3533163593719808
+    m_Key: GalleryText2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
