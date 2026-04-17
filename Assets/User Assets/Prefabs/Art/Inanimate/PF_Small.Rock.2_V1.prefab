@@ -62,7 +62,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 72127f2cc107151439ec8e839e7d81a6, type: 3}
       propertyPath: m_Name
-      value: Small rock 3
+      value: PF_Small.Rock.2_V1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 72127f2cc107151439ec8e839e7d81a6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Dwayne_V1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b86a0d40722e8a74b89e03d77eb8c0ed, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
