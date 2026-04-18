@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &9127607096758148737
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 47.223
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.079
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.163
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+      propertyPath: m_Name
+      value: Damsel LODS
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.14910552
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.051267695
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3792968877797415137}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 731400260993259867}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2847434931456767994}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7151244790075548994}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6999821655931505740}
+  m_SourcePrefab: {fileID: 100100000, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+--- !u!1 &8244595147029324752 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
+  m_PrefabInstance: {fileID: 9127607096758148737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &3792968877797415137
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8244595147029324752}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.22119522, y: 0.5253627, z: 0.7848882}
+  m_Center: {x: -0.006467819, y: 0.01599291, z: -0.107555896}
+--- !u!114 &731400260993259867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8244595147029324752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b2b707f5487194c8ce851a23fabd91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishData
+  reference: 
+  speed: 0
+  rarity: 0
+--- !u!95 &2847434931456767994
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8244595147029324752}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7151244790075548994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8244595147029324752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0cc3be9f5d7434c8aa107a689a885f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishManager
+  speedMultiplier: 3.5
+  splines: []
+  triggerName: 
+--- !u!114 &6999821655931505740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8244595147029324752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
+  m_Target: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_LoopMode: 1
+  m_Method: 0
+  m_Duration: 1
+  m_MaxSpeed: 10
+  m_EasingMode: 0
+  m_AlignmentMode: 1
+  m_ObjectForwardAxis: 2
+  m_ObjectUpAxis: 1
+  m_StartOffset: 0
