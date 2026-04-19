@@ -563,6 +563,10 @@ PrefabInstance:
       value: -Managers-
       objectReference: {fileID: 0}
     - target: {fileID: 8018181755518162613, guid: 226cd394eb3a4cc4f9106ca16ee3c78a, type: 3}
+      propertyPath: fovAngle
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018181755518162613, guid: 226cd394eb3a4cc4f9106ca16ee3c78a, type: 3}
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1823688464}
@@ -8910,7 +8914,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &409279529
 Transform:
   m_ObjectHideFlags: 0
@@ -9804,7 +9808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &454395963
 Transform:
   m_ObjectHideFlags: 0
@@ -29279,6 +29283,10 @@ PrefabInstance:
       propertyPath: oxygenDuration
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 3453080521947802186, guid: 02054630980bfb94ab8b52a9fe14bee1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5060550533016758886, guid: 02054630980bfb94ab8b52a9fe14bee1, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -29381,7 +29389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5506369498404963032, guid: 02054630980bfb94ab8b52a9fe14bee1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33129,6 +33137,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Camera_V1
       objectReference: {fileID: 0}
+    - target: {fileID: 3816049377087944910, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
+      propertyPath: Lens.FieldOfView
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 4108519007481705700, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -58.38714
@@ -33175,12 +33187,16 @@ PrefabInstance:
       objectReference: {fileID: 1902450300}
     - target: {fileID: 5403131646752177410, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
       propertyPath: speed
-      value: 0.01
+      value: 0.005
       objectReference: {fileID: 0}
     - target: {fileID: 9062679119993737431, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
       propertyPath: cameraPivot
       value: 
       objectReference: {fileID: 1823688467}
+    - target: {fileID: 9062679119993737431, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
+      propertyPath: sensitivity
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41729,12 +41745,12 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.34
+    y: 0
     width: 1
-    height: 0.32
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 90
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -49202,7 +49218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5506369498404963032, guid: 797eaa4cb46768d4888707297cde1310, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
