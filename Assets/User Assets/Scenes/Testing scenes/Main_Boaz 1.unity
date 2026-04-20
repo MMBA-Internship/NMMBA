@@ -856,20 +856,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 771145406}
     m_Modifications:
     - target: {fileID: -3775067516474540746, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 312495176}
-    - target: {fileID: -3775067516474540746, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       propertyPath: m_Duration
-      value: 37.095932
-      objectReference: {fileID: 0}
-    - target: {fileID: -3775067516474540746, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
-      propertyPath: m_MaxSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -3775067516474540746, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
-      propertyPath: m_StartOffset
-      value: 0.5
+      value: 9.273983
       objectReference: {fileID: 0}
     - target: {fileID: 564916585162889112, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -914,14 +902,6 @@ PrefabInstance:
     - target: {fileID: 6542400665649160516, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       propertyPath: m_Name
       value: PF.Moorish_3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7230040978247102243, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
-      propertyPath: rarity
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7230040978247102243, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
-      propertyPath: reference
-      value: Moorish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1294,16 +1274,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 771145406}
     m_Modifications:
     - target: {fileID: -6057616456654410009, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 642027638}
-    - target: {fileID: -6057616456654410009, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
       propertyPath: m_Duration
       value: 106.11926
-      objectReference: {fileID: 0}
-    - target: {fileID: -6057616456654410009, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
-      propertyPath: m_MaxSpeed
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 563237063560715722, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1349,14 +1321,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: A_Turtle_2
       objectReference: {fileID: 0}
-    - target: {fileID: 3460218897590212586, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
-      propertyPath: rarity
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3460218897590212586, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
-      propertyPath: reference
-      value: Turtle
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1371,16 +1335,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 771145406}
     m_Modifications:
     - target: {fileID: -3775067516474540746, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 312495176}
-    - target: {fileID: -3775067516474540746, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       propertyPath: m_Duration
-      value: 37.095932
-      objectReference: {fileID: 0}
-    - target: {fileID: -3775067516474540746, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
-      propertyPath: m_MaxSpeed
-      value: 1
+      value: 9.273983
       objectReference: {fileID: 0}
     - target: {fileID: 564916585162889112, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1425,14 +1381,6 @@ PrefabInstance:
     - target: {fileID: 6542400665649160516, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       propertyPath: m_Name
       value: PF.Moorish_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7230040978247102243, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
-      propertyPath: rarity
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7230040978247102243, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
-      propertyPath: reference
-      value: Moorish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3010,14 +2958,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 771145406}
     m_Modifications:
-    - target: {fileID: 191232459115813222, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
-      propertyPath: rarity
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 191232459115813222, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
-      propertyPath: reference
-      value: Zebra Shark
-      objectReference: {fileID: 0}
     - target: {fileID: 1586729485221774320, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.62
@@ -3063,16 +3003,8 @@ PrefabInstance:
       value: A_ZebraShark_4
       objectReference: {fileID: 0}
     - target: {fileID: 5524531006549775312, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 654862423}
-    - target: {fileID: 5524531006549775312, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
       propertyPath: m_Duration
-      value: 24.79989
-      objectReference: {fileID: 0}
-    - target: {fileID: 5524531006549775312, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
-      propertyPath: m_MaxSpeed
-      value: 1
+      value: 9.919956
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8656,14 +8588,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 771145406}
     m_Modifications:
-    - target: {fileID: 1249054101766156162, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
-      propertyPath: rarity
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249054101766156162, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
-      propertyPath: reference
-      value: Eagle Ray
-      objectReference: {fileID: 0}
     - target: {fileID: 1413789375650775279, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.17
@@ -8709,16 +8633,8 @@ PrefabInstance:
       value: A_EagleRay_2
       objectReference: {fileID: 0}
     - target: {fileID: 2796192894167337163, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 731367265}
-    - target: {fileID: 2796192894167337163, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
       propertyPath: m_Duration
-      value: 188.66672
-      objectReference: {fileID: 0}
-    - target: {fileID: 2796192894167337163, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
-      propertyPath: m_MaxSpeed
-      value: 1
+      value: 62.888905
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9005,14 +8921,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 771145406}
     m_Modifications:
-    - target: {fileID: 1249054101766156162, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
-      propertyPath: rarity
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249054101766156162, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
-      propertyPath: reference
-      value: Eagle Ray
-      objectReference: {fileID: 0}
     - target: {fileID: 1413789375650775279, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.17
@@ -9058,16 +8966,8 @@ PrefabInstance:
       value: A_EagleRay_3
       objectReference: {fileID: 0}
     - target: {fileID: 2796192894167337163, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 432718614}
-    - target: {fileID: 2796192894167337163, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
       propertyPath: m_Duration
-      value: 188.66672
-      objectReference: {fileID: 0}
-    - target: {fileID: 2796192894167337163, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
-      propertyPath: m_MaxSpeed
-      value: 1
+      value: 62.888905
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9555,14 +9455,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 771145406}
     m_Modifications:
-    - target: {fileID: 1249054101766156162, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
-      propertyPath: rarity
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249054101766156162, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
-      propertyPath: reference
-      value: Eagle Ray
-      objectReference: {fileID: 0}
     - target: {fileID: 1413789375650775279, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.4547664
@@ -9608,20 +9500,8 @@ PrefabInstance:
       value: A_EagleRay_4
       objectReference: {fileID: 0}
     - target: {fileID: 2796192894167337163, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 805760559}
-    - target: {fileID: 2796192894167337163, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
       propertyPath: m_Duration
-      value: 51.66594
-      objectReference: {fileID: 0}
-    - target: {fileID: 2796192894167337163, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
-      propertyPath: m_MaxSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2796192894167337163, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
-      propertyPath: m_StartOffset
-      value: 1
+      value: 17.22198
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10664,14 +10544,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 771145406}
     m_Modifications:
-    - target: {fileID: 191232459115813222, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
-      propertyPath: rarity
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 191232459115813222, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
-      propertyPath: reference
-      value: Zebra Shark
-      objectReference: {fileID: 0}
     - target: {fileID: 1586729485221774320, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.685155
@@ -10717,16 +10589,8 @@ PrefabInstance:
       value: A_ZebraShark_3
       objectReference: {fileID: 0}
     - target: {fileID: 5524531006549775312, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 90955088}
-    - target: {fileID: 5524531006549775312, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
       propertyPath: m_Duration
-      value: 52.00487
-      objectReference: {fileID: 0}
-    - target: {fileID: 5524531006549775312, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
-      propertyPath: m_MaxSpeed
-      value: 1
+      value: 20.801949
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11716,16 +11580,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 771145406}
     m_Modifications:
     - target: {fileID: -6057616456654410009, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 647161912}
-    - target: {fileID: -6057616456654410009, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
       propertyPath: m_Duration
       value: 106.78328
-      objectReference: {fileID: 0}
-    - target: {fileID: -6057616456654410009, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
-      propertyPath: m_MaxSpeed
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 563237063560715722, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11770,14 +11626,6 @@ PrefabInstance:
     - target: {fileID: 908273074614208368, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
       propertyPath: m_Name
       value: A_Turtle_4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3460218897590212586, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
-      propertyPath: rarity
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3460218897590212586, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
-      propertyPath: reference
-      value: Turtle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12249,14 +12097,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 771145406}
     m_Modifications:
-    - target: {fileID: 191232459115813222, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
-      propertyPath: rarity
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 191232459115813222, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
-      propertyPath: reference
-      value: Zebra Shark
-      objectReference: {fileID: 0}
     - target: {fileID: 1586729485221774320, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.279267
@@ -12302,16 +12142,8 @@ PrefabInstance:
       value: A_ZebraShark_2
       objectReference: {fileID: 0}
     - target: {fileID: 5524531006549775312, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 1261381644}
-    - target: {fileID: 5524531006549775312, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
       propertyPath: m_Duration
-      value: 93.005196
-      objectReference: {fileID: 0}
-    - target: {fileID: 5524531006549775312, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
-      propertyPath: m_MaxSpeed
-      value: 1
+      value: 37.20208
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12332,16 +12164,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 771145406}
     m_Modifications:
     - target: {fileID: -6057616456654410009, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 858418822}
-    - target: {fileID: -6057616456654410009, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
       propertyPath: m_Duration
       value: 106.78328
-      objectReference: {fileID: 0}
-    - target: {fileID: -6057616456654410009, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
-      propertyPath: m_MaxSpeed
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 563237063560715722, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12386,14 +12210,6 @@ PrefabInstance:
     - target: {fileID: 908273074614208368, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
       propertyPath: m_Name
       value: A_Turtle_3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3460218897590212586, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
-      propertyPath: rarity
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3460218897590212586, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
-      propertyPath: reference
-      value: Turtle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18758,14 +18574,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 771145406}
     m_Modifications:
-    - target: {fileID: 191232459115813222, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
-      propertyPath: rarity
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 191232459115813222, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
-      propertyPath: reference
-      value: Zebra Shark
-      objectReference: {fileID: 0}
     - target: {fileID: 1586729485221774320, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.4547664
@@ -18811,16 +18619,8 @@ PrefabInstance:
       value: A_ZebraShark_1
       objectReference: {fileID: 0}
     - target: {fileID: 5524531006549775312, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 805760559}
-    - target: {fileID: 5524531006549775312, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
       propertyPath: m_Duration
-      value: 51.66594
-      objectReference: {fileID: 0}
-    - target: {fileID: 5524531006549775312, guid: 0401ae2f8feb2be47a3d0334027c95ac, type: 3}
-      propertyPath: m_MaxSpeed
-      value: 1
+      value: 20.666376
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18836,16 +18636,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 771145406}
     m_Modifications:
     - target: {fileID: -3775067516474540746, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 1157191256}
-    - target: {fileID: -3775067516474540746, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       propertyPath: m_Duration
-      value: 37.107487
-      objectReference: {fileID: 0}
-    - target: {fileID: -3775067516474540746, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
-      propertyPath: m_MaxSpeed
-      value: 1
+      value: 9.276872
       objectReference: {fileID: 0}
     - target: {fileID: 564916585162889112, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18891,14 +18683,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF.Moorish
       objectReference: {fileID: 0}
-    - target: {fileID: 7230040978247102243, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
-      propertyPath: rarity
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7230040978247102243, guid: 77a6859c754cd8040b995a54d490b2a1, type: 3}
-      propertyPath: reference
-      value: Moorish
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18912,14 +18696,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 771145406}
     m_Modifications:
-    - target: {fileID: 1249054101766156162, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
-      propertyPath: rarity
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249054101766156162, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
-      propertyPath: reference
-      value: Eagle Ray
-      objectReference: {fileID: 0}
     - target: {fileID: 1413789375650775279, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.17
@@ -18965,16 +18741,8 @@ PrefabInstance:
       value: A_EagleRay_1
       objectReference: {fileID: 0}
     - target: {fileID: 2796192894167337163, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 753345416}
-    - target: {fileID: 2796192894167337163, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
       propertyPath: m_Duration
-      value: 188.66672
-      objectReference: {fileID: 0}
-    - target: {fileID: 2796192894167337163, guid: b5680d2c6d586a542a4f80f624fd9a63, type: 3}
-      propertyPath: m_MaxSpeed
-      value: 1
+      value: 62.888905
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18990,16 +18758,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 771145406}
     m_Modifications:
     - target: {fileID: -6057616456654410009, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 897281050}
-    - target: {fileID: -6057616456654410009, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
       propertyPath: m_Duration
       value: 106.13375
-      objectReference: {fileID: 0}
-    - target: {fileID: -6057616456654410009, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
-      propertyPath: m_MaxSpeed
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 563237063560715722, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19044,14 +18804,6 @@ PrefabInstance:
     - target: {fileID: 908273074614208368, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
       propertyPath: m_Name
       value: A_Turtle_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3460218897590212586, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
-      propertyPath: rarity
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3460218897590212586, guid: 7e43a9b08b97a0549a3d1aefb6f73797, type: 3}
-      propertyPath: reference
-      value: Turtle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

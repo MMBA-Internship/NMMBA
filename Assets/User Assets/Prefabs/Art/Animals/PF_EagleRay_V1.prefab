@@ -296,9 +296,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b2b707f5487194c8ce851a23fabd91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishInstance
-  reference: 
+  reference: Eagle Ray
   speed: 0
-  rarity: 0
+  rarity: 12
 --- !u!65 &4505124078229454437
 BoxCollider:
   m_ObjectHideFlags: 0
