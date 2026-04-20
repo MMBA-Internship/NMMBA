@@ -40,7 +40,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 38690652160
-    m_Key: ObjectiveText
+    m_Key: ObjectiveText_Lobby
     m_Metadata:
       m_Items: []
   - m_Id: 2037293285376
@@ -93,6 +93,18 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3533163593719808
     m_Key: GalleryText2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673458259615744
+    m_Key: Tutorial_ObjectiveText1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673580938813440
+    m_Key: Tutorial_ObjectiveText2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673595534991360
+    m_Key: Tutorial_ObjectiveText3
     m_Metadata:
       m_Items: []
   m_Metadata:

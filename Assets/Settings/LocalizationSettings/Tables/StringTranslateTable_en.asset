@@ -111,6 +111,18 @@ MonoBehaviour:
       photographer!'
     m_Metadata:
       m_Items: []
+  - m_Id: 4673458259615744
+    m_Localized: Explore the ocean and search for sea creatures
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673580938813440
+    m_Localized: Aim at the sea creatures and take a picture
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673595534991360
+    m_Localized: Centred and clear photos score the most points
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

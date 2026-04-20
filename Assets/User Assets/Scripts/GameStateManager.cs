@@ -17,8 +17,8 @@ public class GameStateManager : MonoBehaviour
 	public GameObject LobbyScreen;
 	public GameObject GameplayScreen_A;
 	public GameObject GameplayScreen_B;
-	public GameObject Tutorial_A;
-	public GameObject Tutorial_B;
+	public GameObject Tutorial_Objective;
+	public GameObject Tutorial_Controls;
 	public GameObject RoundOver;
 	public GameObject EndScore;
 	public GameObject Gallery;
@@ -58,8 +58,16 @@ public class GameStateManager : MonoBehaviour
 
 	void Start()
 	{
-		ShowConfig();
-	}
+		if (WallBuild)
+		{
+            ShowConfig();
+        }
+		else
+		{
+			ShowLobby();
+		}
+
+    }
 
 	void OnEnable()
 	{
@@ -129,8 +137,8 @@ public class GameStateManager : MonoBehaviour
 		ConfigScreen.SetActive(false);
 		GameplayScreen_A.SetActive(false);
 		GameplayScreen_B.SetActive(false);
-		Tutorial_A.SetActive(false);
-		Tutorial_B.SetActive(false);
+		Tutorial_Objective.SetActive(false);
+		Tutorial_Controls.SetActive(false);
 		RoundOver.SetActive(false);
 		EndScore.SetActive(false);
 
@@ -160,22 +168,29 @@ public class GameStateManager : MonoBehaviour
 		GameEvents.Raise3DCameraSettingsSaved(maxDepth, minDepth, regionStart, regionEnd);
 	}
 
-	public void OnTutorialPressed()
+	public void OnTutorialObjectivePressed()
 	{
-		if (useVersionA)
-		{
-			Tutorial_A.SetActive(true);
-		}
-		else
-		{
-			Tutorial_B.SetActive(true);
-		}
-	}
+        Tutorial_Objective.SetActive(true);
 
-	public void OnTutorialExit()
+        //if (useVersionA)
+        //{
+        //	Tutorial_Objective.SetActive(true);
+        //}
+        //else
+        //{
+        //	Tutorial_Controls.SetActive(true);
+        //}
+    }
+
+    public void OnTutorialContinue()
+    {
+        Tutorial_Objective.SetActive(false);
+        Tutorial_Controls.SetActive(true);
+    }
+    public void OnTutorialExit()
 	{
-		Tutorial_A.SetActive(false);
-		Tutorial_B.SetActive(false);
+		Tutorial_Objective.SetActive(false);
+		Tutorial_Controls.SetActive(false);
 	}
 
 	//called by ready button
@@ -224,12 +239,12 @@ public class GameStateManager : MonoBehaviour
 		if (useVersionA && !WallBuild)
 		{
 			GameplayScreen_A.SetActive(true);
-			Tutorial_A.SetActive(true);
+			Tutorial_Objective.SetActive(true);
 		}
 		else if (!WallBuild)
 		{
 			GameplayScreen_B.SetActive(true);
-			Tutorial_B.SetActive(true);
+			Tutorial_Controls.SetActive(true);
 		}
 
 		StartCoroutine(GameplayFlow());
@@ -240,8 +255,8 @@ public class GameStateManager : MonoBehaviour
 		//show tutorial for a couple of seconds
 		yield return new WaitForSeconds(tutorialDuration);
 
-		Tutorial_A.SetActive(false);
-		Tutorial_B.SetActive(false);
+		Tutorial_Objective.SetActive(false);
+		Tutorial_Controls.SetActive(false);
 
 		//run oxygen timer
 		yield return StartCoroutine(OxygenTimer());
