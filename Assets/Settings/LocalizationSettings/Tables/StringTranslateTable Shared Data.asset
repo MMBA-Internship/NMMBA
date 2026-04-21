@@ -107,6 +107,26 @@ MonoBehaviour:
     m_Key: Tutorial_ObjectiveText3
     m_Metadata:
       m_Items: []
+  - m_Id: 4942543744655360
+    m_Key: TapToContinue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4967756750381056
+    m_Key: ControlsName1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4967843727663104
+    m_Key: ControlsName2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4991306819428352
+    m_Key: ObjectiveTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4991350196920320
+    m_Key: ControlsTitle
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

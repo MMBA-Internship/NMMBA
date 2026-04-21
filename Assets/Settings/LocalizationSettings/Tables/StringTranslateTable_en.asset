@@ -123,6 +123,26 @@ MonoBehaviour:
     m_Localized: Centred and clear photos score the most points
     m_Metadata:
       m_Items: []
+  - m_Id: 4942543744655360
+    m_Localized: Tap to continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4967756750381056
+    m_Localized: Classic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4967843727663104
+    m_Localized: Double Tap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4991306819428352
+    m_Localized: The Objective
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4991350196920320
+    m_Localized: The Controls
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

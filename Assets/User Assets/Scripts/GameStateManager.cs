@@ -1,12 +1,13 @@
-using UnityEngine;
-using TMPro;
+using System;
 using System.Collections;
-using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
-using System;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.HighDefinition;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
 
 public class GameStateManager : MonoBehaviour
 {
@@ -19,7 +20,9 @@ public class GameStateManager : MonoBehaviour
 	public GameObject GameplayScreen_B;
 	public GameObject Tutorial_Objective;
 	public GameObject Tutorial_Controls;
-	public GameObject RoundOver;
+    public GameObject Controls_A;
+    public GameObject Controls_B;
+    public GameObject RoundOver;
 	public GameObject EndScore;
 	public GameObject Gallery;
 
@@ -37,7 +40,6 @@ public class GameStateManager : MonoBehaviour
 	public GameObject tutorialButton;
 	public GameObject exitTutorial;
 	public TextMeshProUGUI countdownText;
-	public TextMeshProUGUI versionText;
 
 	[Header("Gameplay UI Elements")]
 	public TextMeshProUGUI oxygenTimerText_A;
@@ -46,11 +48,10 @@ public class GameStateManager : MonoBehaviour
 
 	[Header("Settings")]
 	public float countdownDuration = 10f;
-	public float tutorialDuration = 5f;
 	public float oxygenDuration = 180f;
 	public float roundOverDuration = 5f;
 
-	private int currentScore = 0;
+    private int currentScore = 0;
 	private bool useVersionA = true;
 	private Coroutine countdownCoroutine;
 
@@ -58,14 +59,15 @@ public class GameStateManager : MonoBehaviour
 
 	void Start()
 	{
-		if (WallBuild)
-		{
+
+        if (WallBuild)
+        {
             ShowConfig();
         }
-		else
-		{
-			ShowLobby();
-		}
+        else
+        {
+            ShowLobby();
+        }
 
     }
 
@@ -109,20 +111,44 @@ public class GameStateManager : MonoBehaviour
 		GameEvents.RaiseTry3DCameraConnect();
 	}
 
-	public void ToggleVersion()
-	{
-		useVersionA = !useVersionA;
-		GameEvents.RaiseControlVersionChanged(useVersionA);
-		UpdateVersionDisplay();
-	}
+    public void SelectVersionA()
+    {
+        useVersionA = true;
+        GameEvents.RaiseControlVersionChanged(useVersionA);
+        UpdateVersionDisplay();
+        UpdateGameplayScreen();
+    }
 
-	private void UpdateVersionDisplay()
+    public void SelectVersionB()
+    {
+        useVersionA = false;
+        GameEvents.RaiseControlVersionChanged(useVersionA);
+        UpdateVersionDisplay();
+        UpdateGameplayScreen();
+    }
+    private void UpdateGameplayScreen()
+    {
+        bool inGameplay = GameplayScreen_A.activeSelf || GameplayScreen_B.activeSelf;
+        if (!inGameplay) return;
+
+        if (useVersionA)
+        {
+            GameplayScreen_A.SetActive(true);
+            GameplayScreen_B.SetActive(false);
+        }
+        else
+        {
+            GameplayScreen_A.SetActive(false);
+            GameplayScreen_B.SetActive(true);
+        }
+    }
+    private void UpdateVersionDisplay()
 	{
-		if (versionText != null)
-		{
-			versionText.text = useVersionA ? "Version A" : "Version B";
-		}
-	}
+        //show which control is selected
+        Controls_A.SetActive(useVersionA);
+        Controls_B.SetActive(!useVersionA);
+
+    }
 
 	void ShowConfig()
 	{
@@ -132,8 +158,8 @@ public class GameStateManager : MonoBehaviour
 
 	public void ShowLobby()
 	{
-		//show only the lobby, hiding everything else
-		LobbyScreen.SetActive(true);
+        //show only the lobby, hiding everything else
+        LobbyScreen.SetActive(true);
 		ConfigScreen.SetActive(false);
 		GameplayScreen_A.SetActive(false);
 		GameplayScreen_B.SetActive(false);
@@ -168,18 +194,10 @@ public class GameStateManager : MonoBehaviour
 		GameEvents.Raise3DCameraSettingsSaved(maxDepth, minDepth, regionStart, regionEnd);
 	}
 
-	public void OnTutorialObjectivePressed()
-	{
+    public void OnTutorialObjectivePressed()
+    {
         Tutorial_Objective.SetActive(true);
-
-        //if (useVersionA)
-        //{
-        //	Tutorial_Objective.SetActive(true);
-        //}
-        //else
-        //{
-        //	Tutorial_Controls.SetActive(true);
-        //}
+        Tutorial_Controls.SetActive(false);
     }
 
     public void OnTutorialContinue()
@@ -232,19 +250,17 @@ public class GameStateManager : MonoBehaviour
 
 	public void StartGameplay()
 	{
-		//hide lobby, show gameplay
-		LobbyScreen.SetActive(false);
+        //hide lobby, show gameplay
+        LobbyScreen.SetActive(false);
 		ConfigScreen.SetActive(false);
 
 		if (useVersionA && !WallBuild)
 		{
 			GameplayScreen_A.SetActive(true);
-			Tutorial_Objective.SetActive(true);
 		}
 		else if (!WallBuild)
 		{
 			GameplayScreen_B.SetActive(true);
-			Tutorial_Controls.SetActive(true);
 		}
 
 		StartCoroutine(GameplayFlow());
@@ -252,12 +268,6 @@ public class GameStateManager : MonoBehaviour
 
 	IEnumerator GameplayFlow()
 	{
-		//show tutorial for a couple of seconds
-		yield return new WaitForSeconds(tutorialDuration);
-
-		Tutorial_Objective.SetActive(false);
-		Tutorial_Controls.SetActive(false);
-
 		//run oxygen timer
 		yield return StartCoroutine(OxygenTimer());
 
