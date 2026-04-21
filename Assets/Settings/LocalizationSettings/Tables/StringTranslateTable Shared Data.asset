@@ -127,6 +127,10 @@ MonoBehaviour:
     m_Key: ControlsTitle
     m_Metadata:
       m_Items: []
+  - m_Id: 5094488258109440
+    m_Key: LoadingText
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
