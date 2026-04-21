@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using Unity.Hierarchy;
 using UnityEngine;
 
@@ -10,6 +11,8 @@ public class PhotoScoreCalculator : MonoBehaviour
     [SerializeField] private float baseScoreDistance = 40f;
     [SerializeField] private float baseScoreCentering = 30f;
     [SerializeField] private float baseScoreObstruction = 30f;
+    [SerializeField] private TextMeshProUGUI uiScoreLabel;
+
 
     private static int pictureCounter = 0;
     private List<string> foundFishReferences = new List<string>();
@@ -94,7 +97,7 @@ public class PhotoScoreCalculator : MonoBehaviour
 
             fishScore = obstructionScore + distanceScore + centeringScore;
 
-            totalPictureScore += Mathf.RoundToInt(fishScore * info.fishData.rarity) * 10;
+            totalPictureScore += Mathf.RoundToInt(fishScore * ((int)info.fishData.rarity/10f)) * 10;
 
             Debug.Log(
                 $"{pictureName} | Fish: {info.fishData.reference}\n" +
@@ -110,6 +113,8 @@ public class PhotoScoreCalculator : MonoBehaviour
         result.totalScore = totalPictureScore;
 
         Debug.Log($"{pictureName} total score = {totalPictureScore}");
+
+        uiScoreLabel.text = totalPictureScore.ToString();
 
         GameEvents.RaisePhotoScored(result);
     }
