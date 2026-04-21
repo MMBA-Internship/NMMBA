@@ -22,7 +22,7 @@ public class SaveLoad : MonoBehaviour
     private void Awake()
     {
         //Gets the file and data information. This is to make sure that every shutdown of the system doesn't get rid of all scores
-        string json = File.ReadAllText(Application.dataPath + "/SavedData.json");
+        string json = File.ReadAllText(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "/SavedData.json");
         if (!string.IsNullOrEmpty(json) && json != "{}")
         {
             scores = JsonUtility.FromJson<SerializableList<int>>(json);
@@ -33,7 +33,7 @@ public class SaveLoad : MonoBehaviour
     public void LoadData()
     {
         //Reads the Json file
-        string json = File.ReadAllText(Application.dataPath + "/SavedData.json");
+        string json = File.ReadAllText(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "/SavedData.json");
         
         //Checks if it's empty or not (I don't know if return does anything here, but I put it in just in case)
         if(string.IsNullOrEmpty(json) || json == "{}")
@@ -64,6 +64,6 @@ public class SaveLoad : MonoBehaviour
         //Turns the scores into a string for Json
         string json = JsonUtility.ToJson(scores);
         //Saves it to a local space on the PC
-        File.WriteAllText(Application.dataPath + "/SavedData.json", json);
+        File.WriteAllText(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "/SavedData.json", json);
     }
 }

@@ -8,6 +8,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.HighDefinition;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class GameStateManager : MonoBehaviour
 {
@@ -51,6 +52,10 @@ public class GameStateManager : MonoBehaviour
 	public float oxygenDuration = 180f;
 	public float roundOverDuration = 5f;
 
+	[Header("ScoreSaving")]
+	public SaveLoad saveLoadManager;
+
+	private List<int> scores;
     private int currentScore = 0;
 	private bool useVersionA = true;
 	private Coroutine countdownCoroutine;
@@ -315,6 +320,8 @@ public class GameStateManager : MonoBehaviour
 		RoundOver.SetActive(false);
 		EndScore.SetActive(true);
 		finalScoreText.text = currentScore.ToString();
+		saveLoadManager.score = currentScore;
+		saveLoadManager.SaveData();
 	}
 
 	public void OnContinuePressed()
