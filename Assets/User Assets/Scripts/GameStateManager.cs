@@ -25,8 +25,9 @@ public class GameStateManager : MonoBehaviour
     public GameObject RoundOver;
 	public GameObject EndScore;
 	public GameObject Gallery;
+    public GameObject LoadingScreen;
 
-	[Header("Config UI Elements")]
+    [Header("Config UI Elements")]
 	public GameObject HandDetectedUI;
 	public TMP_InputField MaxCameraDepth;
 	public TMP_InputField MinCameraDepth;
@@ -167,8 +168,13 @@ public class GameStateManager : MonoBehaviour
 		Tutorial_Controls.SetActive(false);
 		RoundOver.SetActive(false);
 		EndScore.SetActive(false);
+        Gallery.SetActive(false);
+        LoadingScreen.SetActive(false);
+        ConfigScreen.SetActive(false);
 
-		notReadyState.SetActive(true);
+
+
+        notReadyState.SetActive(true);
 		readyState.SetActive(false);
 		countdownText.text = "";
 
@@ -276,24 +282,23 @@ public class GameStateManager : MonoBehaviour
 	}
 
 	IEnumerator OxygenTimer()
-	{
-		float timeRemaining = oxygenDuration;
+{
+        float timeRemaining = oxygenDuration;
 
-		//picking version timer
-		TextMeshProUGUI activeTimerText = useVersionA ? oxygenTimerText_A : oxygenTimerText_B;
+        while (timeRemaining > 0)
+        {
+            //pick active timer every frame instead of once at start, else it doesnt update time when switching control versions
+            TextMeshProUGUI activeTimerText = useVersionA ? oxygenTimerText_A : oxygenTimerText_B;
 
+            int minutes = Mathf.FloorToInt(timeRemaining / 60);
+            int seconds = Mathf.FloorToInt(timeRemaining % 60);
+            activeTimerText.text = $"{minutes:00}:{seconds:00}";
 
-		while (timeRemaining > 0)
-		{
-			int minutes = Mathf.FloorToInt(timeRemaining / 60);
-			int seconds = Mathf.FloorToInt(timeRemaining % 60);
-			activeTimerText.text = $"{minutes:00}:{seconds:00}";
-
-			if (!WallBuild)
-				timeRemaining -= Time.deltaTime;
-			yield return null;
-		}
-	}
+            if (!WallBuild)
+                timeRemaining -= Time.deltaTime;
+            yield return null;
+        }
+    }
 
 	void EndRound()
 	{
@@ -317,13 +322,24 @@ public class GameStateManager : MonoBehaviour
 		finalScoreText.text = currentScore.ToString();
 	}
 
-	public void OnContinuePressed()
-	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    public void OnContinuePressed()
+    {
+        StartCoroutine(LoadingSequence());
+    }
 
-	}
+    IEnumerator LoadingSequence()
+    {
+        EndScore.SetActive(false);
+        Gallery.SetActive(false);
+        LoadingScreen.SetActive(true);
 
-	public void OnGalleryPressed()
+        //wait 1 second so sreen is visible
+        yield return new WaitForSeconds(1f);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void OnGalleryPressed()
 	{
 		EndScore.SetActive(false);
 		Gallery.SetActive(true);
