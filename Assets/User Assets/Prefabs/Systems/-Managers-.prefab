@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4898016604868050642}
   - component: {fileID: 3963285170470641429}
   - component: {fileID: 3611045305730521458}
+  - component: {fileID: 4655351860989842355}
   m_Layer: 0
   m_Name: -Managers-
   m_TagString: Untagged
@@ -69,6 +70,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PhotoScoreCalculator
   animalFind: {fileID: 8018181755518162613}
+  idealDistanceFromCam: 3
+  maxDistanceFromCam: 10
+  baseScoreDistance: 40
+  baseScoreCentering: 30
+  baseScoreObstruction: 30
 --- !u!114 &4898016604868050642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,3 +121,44 @@ MonoBehaviour:
   requiredDetectionTime: 0.2
   detectionTime: 0
   accumulatedTime: 0
+--- !u!114 &4655351860989842355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2861621255647572046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ecebe79d8c3aa438f368c28ad5109d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameStateManager
+  WallBuild: 0
+  ConfigScreen: {fileID: 0}
+  LobbyScreen: {fileID: 0}
+  GameplayScreen_A: {fileID: 0}
+  GameplayScreen_B: {fileID: 0}
+  Tutorial_A: {fileID: 0}
+  Tutorial_B: {fileID: 0}
+  RoundOver: {fileID: 0}
+  EndScore: {fileID: 0}
+  Gallery: {fileID: 0}
+  HandDetectedUI: {fileID: 0}
+  MaxCameraDepth: {fileID: 0}
+  MinCameraDepth: {fileID: 0}
+  CameraRegionStart: {fileID: 0}
+  CameraRegionEnd: {fileID: 0}
+  CameraErrorText: {fileID: 0}
+  notReadyState: {fileID: 0}
+  readyState: {fileID: 0}
+  tutorialButton: {fileID: 0}
+  exitTutorial: {fileID: 0}
+  countdownText: {fileID: 0}
+  versionText: {fileID: 0}
+  oxygenTimerText_A: {fileID: 0}
+  oxygenTimerText_B: {fileID: 0}
+  finalScoreText: {fileID: 0}
+  countdownDuration: 5
+  tutorialDuration: 5
+  oxygenDuration: 120
+  roundOverDuration: 7
