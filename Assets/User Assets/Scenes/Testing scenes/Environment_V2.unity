@@ -29358,6 +29358,10 @@ PrefabInstance:
       propertyPath: saveLoadManager
       value: 
       objectReference: {fileID: 996768979}
+    - target: {fileID: 4414686940704794578, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5060550533016758886, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
