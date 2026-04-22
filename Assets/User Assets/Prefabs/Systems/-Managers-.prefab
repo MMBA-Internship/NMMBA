@@ -75,6 +75,7 @@ MonoBehaviour:
   baseScoreDistance: 40
   baseScoreCentering: 30
   baseScoreObstruction: 30
+  uiScoreLabel: {fileID: 0}
 --- !u!114 &4898016604868050642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +129,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2861621255647572046}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69ecebe79d8c3aa438f368c28ad5109d, type: 3}
   m_Name: 
@@ -138,11 +139,14 @@ MonoBehaviour:
   LobbyScreen: {fileID: 0}
   GameplayScreen_A: {fileID: 0}
   GameplayScreen_B: {fileID: 0}
-  Tutorial_A: {fileID: 0}
-  Tutorial_B: {fileID: 0}
+  Tutorial_Objective: {fileID: 0}
+  Tutorial_Controls: {fileID: 0}
+  Controls_A: {fileID: 0}
+  Controls_B: {fileID: 0}
   RoundOver: {fileID: 0}
   EndScore: {fileID: 0}
   Gallery: {fileID: 0}
+  LoadingScreen: {fileID: 0}
   HandDetectedUI: {fileID: 0}
   MaxCameraDepth: {fileID: 0}
   MinCameraDepth: {fileID: 0}
@@ -154,11 +158,11 @@ MonoBehaviour:
   tutorialButton: {fileID: 0}
   exitTutorial: {fileID: 0}
   countdownText: {fileID: 0}
-  versionText: {fileID: 0}
   oxygenTimerText_A: {fileID: 0}
   oxygenTimerText_B: {fileID: 0}
   finalScoreText: {fileID: 0}
   countdownDuration: 5
-  tutorialDuration: 5
   oxygenDuration: 120
   roundOverDuration: 7
+  saveLoadManager: {fileID: 0}
+  leaderboard: {fileID: 0}
