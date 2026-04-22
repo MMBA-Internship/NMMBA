@@ -15,7 +15,7 @@ public class SaveLoad : MonoBehaviour
 {
     //Iterates twice to create accessible lists via Json
     [SerializeField] private SerializableList<int> scores;
-    [SerializeField] private SerializableList<int> highScores;
+    [SerializeField] public SerializableList<int> highScores;
     //This score needs to be updated based on the players' scores at the end of the game
     public int score;
 
@@ -45,6 +45,8 @@ public class SaveLoad : MonoBehaviour
         highScores = JsonUtility.FromJson<SerializableList<int>>(json);
         //Sorts the highscores lowest to highest. Could be done the other way maybe, but I don't get it fully
         highScores.list.Sort();
+        //Reverses the highscore list
+        highScores.list.Reverse();
 
         /*for(int i = 0; i < highScores.list.Count; i++)//This is unnecessary. It's just for checking it inside editor
         {
@@ -60,6 +62,8 @@ public class SaveLoad : MonoBehaviour
         scores.list.Add(score);
         //Sorts the scores lowest to highest
         scores.list.Sort();
+        //Reverses the list so that the highest is at List[0]
+        scores.list.Reverse();
 
         //Turns the scores into a string for Json
         string json = JsonUtility.ToJson(scores);

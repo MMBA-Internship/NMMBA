@@ -9,6 +9,7 @@ using UnityEngine.Rendering.HighDefinition;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameStateManager : MonoBehaviour
 {
@@ -55,6 +56,7 @@ public class GameStateManager : MonoBehaviour
 
 	[Header("ScoreSaving")]
 	public SaveLoad saveLoadManager;
+	public LeaderboardScript leaderboard;
 
 	private List<int> scores;
     private int currentScore = 0;
@@ -327,6 +329,7 @@ public class GameStateManager : MonoBehaviour
 		finalScoreText.text = currentScore.ToString();
 		saveLoadManager.score = currentScore;
 		saveLoadManager.SaveData();
+		leaderboard.MakeLeaderboard();
 	}
 
     public void OnContinuePressed()
