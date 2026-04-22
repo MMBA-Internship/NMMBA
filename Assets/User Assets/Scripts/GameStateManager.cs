@@ -263,9 +263,15 @@ public class GameStateManager : MonoBehaviour
 
 	public void StartGameplay()
 	{
-        //hide lobby, show gameplay
-        LobbyScreen.SetActive(false);
-		ConfigScreen.SetActive(false);
+		//hide lobby, show gameplay
+		if (LobbyScreen != null)
+		{
+			LobbyScreen.SetActive(false);
+		}
+		if(ConfigScreen != null)
+        {
+            ConfigScreen.SetActive(false);
+        }
 
 		if (useVersionA && !WallBuild)
 		{
