@@ -40,7 +40,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 38690652160
-    m_Key: ObjectiveText
+    m_Key: ObjectiveText_Lobby
     m_Metadata:
       m_Items: []
   - m_Id: 2037293285376
@@ -76,7 +76,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 45956865490944
-    m_Key: Continue
+    m_Key: Confirm
     m_Metadata:
       m_Items: []
   - m_Id: 56045173243904
@@ -85,6 +85,50 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 56077477773312
     m_Key: TraditionalChineseLanguageText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3531344264028160
+    m_Key: GalleryText1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3533163593719808
+    m_Key: GalleryText2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673458259615744
+    m_Key: Tutorial_ObjectiveText1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673580938813440
+    m_Key: Tutorial_ObjectiveText2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673595534991360
+    m_Key: Tutorial_ObjectiveText3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4942543744655360
+    m_Key: TapToContinue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4967756750381056
+    m_Key: ControlsName1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4967843727663104
+    m_Key: ControlsName2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4991306819428352
+    m_Key: ObjectiveTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4991350196920320
+    m_Key: ControlsTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5094488258109440
+    m_Key: LoadingText
     m_Metadata:
       m_Items: []
   m_Metadata:

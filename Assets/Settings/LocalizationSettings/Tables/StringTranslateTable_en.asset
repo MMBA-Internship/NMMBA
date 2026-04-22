@@ -90,7 +90,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 45956865490944
-    m_Localized: Continue
+    m_Localized: Confirm
     m_Metadata:
       m_Items: []
   - m_Id: 56045173243904
@@ -99,6 +99,52 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 56077477773312
     m_Localized: Traditional Chinese
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3531344264028160
+    m_Localized: Photo Gallery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3533163593719808
+    m_Localized: 'You''re a real underwater
+
+      photographer!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673458259615744
+    m_Localized: Explore the ocean and search for sea creatures
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673580938813440
+    m_Localized: Aim at the sea creatures and take a picture
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673595534991360
+    m_Localized: Centred and clear photos score the most points
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4942543744655360
+    m_Localized: Tap to continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4967756750381056
+    m_Localized: Classic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4967843727663104
+    m_Localized: Double Tap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4991306819428352
+    m_Localized: The Objective
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4991350196920320
+    m_Localized: The Controls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5094488258109440
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   references:

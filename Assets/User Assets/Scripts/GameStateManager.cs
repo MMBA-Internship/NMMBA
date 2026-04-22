@@ -1,284 +1,391 @@
-using UnityEngine;
-using TMPro;
+using System;
 using System.Collections;
-using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.HighDefinition;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using System.Collections.Generic;
 
 public class GameStateManager : MonoBehaviour
 {
-    [Header("UI Screens")]
-    public GameObject LobbyScreen;
-    public GameObject GameplayScreen_A;
-    public GameObject GameplayScreen_B;
-    public GameObject Tutorial_A;
-    public GameObject Tutorial_B;
+	public bool WallBuild = false;
+
+	[Header("UI Screens")]
+	public GameObject ConfigScreen;
+	public GameObject LobbyScreen;
+	public GameObject GameplayScreen_A;
+	public GameObject GameplayScreen_B;
+	public GameObject Tutorial_Objective;
+	public GameObject Tutorial_Controls;
+    public GameObject Controls_A;
+    public GameObject Controls_B;
     public GameObject RoundOver;
-    public GameObject EndScore;
-    public GameObject Gallery;
+	public GameObject EndScore;
+	public GameObject Gallery;
+    public GameObject LoadingScreen;
 
-    [Header("Lobby UI Elements")]
-    public GameObject notReadyState;
-    public GameObject readyState;
-    public GameObject tutorialButton;
-    public GameObject exitTutorial;
-    public TextMeshProUGUI countdownText;
-    public TextMeshProUGUI versionText; 
+    [Header("Config UI Elements")]
+	public GameObject HandDetectedUI;
+	public TMP_InputField MaxCameraDepth;
+	public TMP_InputField MinCameraDepth;
+	public TMP_InputField CameraRegionStart;
+	public TMP_InputField CameraRegionEnd;
+	public TextMeshProUGUI CameraErrorText;
 
-    [Header("Gameplay UI Elements")]
-    public TextMeshProUGUI oxygenTimerText_A;
-    public TextMeshProUGUI oxygenTimerText_B;
-    public TextMeshProUGUI finalScoreText;
+	[Header("Lobby UI Elements")]
+	public GameObject notReadyState;
+	public GameObject readyState;
+	public GameObject tutorialButton;
+	public GameObject exitTutorial;
+	public TextMeshProUGUI countdownText;
 
-    //public RawImage highscorePhotoDisplay;
-    //public TextMeshProUGUI highscoreLabel;
+	[Header("Gameplay UI Elements")]
+	public TextMeshProUGUI oxygenTimerText_A;
+	public TextMeshProUGUI oxygenTimerText_B;
+	public TextMeshProUGUI finalScoreText;
 
-    [Header("Settings")]
-    public float countdownDuration = 10f;
-    public float tutorialDuration = 5f;
-    public float oxygenDuration = 180f;
-    public float roundOverDuration = 5f;
+	[Header("Settings")]
+	public float countdownDuration = 10f;
+	public float oxygenDuration = 180f;
+	public float roundOverDuration = 5f;
 
-    //public SessionScoreManager scoreManager;
+	[Header("ScoreSaving")]
+	public SaveLoad saveLoadManager;
 
+	private List<int> scores;
     private int currentScore = 0;
-    private bool useVersionA = true;
-    private Coroutine countdownCoroutine;
+	private bool useVersionA = true;
+	private Coroutine countdownCoroutine;
 
-    private bool isChanging = false;
+	private bool isChanging = false;
 
-    void Start()
-    {
-        ShowLobby();
-    }
+	void Start()
+	{
 
-    void OnEnable()
-    {
-        GameEvents.OnSessionScoreChanged += UpdateScore;
-
-    }
-
-    void OnDisable()
-    {
-        GameEvents.OnSessionScoreChanged -= UpdateScore;
-    }
-
-    public void ToggleVersion()
-    {
-        useVersionA = !useVersionA;
-        GameEvents.RaiseControlVersionChanged(useVersionA);
-        UpdateVersionDisplay();
-    }
-
-    private void UpdateVersionDisplay()
-    {
-        if (versionText != null)
+        if (WallBuild)
         {
-            versionText.text = useVersionA ? "Version A" : "Version B";
-        }
-    }
-
-    void ShowLobby()
-    {
-        //show only the lobby, hiding everything else
-        LobbyScreen.SetActive(true);
-        GameplayScreen_A.SetActive(false);
-        GameplayScreen_B.SetActive(false);
-        Tutorial_A.SetActive(false);
-        Tutorial_B.SetActive(false);
-        RoundOver.SetActive(false);
-        EndScore.SetActive(false);
-
-        notReadyState.SetActive(true);
-        readyState.SetActive(false);
-        countdownText.text = "";
-
-        UpdateVersionDisplay();
-
-    }
-
-    public void OnTutorialPressed()
-    {
-        if (useVersionA)
-        {
-            Tutorial_A.SetActive(true);
+            ShowConfig();
         }
         else
         {
-            Tutorial_B.SetActive(true);
-        }
-    }
-
-    public void OnTutorialExit()
-    {
-        Tutorial_A.SetActive(false);
-        Tutorial_B.SetActive(false);
-    }
-
-    //called by ready button
-    public void OnReadyPressed()
-    {
-        notReadyState.SetActive(false);
-        readyState.SetActive(true);
-        countdownCoroutine = StartCoroutine(CountdownThenStart()); 
-    }
-
-    IEnumerator CountdownThenStart()
-    {
-        float timeRemaining = countdownDuration;
-
-        while (timeRemaining > 0)
-        {
-            countdownText.text = Mathf.Ceil(timeRemaining).ToString();
-            timeRemaining -= Time.deltaTime;
-            yield return null;
+            ShowLobby();
         }
 
-        StartGameplay();
     }
 
-    public void OnCancelPressed()
-    {
-        //stop the countdown
-        if (countdownCoroutine != null)
-        {
-            StopCoroutine(countdownCoroutine);
-            countdownCoroutine = null;
-        }
+	void OnEnable()
+	{
+		GameEvents.OnSessionScoreChanged += UpdateScore;
+		GameEvents.OnHandEntered += ShowHandUI;
+		GameEvents.OnHandExited += HideHandUI;
+		GameEvents.On3DCameraConnectionError += ShowCameraError;
+	}
 
-        //reset back to not ready state
-        notReadyState.SetActive(true);
-        readyState.SetActive(false);
-        countdownText.text = "";
+
+	void OnDisable()
+	{
+		GameEvents.OnSessionScoreChanged -= UpdateScore;
+		GameEvents.OnHandEntered -= ShowHandUI;
+		GameEvents.OnHandExited -= HideHandUI;
+		GameEvents.On3DCameraConnectionError -= ShowCameraError;
+	}
+
+	private void ShowCameraError(Exception exception)
+	{
+		CameraErrorText.gameObject.SetActive(true);
+		CameraErrorText.text = "Error: " + exception.Message;
+
+	}
+
+	private void HideHandUI()
+	{
+		HandDetectedUI.SetActive(false);
+	}
+
+	private void ShowHandUI()
+	{
+		HandDetectedUI.SetActive(true);
+	}
+
+	public void Try3DCameraConnect()
+	{
+		CameraErrorText.gameObject.SetActive(false);
+		GameEvents.RaiseTry3DCameraConnect();
+	}
+
+    public void SelectVersionA()
+    {
+        useVersionA = true;
+        GameEvents.RaiseControlVersionChanged(useVersionA);
+        UpdateVersionDisplay();
+        UpdateGameplayScreen();
     }
 
-    void StartGameplay()
+    public void SelectVersionB()
     {
-        //hide lobby, show gameplay
-        LobbyScreen.SetActive(false);
+        useVersionA = false;
+        GameEvents.RaiseControlVersionChanged(useVersionA);
+        UpdateVersionDisplay();
+        UpdateGameplayScreen();
+    }
+    private void UpdateGameplayScreen()
+    {
+        bool inGameplay = GameplayScreen_A.activeSelf || GameplayScreen_B.activeSelf;
+        if (!inGameplay) return;
 
         if (useVersionA)
         {
             GameplayScreen_A.SetActive(true);
-            Tutorial_A.SetActive(true);
+            GameplayScreen_B.SetActive(false);
         }
         else
         {
+            GameplayScreen_A.SetActive(false);
             GameplayScreen_B.SetActive(true);
-            Tutorial_B.SetActive(true);
         }
+    }
+    private void UpdateVersionDisplay()
+	{
+        //show which control is selected
+        Controls_A.SetActive(useVersionA);
+        Controls_B.SetActive(!useVersionA);
 
-        StartCoroutine(GameplayFlow());
     }
 
-    IEnumerator GameplayFlow()
+	void ShowConfig()
+	{
+		// Assuming that everything else is disabled by default
+		ConfigScreen.SetActive(true);
+	}
+
+	public void ShowLobby()
+	{
+        //show only the lobby, hiding everything else
+        LobbyScreen.SetActive(true);
+		ConfigScreen.SetActive(false);
+		GameplayScreen_A.SetActive(false);
+		GameplayScreen_B.SetActive(false);
+		Tutorial_Objective.SetActive(false);
+		Tutorial_Controls.SetActive(false);
+		RoundOver.SetActive(false);
+		EndScore.SetActive(false);
+        Gallery.SetActive(false);
+        LoadingScreen.SetActive(false);
+        ConfigScreen.SetActive(false);
+
+
+
+        notReadyState.SetActive(true);
+		readyState.SetActive(false);
+		countdownText.text = "";
+
+		GameEvents.OnHandEntered -= ShowHandUI;
+		GameEvents.OnHandExited -= HideHandUI;
+
+		UpdateVersionDisplay();
+
+	}
+
+	public void SaveSettings()
+	{
+		float maxDepth;
+		float minDepth;
+		float regionStart;
+		float regionEnd;
+
+		float.TryParse(MaxCameraDepth.text, out maxDepth);
+		float.TryParse(MinCameraDepth.text, out minDepth);
+		float.TryParse(CameraRegionStart.text, out regionStart);
+		float.TryParse(CameraRegionEnd.text, out regionEnd);
+
+		GameEvents.Raise3DCameraSettingsSaved(maxDepth, minDepth, regionStart, regionEnd);
+	}
+
+    public void OnTutorialObjectivePressed()
     {
-        //show tutorial for a couple of seconds
-        yield return new WaitForSeconds(tutorialDuration);
-
-        Tutorial_A.SetActive(false);
-        Tutorial_B.SetActive(false);
-
-        //run oxygen timer
-        yield return StartCoroutine(OxygenTimer());
-
-        //timer finished round ended
-        EndRound();
+        Tutorial_Objective.SetActive(true);
+        Tutorial_Controls.SetActive(false);
     }
 
-    IEnumerator OxygenTimer()
+    public void OnTutorialContinue()
     {
+        Tutorial_Objective.SetActive(false);
+        Tutorial_Controls.SetActive(true);
+    }
+    public void OnTutorialExit()
+	{
+		Tutorial_Objective.SetActive(false);
+		Tutorial_Controls.SetActive(false);
+	}
+
+	//called by ready button
+	public void OnReadyPressed()
+	{
+		notReadyState.SetActive(false);
+		readyState.SetActive(true);
+		countdownCoroutine = StartCoroutine(CountdownThenStart());
+	}
+
+	IEnumerator CountdownThenStart()
+	{
+		float timeRemaining = countdownDuration;
+
+		while (timeRemaining > 0)
+		{
+			countdownText.text = Mathf.Ceil(timeRemaining).ToString();
+			timeRemaining -= Time.deltaTime;
+			yield return null;
+		}
+
+		StartGameplay();
+	}
+
+	public void OnCancelPressed()
+	{
+		//stop the countdown
+		if (countdownCoroutine != null)
+		{
+			StopCoroutine(countdownCoroutine);
+			countdownCoroutine = null;
+		}
+
+		//reset back to not ready state
+		notReadyState.SetActive(true);
+		readyState.SetActive(false);
+		countdownText.text = "";
+	}
+
+	public void StartGameplay()
+	{
+        //hide lobby, show gameplay
+        LobbyScreen.SetActive(false);
+		ConfigScreen.SetActive(false);
+
+		if (useVersionA && !WallBuild)
+		{
+			GameplayScreen_A.SetActive(true);
+		}
+		else if (!WallBuild)
+		{
+			GameplayScreen_B.SetActive(true);
+		}
+
+		StartCoroutine(GameplayFlow());
+	}
+
+	IEnumerator GameplayFlow()
+	{
+		//run oxygen timer
+		yield return StartCoroutine(OxygenTimer());
+
+		//timer finished round ended
+		EndRound();
+	}
+
+	IEnumerator OxygenTimer()
+{
         float timeRemaining = oxygenDuration;
-
-        //picking version timer
-        TextMeshProUGUI activeTimerText = useVersionA ? oxygenTimerText_A : oxygenTimerText_B;
-
 
         while (timeRemaining > 0)
         {
+            //pick active timer every frame instead of once at start, else it doesnt update time when switching control versions
+            TextMeshProUGUI activeTimerText = useVersionA ? oxygenTimerText_A : oxygenTimerText_B;
+
             int minutes = Mathf.FloorToInt(timeRemaining / 60);
             int seconds = Mathf.FloorToInt(timeRemaining % 60);
             activeTimerText.text = $"{minutes:00}:{seconds:00}";
 
-            timeRemaining -= Time.deltaTime;
+            if (!WallBuild)
+                timeRemaining -= Time.deltaTime;
             yield return null;
         }
     }
 
-    void EndRound()
-    {
-        GameEvents.RaiseRoundEnded();
+	void EndRound()
+	{
+		GameEvents.RaiseRoundEnded();
 
-        //hide gameplay, show round over
-        GameplayScreen_A.SetActive(false);
-        GameplayScreen_B.SetActive(false);
-        RoundOver.SetActive(true);
+		//hide gameplay, show round over
+		GameplayScreen_A.SetActive(false);
+		GameplayScreen_B.SetActive(false);
+		RoundOver.SetActive(true);
 
-        StartCoroutine(ShowScoreAfterDelay());
-    }
+		StartCoroutine(ShowScoreAfterDelay());
+	}
 
-    IEnumerator ShowScoreAfterDelay()
-    {
-        yield return new WaitForSeconds(roundOverDuration);
-        Debug.Log("requesting score");
-        int score = GameEvents.RaiseScoreRequested();
-        Debug.Log(score);
-        RoundOver.SetActive(false);
-        EndScore.SetActive(true);
-        finalScoreText.text = currentScore.ToString();
-        //highscorePhotoDisplay.texture = scoreManager.GetFinalPhotoDisplay().pictureTexture;
-        //highscoreLabel.text = scoreManager.GetFinalPhotoDisplay().totalScore.ToString();
-
-    }
+	IEnumerator ShowScoreAfterDelay()
+	{
+		yield return new WaitForSeconds(roundOverDuration);
+		int score = GameEvents.RaiseScoreRequested();
+		Debug.Log(score);
+		RoundOver.SetActive(false);
+		EndScore.SetActive(true);
+		finalScoreText.text = currentScore.ToString();
+		saveLoadManager.score = currentScore;
+		saveLoadManager.SaveData();
+	}
 
     public void OnContinuePressed()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        StartCoroutine(LoadingSequence());
+    }
 
+    IEnumerator LoadingSequence()
+    {
+        EndScore.SetActive(false);
+        Gallery.SetActive(false);
+        LoadingScreen.SetActive(true);
+
+        //wait 1 second so sreen is visible
+        yield return new WaitForSeconds(1f);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void OnGalleryPressed()
-    {
-        EndScore.SetActive(false);
-        Gallery.SetActive(true);
-        GameEvents.RaiseGalleryScreenActivated();
-    }
+	{
+		EndScore.SetActive(false);
+		Gallery.SetActive(true);
+		GameEvents.RaiseGalleryScreenActivated();
+	}
 
-    void UpdateScore(int newScore)
-    {
-        currentScore = newScore;
-    }
+	void UpdateScore(int newScore)
+	{
+		currentScore = newScore;
+	}
 
-    public void SetEnglish()
-    {
-        ChangeLanguageByCode("en");
-    }
+	public void SetEnglish()
+	{
+		ChangeLanguageByCode("en");
+	}
 
-    public void SetTraditionalChinese()
-    {
-        ChangeLanguageByCode("zh-TW"); 
-    }
+	public void SetTraditionalChinese()
+	{
+		ChangeLanguageByCode("zh-TW");
+	}
 
-    private void ChangeLanguageByCode(string localeCode)
-    {
-        if (isChanging) return;
-        StartCoroutine(ChangeLanguageByCodeCoroutine(localeCode));
-    }
+	private void ChangeLanguageByCode(string localeCode)
+	{
+		if (isChanging) return;
+		StartCoroutine(ChangeLanguageByCodeCoroutine(localeCode));
+	}
 
-    private IEnumerator ChangeLanguageByCodeCoroutine(string localeCode)
-    {
-        isChanging = true;
-        yield return LocalizationSettings.InitializationOperation;
+	private IEnumerator ChangeLanguageByCodeCoroutine(string localeCode)
+	{
+		isChanging = true;
+		yield return LocalizationSettings.InitializationOperation;
 
-        Locale selectedLocale = LocalizationSettings.AvailableLocales.GetLocale(localeCode);
-        if (selectedLocale != null)
-        {
-            LocalizationSettings.SelectedLocale = selectedLocale;
-        }
+		Locale selectedLocale = LocalizationSettings.AvailableLocales.GetLocale(localeCode);
+		if (selectedLocale != null)
+		{
+			LocalizationSettings.SelectedLocale = selectedLocale;
+		}
 
-        isChanging = false;
-    }
+		isChanging = false;
+	}
 }
 
