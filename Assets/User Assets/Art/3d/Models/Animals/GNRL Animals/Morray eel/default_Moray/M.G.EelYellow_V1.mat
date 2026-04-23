@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: S.G.EelYellow
+  m_Name: M.G.EelYellow_V1
   m_Shader: {fileID: -6465566751694194690, guid: 4bab31795ac8f774496b5a66cdfde0b3, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
