@@ -190,7 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   reference: 
   speed: 0
-  rarity: 0
+  rarity: 10
 --- !u!95 &6213045941017202860
 Animator:
   serializedVersion: 7

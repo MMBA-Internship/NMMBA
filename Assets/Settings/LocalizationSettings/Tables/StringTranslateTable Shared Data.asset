@@ -55,10 +55,6 @@ MonoBehaviour:
     m_Key: Cancel
     m_Metadata:
       m_Items: []
-  - m_Id: 34297568591872
-    m_Key: VersionText
-    m_Metadata:
-      m_Items: []
   - m_Id: 36153334202368
     m_Key: TaptotakePicText
     m_Metadata:

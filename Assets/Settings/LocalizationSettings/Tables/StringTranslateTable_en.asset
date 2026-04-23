@@ -65,10 +65,6 @@ MonoBehaviour:
     m_Localized: Round Over
     m_Metadata:
       m_Items: []
-  - m_Id: 34297568591872
-    m_Localized: Version
-    m_Metadata:
-      m_Items: []
   - m_Id: 36153334202368
     m_Localized: Tap to take a picture
     m_Metadata:
