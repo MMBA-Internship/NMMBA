@@ -300,7 +300,10 @@ public class GameStateManager : MonoBehaviour
 			GameplayScreen_B.SetActive(true);
 		}
 
-        Tutorial_Objective.SetActive(true);
+        if (!WallBuild)
+        {
+            Tutorial_Objective.SetActive(true);
+        }
     }
 
 	IEnumerator GameplayFlow()

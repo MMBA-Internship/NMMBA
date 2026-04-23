@@ -758,6 +758,10 @@ PrefabInstance:
       propertyPath: uiScoreLabel
       value: 
       objectReference: {fileID: 810071432}
+    - target: {fileID: 3963285170470641429, guid: 226cd394eb3a4cc4f9106ca16ee3c78a, type: 3}
+      propertyPath: feedbackBubbles
+      value: 
+      objectReference: {fileID: 694722278}
     - target: {fileID: 4655351860989842355, guid: 226cd394eb3a4cc4f9106ca16ee3c78a, type: 3}
       propertyPath: leaderboard
       value: 
@@ -64040,19 +64044,19 @@ MonoBehaviour:
         y: 0.63483614
         z: 124.447426
       TangentIn:
-        x: 0
-        y: 0
-        z: -3.4930305
+        x: -0
+        y: -0
+        z: -6.173559
       TangentOut:
         x: 0
         y: 0
-        z: 3.4930305
+        z: 7.369852
       Rotation:
         value:
-          x: 0.06777032
-          y: 0.892983
-          z: 0.08339145
-          w: -0.43707478
+          x: -0.03549971
+          y: 0.71242476
+          z: 0.026828807
+          w: -0.7003363
     - Position:
         x: 29.59401
         y: 0.6562017
@@ -64404,7 +64408,7 @@ MonoBehaviour:
       Tension: 0.5
     - Mode: 0
       Tension: 0.5
-    - Mode: 2
+    - Mode: 0
       Tension: 0.5
     - Mode: 0
       Tension: 0.5
