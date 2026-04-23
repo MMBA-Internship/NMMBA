@@ -1,11 +1,13 @@
-using UnityEngine;
 using System.Linq;
+using UnityEngine;
+using UnityEngine.VFX;
 
 public class FishScarer : MonoBehaviour
 {
 	[SerializeField] private AnimalFind animalFind;
 	[SerializeField] private float scareCooldown = 5f;
-	private Time lastScared;
+    [SerializeField] private VisualEffect feedbackBubbles;
+    private Time lastScared;
 
 	private void OnEnable()
 	{
@@ -21,8 +23,9 @@ public class FishScarer : MonoBehaviour
 	private void HanleOnHandEntered()
 	{
 		var fishes = animalFind.GetFishVisibilityData();
+		feedbackBubbles.Play();
 
-		foreach (AnimalFindInfo fish in fishes)
+        foreach (AnimalFindInfo fish in fishes)
 		{
 			FishManager fManager = fish.fishObject.GetComponent<FishManager>();
 			if (fManager)
