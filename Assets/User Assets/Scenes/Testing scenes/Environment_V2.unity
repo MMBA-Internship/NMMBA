@@ -758,6 +758,10 @@ PrefabInstance:
       propertyPath: uiScoreLabel
       value: 
       objectReference: {fileID: 810071432}
+    - target: {fileID: 3963285170470641429, guid: 226cd394eb3a4cc4f9106ca16ee3c78a, type: 3}
+      propertyPath: feedbackBubbles
+      value: 
+      objectReference: {fileID: 694722278}
     - target: {fileID: 4655351860989842355, guid: 226cd394eb3a4cc4f9106ca16ee3c78a, type: 3}
       propertyPath: leaderboard
       value: 
