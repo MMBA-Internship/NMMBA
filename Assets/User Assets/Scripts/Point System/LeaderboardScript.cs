@@ -12,11 +12,11 @@ public class LeaderboardScript : MonoBehaviour
 
     public void MakeLeaderboard()
     {
-        int count = SaveLoadManager.highScores.list.Count;
+        /*int count = SaveLoadManager.retrievedData.Count;
         for(int i = 0; i < count; i++)
         {
-            Highscores[i].GetComponent<TMP_Text>().text = new string($"{SaveLoadManager.highScores.list[i]}");
-        }
+            Highscores[i].GetComponent<TMP_Text>().text = new string($"{SaveLoadManager.retrievedData[i]}");
+        }*/
     }
 
 }
