@@ -34489,9 +34489,37 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 1920
       objectReference: {fileID: 0}
+    - target: {fileID: 2042678404810478719, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042678404810478719, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042678404810478719, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 996768986}
+    - target: {fileID: 2042678404810478719, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042678404810478719, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SwitchLanguageEnglish
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042678404810478719, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: NameGenerator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042678404810478719, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2047066282111350172, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2444285766799113364, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
       propertyPath: m_Name
@@ -34572,6 +34600,34 @@ PrefabInstance:
     - target: {fileID: 4414686940704794578, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612648590845364498, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612648590845364498, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612648590845364498, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 996768986}
+    - target: {fileID: 4612648590845364498, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612648590845364498, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SwitchLanguageTaiwan
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612648590845364498, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: NameGenerator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612648590845364498, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5060550533016758886, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
       propertyPath: m_Pivot.x
@@ -34679,7 +34735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6162833266887548920, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6269178547555293367, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
       propertyPath: m_Name

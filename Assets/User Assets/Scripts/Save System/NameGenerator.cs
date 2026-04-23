@@ -33,4 +33,14 @@ public class NameGenerator : MonoBehaviour
                 return adj.chineseSimplified + fish.chineseSimplified;
         }
     }
+
+    public void SwitchLanguageEnglish()
+    {
+        currentLanguage = Language.English;
+    }
+
+    public void SwitchLanguageTaiwan()
+    {
+        currentLanguage = Language.Chinese;
+    }
 }
