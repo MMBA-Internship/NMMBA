@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
       propertyPath: m_LODs.Array.data[0].screenRelativeHeight
-      value: 0.14910552
+      value: 0.14964324
       objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: 2f0cfea01a96ea049b9b8278d14e123c, type: 3}
       propertyPath: m_LODs.Array.data[1].screenRelativeHeight
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   reference: 
   speed: 0
-  rarity: 0
+  rarity: 10
 --- !u!95 &2847434931456767994
 Animator:
   serializedVersion: 7
