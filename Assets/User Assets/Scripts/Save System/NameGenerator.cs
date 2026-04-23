@@ -10,7 +10,10 @@ public class NameGenerator : MonoBehaviour
 {
     public RandomNameObject dataBase;
     public Language currentLanguage;
-
+    private void Awake()
+    {
+        currentLanguage = Language.Chinese;
+    }
     public string GeneratedName()
     {
         if(dataBase == null || dataBase.adjectives.Count == 0 || dataBase.fish.Count == 0)
