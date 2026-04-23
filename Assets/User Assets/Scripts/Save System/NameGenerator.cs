@@ -17,8 +17,8 @@ public class NameGenerator : MonoBehaviour
         {
             return "InvalidName";
         }
-        var adj = dataBase.adjectives[Random.Range(0, dataBase.adjectives.Count)];
-        var fish = dataBase.fish[Random.Range(0, dataBase.adjectives.Count)];
+        var adj = dataBase.adjectives[Random.Range(0, dataBase.fish.Count - 1)];
+        var fish = dataBase.fish[Random.Range(0, dataBase.adjectives.Count - 1)];
 
         return FormatName(adj, fish);
     }

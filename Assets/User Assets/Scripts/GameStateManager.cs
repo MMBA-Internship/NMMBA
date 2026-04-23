@@ -57,6 +57,8 @@ public class GameStateManager : MonoBehaviour
 	[Header("ScoreSaving")]
 	public SaveLoad saveLoadManager;
 	public LeaderboardScript leaderboard;
+	public GameObject playerName;
+	public NameGenerator nameGenerator;
 
 	private List<int> scores;
     private int currentScore = 0;
@@ -156,6 +158,19 @@ public class GameStateManager : MonoBehaviour
         Controls_A.SetActive(useVersionA);
         Controls_B.SetActive(!useVersionA);
 
+    }
+
+	public void generateName()
+	{
+		string generatedString = nameGenerator.GeneratedName();
+		Debug.Log(generatedString);
+        playerName.gameObject.GetComponent<TMP_Text>().text = generatedString;
+	}
+
+	public void SaveName()
+	{
+		saveLoadManager.SaveName(playerName.gameObject.GetComponent<TMP_Text>().text);
+        saveLoadManager.SaveData();
     }
 
 	void ShowConfig()
@@ -334,7 +349,6 @@ public class GameStateManager : MonoBehaviour
 		EndScore.SetActive(true);
 		finalScoreText.text = currentScore.ToString();
 		saveLoadManager.score = currentScore;
-		saveLoadManager.SaveData();
 		leaderboard.MakeLeaderboard();
 	}
 

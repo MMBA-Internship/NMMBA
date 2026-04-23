@@ -65,7 +65,6 @@ public class SaveLoad : MonoBehaviour
 
     public void SaveData()
     {
-        SaveName(new string("Jason"));
         savedData.list.Add(new ScoreEntry(score, named));
 
         savedData.list.Sort((a,b) => b.score.CompareTo(a.score));
