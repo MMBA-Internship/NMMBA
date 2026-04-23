@@ -67,6 +67,7 @@ public class GameStateManager : MonoBehaviour
 
 	void Start()
 	{
+        StartCoroutine(SetDefaultLanguage());
 
         if (WallBuild)
         {
@@ -79,7 +80,17 @@ public class GameStateManager : MonoBehaviour
 
     }
 
-	void OnEnable()
+    IEnumerator SetDefaultLanguage()
+    {
+        yield return LocalizationSettings.InitializationOperation;
+        Locale selectedLocale = LocalizationSettings.AvailableLocales.GetLocale("zh-TW");
+        if (selectedLocale != null)
+        {
+            LocalizationSettings.SelectedLocale = selectedLocale;
+        }
+    }
+
+    void OnEnable()
 	{
 		GameEvents.OnSessionScoreChanged += UpdateScore;
 		GameEvents.OnHandEntered += ShowHandUI;
@@ -220,9 +231,16 @@ public class GameStateManager : MonoBehaviour
     }
     public void OnTutorialExit()
 	{
-		Tutorial_Objective.SetActive(false);
-		Tutorial_Controls.SetActive(false);
-	}
+        Tutorial_Objective.SetActive(false);
+        Tutorial_Controls.SetActive(false);
+
+        //only start gameplay timer if we are actually in gameplay
+        bool inGameplay = GameplayScreen_A.activeSelf || GameplayScreen_B.activeSelf;
+        if (inGameplay)
+        {
+            StartCoroutine(GameplayFlow());
+        }
+    }
 
 	//called by ready button
 	public void OnReadyPressed()
@@ -282,8 +300,8 @@ public class GameStateManager : MonoBehaviour
 			GameplayScreen_B.SetActive(true);
 		}
 
-		StartCoroutine(GameplayFlow());
-	}
+        Tutorial_Objective.SetActive(true);
+    }
 
 	IEnumerator GameplayFlow()
 	{
