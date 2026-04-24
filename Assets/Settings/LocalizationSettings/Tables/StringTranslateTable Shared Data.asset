@@ -127,6 +127,10 @@ MonoBehaviour:
     m_Key: LoadingText
     m_Metadata:
       m_Items: []
+  - m_Id: 6118398034436096
+    m_Key: NoScoresText
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

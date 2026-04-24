@@ -35792,6 +35792,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NameGenerator
   dataBase: {fileID: 11400000, guid: d9f15bb1af0e7fa4eb1f2ac16af81743, type: 2}
   currentLanguage: 0
+--- !u!114 &996768987 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3963285170470641429, guid: 226cd394eb3a4cc4f9106ca16ee3c78a, type: 3}
+  m_PrefabInstance: {fileID: 23640625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23640626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce89d4257ff416247a5e787ba0d12518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishScarer
 --- !u!1001 &999003780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38501,6 +38512,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Controls_B
       objectReference: {fileID: 0}
+    - target: {fileID: 2827304270467600007, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 996768987}
+    - target: {fileID: 2827304270467600007, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HanleOnHandEntered
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827304270467600007, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FishScarer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827304270467600007, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3423215537561906567, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
       propertyPath: PPV
       value: 
@@ -38719,7 +38746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6162833266887548920, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6269178547555293367, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
       propertyPath: m_Name
@@ -38728,6 +38755,26 @@ PrefabInstance:
     - target: {fileID: 6269178547555293367, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355332290483209844, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355332290483209844, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 996768987}
+    - target: {fileID: 6355332290483209844, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HanleOnHandEntered
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355332290483209844, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FishScarer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355332290483209844, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6468200894422061737, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
       propertyPath: m_Color.a
@@ -38770,7 +38817,8 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1690880082880864521, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6750731127116277007, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
       insertIndex: -1

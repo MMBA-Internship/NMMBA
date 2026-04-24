@@ -143,6 +143,10 @@ MonoBehaviour:
     m_Localized: Loading...
     m_Metadata:
       m_Items: []
+  - m_Id: 6118398034436096
+    m_Localized: No scores yet
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

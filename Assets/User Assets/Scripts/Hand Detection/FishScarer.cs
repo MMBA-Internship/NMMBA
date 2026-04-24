@@ -7,11 +7,10 @@ public class FishScarer : MonoBehaviour
 	[SerializeField] private AnimalFind animalFind;
 	[SerializeField] private float scareCooldown = 5f;
     [SerializeField] private VisualEffect feedbackBubbles;
-    private Time lastScared;
 
-	private void OnEnable()
+	public void OnEnable()
 	{
-		GameEvents.OnHandEntered += HanleOnHandEntered;
+        GameEvents.OnHandEntered += HanleOnHandEntered;
 	}
 
 	private void OnDisable()
@@ -20,10 +19,11 @@ public class FishScarer : MonoBehaviour
 	}
 
 	// TODO: Make a cooldown so scare can't be called every 0.2 seconds
-	private void HanleOnHandEntered()
+	public void HanleOnHandEntered()
 	{
-		var fishes = animalFind.GetFishVisibilityData();
-		feedbackBubbles.Play();
+        feedbackBubbles.Play();
+
+        var fishes = animalFind.GetFishVisibilityData();
 
         foreach (AnimalFindInfo fish in fishes)
 		{
