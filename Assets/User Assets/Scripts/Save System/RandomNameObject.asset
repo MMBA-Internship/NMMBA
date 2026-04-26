@@ -14,204 +14,204 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RandomNameObject
   adjectives:
   - english: Agile
-    chineseSimplified: "\u654F\u6377\u7684"
+    chineseSimplified: "\u654F\u6377"
   - english: Slimy
-    chineseSimplified: "\u6ED1\u6E9C\u7684"
+    chineseSimplified: "\u9ECF\u6ED1"
   - english: Strong
-    chineseSimplified: "\u5F3A\u58EE\u7684"
+    chineseSimplified: "\u5F37\u58EF"
   - english: Vibrant
-    chineseSimplified: "\u9C9C\u8273\u7684"
+    chineseSimplified: "\u6D3B\u8E8D"
   - english: Shiny
-    chineseSimplified: "\u95EA\u4EAE\u7684"
+    chineseSimplified: "\u9583\u4EAE"
   - english: Ancient
-    chineseSimplified: "\u53E4\u8001\u7684"
+    chineseSimplified: "\u53E4\u8001"
   - english: Fierce
-    chineseSimplified: "\u51F6\u731B\u7684"
+    chineseSimplified: "\u5147\u731B"
   - english: Gentle
-    chineseSimplified: "\u6E29\u548C\u7684"
+    chineseSimplified: "\u6EAB\u67D4"
   - english: Curious
-    chineseSimplified: "\u597D\u5947\u7684"
+    chineseSimplified: "\u597D\u5947"
   - english: Timid
-    chineseSimplified: "\u80C6\u5C0F\u7684"
+    chineseSimplified: "\u81BD\u5C0F"
   - english: Huge
-    chineseSimplified: "\u5DE8\u5927\u7684"
+    chineseSimplified: "\u5DE8\u5927"
   - english: Tiny
-    chineseSimplified: "\u5FAE\u5C0F\u7684"
+    chineseSimplified: "\u5FAE\u5C0F"
   - english: Graceful
-    chineseSimplified: "\u4F18\u96C5\u7684"
+    chineseSimplified: "\u512A\u96C5"
   - english: Clumsy
-    chineseSimplified: "\u7B28\u62D9\u7684"
+    chineseSimplified: "\u7B28\u62D9"
   - english: Fast
-    chineseSimplified: "\u5FEB\u901F\u7684"
+    chineseSimplified: "\u5FEB\u901F"
   - english: Slow
-    chineseSimplified: "\u7F13\u6162\u7684"
+    chineseSimplified: "\u7DE9\u6162"
   - english: Transparent
-    chineseSimplified: "\u900F\u660E\u7684"
+    chineseSimplified: "\u900F\u660E"
   - english: Spiny
-    chineseSimplified: "\u5E26\u523A\u7684"
+    chineseSimplified: "\u591A\u523A"
   - english: Smooth
-    chineseSimplified: "\u5149\u6ED1\u7684"
+    chineseSimplified: "\u5149\u6ED1"
   - english: Rough
-    chineseSimplified: "\u7C97\u7CD9\u7684"
+    chineseSimplified: "\u7C97\u7CD9"
   - english: Poisonous
-    chineseSimplified: "\u6709\u6BD2\u7684"
+    chineseSimplified: "\u6709\u6BD2"
   - english: Non-poisonous
-    chineseSimplified: "\u65E0\u6BD2\u7684"
+    chineseSimplified: "\u7121\u6BD2"
   - english: Social
-    chineseSimplified: "\u7FA4\u5C45\u7684"
+    chineseSimplified: "\u7FA4\u5C45"
   - english: Solitary
-    chineseSimplified: "\u72EC\u884C\u7684"
+    chineseSimplified: "\u7368\u5C45"
   - english: Colorful
-    chineseSimplified: "\u5F69\u8272\u7684"
+    chineseSimplified: "\u591A\u5F69"
   - english: Monochrome
-    chineseSimplified: "\u5355\u8272\u7684"
+    chineseSimplified: "\u55AE\u8272"
   - english: Striped
-    chineseSimplified: "\u6761\u7EB9\u7684"
+    chineseSimplified: "\u689D\u7D0B"
   - english: Spotted
-    chineseSimplified: "\u6591\u70B9\u7684"
+    chineseSimplified: "\u6591\u9EDE"
   - english: Glowing
-    chineseSimplified: "\u53D1\u5149\u7684"
+    chineseSimplified: "\u767C\u5149"
   - english: Mysterious
-    chineseSimplified: "\u795E\u79D8\u7684"
+    chineseSimplified: "\u795E\u79D8"
   - english: Rare
-    chineseSimplified: "\u7A00\u6709\u7684"
+    chineseSimplified: "\u7A00\u6709"
   - english: Common
-    chineseSimplified: "\u5E38\u89C1\u7684"
+    chineseSimplified: "\u5E38\u898B"
   - english: Silent
-    chineseSimplified: "\u6C89\u9ED8\u7684"
+    chineseSimplified: "\u5B89\u975C"
   - english: Noisy
-    chineseSimplified: "\u5435\u95F9\u7684"
+    chineseSimplified: "\u55A7\u9B27"
   - english: Gluttonous
-    chineseSimplified: "\u8D2A\u5403\u7684"
+    chineseSimplified: "\u8CAA\u5403"
   - english: Picky
-    chineseSimplified: "\u6311\u5254\u7684"
+    chineseSimplified: "\u6311\u98DF"
   - english: Tenacious
-    chineseSimplified: "\u987D\u5F3A\u7684"
+    chineseSimplified: "\u9811\u5F37"
   - english: Fragile
-    chineseSimplified: "\u8106\u5F31\u7684"
+    chineseSimplified: "\u8106\u5F31"
   - english: Noble
-    chineseSimplified: "\u9AD8\u8D35\u7684"
+    chineseSimplified: "\u9AD8\u8CB4"
   - english: Ordinary
-    chineseSimplified: "\u5E73\u51E1\u7684"
+    chineseSimplified: "\u666E\u901A"
   - english: Dexterous
-    chineseSimplified: "\u7075\u5DE7\u7684"
+    chineseSimplified: "\u9748\u5DE7"
   - english: Sluggish
-    chineseSimplified: "\u8FDF\u949D\u7684"
+    chineseSimplified: "\u9072\u920D"
   - english: Alert
-    chineseSimplified: "\u673A\u8B66\u7684"
+    chineseSimplified: "\u8B66\u89BA"
   - english: Lazy
-    chineseSimplified: "\u61D2\u60F0\u7684"
+    chineseSimplified: "\u61F6\u60F0"
   - english: Deep-sea
-    chineseSimplified: "\u6DF1\u6D77\u7684"
+    chineseSimplified: "\u6DF1\u6D77"
   - english: Shallow-water
-    chineseSimplified: "\u6D45\u6C34\u7684"
+    chineseSimplified: "\u6DFA\u6C34"
   - english: Migratory
-    chineseSimplified: "\u6D04\u6E38\u7684"
+    chineseSimplified: "\u6D04\u6E38"
   - english: Bottom-dwelling
-    chineseSimplified: "\u5E95\u6816\u7684"
+    chineseSimplified: "\u5E95\u68F2"
   - english: Carnivorous
-    chineseSimplified: "\u8089\u98DF\u7684"
+    chineseSimplified: "\u8089\u98DF"
   - english: Herbivorous
-    chineseSimplified: "\u8349\u98DF\u7684"
+    chineseSimplified: "\u8349\u98DF"
   - english: Omnivorous
-    chineseSimplified: "\u6742\u98DF\u7684"
+    chineseSimplified: "\u96DC\u98DF"
   - english: Filter-feeding
-    chineseSimplified: "\u6EE4\u98DF\u7684"
+    chineseSimplified: "\u6FFE\u98DF"
   - english: Parasitic
-    chineseSimplified: "\u5BC4\u751F\u7684"
+    chineseSimplified: "\u5BC4\u751F"
   - english: Symbiotic
-    chineseSimplified: "\u5171\u751F\u7684"
+    chineseSimplified: "\u5171\u751F"
   - english: Territorial
-    chineseSimplified: "\u9886\u5730\u6027\u7684"
+    chineseSimplified: "\u9818\u57DF\u6027"
   - english: Nocturnal
-    chineseSimplified: "\u591C\u884C\u7684"
+    chineseSimplified: "\u591C\u884C"
   - english: Diurnal
-    chineseSimplified: "\u65E5\u884C\u7684"
+    chineseSimplified: "\u665D\u884C"
   - english: Cold-tolerant
-    chineseSimplified: "\u8010\u5BD2\u7684"
+    chineseSimplified: "\u8010\u5BD2"
   - english: Warm-loving
-    chineseSimplified: "\u559C\u6696\u7684"
+    chineseSimplified: "\u559C\u6696"
   - english: Long-tailed
-    chineseSimplified: "\u957F\u5C3E\u7684"
+    chineseSimplified: "\u9577\u5C3E"
   - english: Short-tailed
-    chineseSimplified: "\u77ED\u5C3E\u7684"
+    chineseSimplified: "\u77ED\u5C3E"
   - english: Large-eyed
-    chineseSimplified: "\u5927\u773C\u7684"
+    chineseSimplified: "\u5927\u773C"
   - english: Small-eyed
-    chineseSimplified: "\u5C0F\u773C\u7684"
+    chineseSimplified: "\u5C0F\u773C"
   - english: Flat
-    chineseSimplified: "\u6241\u5E73\u7684"
+    chineseSimplified: "\u6241\u5E73"
   - english: Round
-    chineseSimplified: "\u5706\u6EDA\u7684"
+    chineseSimplified: "\u5713\u6F64"
   - english: Long-snouted
-    chineseSimplified: "\u957F\u543B\u7684"
+    chineseSimplified: "\u9577\u543B"
   - english: Wide-mouthed
-    chineseSimplified: "\u5BBD\u5634\u7684"
+    chineseSimplified: "\u5BEC\u53E3"
   - english: Scaly
-    chineseSimplified: "\u6709\u9CDE\u7684"
+    chineseSimplified: "\u591A\u9C57"
   - english: Scaleless
-    chineseSimplified: "\u65E0\u9CDE\u7684"
+    chineseSimplified: "\u7121\u9C57"
   - english: Finned
-    chineseSimplified: "\u6709\u9CCD\u7684"
+    chineseSimplified: "\u6709\u9C2D"
   - english: Finless
-    chineseSimplified: "\u6ED1\u6E9C\u7684"
+    chineseSimplified: "\u7121\u9C2D"
   - english: Squirting
-    chineseSimplified: "\u55B7\u6C34\u7684"
+    chineseSimplified: "\u5674\u6C34"
   - english: Leaping
-    chineseSimplified: "\u8DF3\u8DC3\u7684"
+    chineseSimplified: "\u8DF3\u8E8D"
   - english: Sand-diving
-    chineseSimplified: "\u94BB\u6C99\u7684"
+    chineseSimplified: "\u6F5B\u6C99"
   - english: Hiding
-    chineseSimplified: "\u8EB2\u85CF\u7684"
+    chineseSimplified: "\u5584\u8EB2"
   - english: Mimetic
-    chineseSimplified: "\u62DF\u6001\u7684"
+    chineseSimplified: "\u64EC\u614B"
   - english: Electric
-    chineseSimplified: "\u5E26\u7535\u7684"
+    chineseSimplified: "\u653E\u96FB"
   - english: Soft
-    chineseSimplified: "\u67D4\u8F6F\u7684"
+    chineseSimplified: "\u67D4\u8EDF"
   - english: Slimy
-    chineseSimplified: "\u6ED1\u6E9C\u7684"
+    chineseSimplified: "\u9ECF\u6ED1"
   fish:
   - english: clownfish
     chineseSimplified: "\u5C0F\u4E11\u9C7C"
   - english: blue whale
-    chineseSimplified: "\u84DD\u9CB8"
+    chineseSimplified: "\u85CD\u9BE8"
   - english: seahorse
-    chineseSimplified: "\u6D77\u9A6C"
+    chineseSimplified: "\u6D77\u99AC"
   - english: octopus
-    chineseSimplified: "\u7AE0\u9C7C"
+    chineseSimplified: "\u7AE0\u9B5A"
   - english: jellyfish
     chineseSimplified: "\u6C34\u6BCD"
   - english: sea turtle
-    chineseSimplified: "\u6D77\u9F9F"
+    chineseSimplified: "\u6D77\u9F9C"
   - english: dolphin
     chineseSimplified: "\u6D77\u8C5A"
   - english: shark
-    chineseSimplified: "\u9CA8\u9C7C"
+    chineseSimplified: "\u9BCA\u9B5A"
   - english: starfish
     chineseSimplified: "\u6D77\u661F"
   - english: sea urchin
-    chineseSimplified: "\u6D77\u80C6"
+    chineseSimplified: "\u6D77\u81BD"
   - english: sea cucumber
-    chineseSimplified: "\u6D77\u53C2"
+    chineseSimplified: "\u6D77\u53C3"
   - english: coral
     chineseSimplified: "\u73CA\u745A"
   - english: sea anemone
     chineseSimplified: "\u6D77\u8475"
   - english: lobster
-    chineseSimplified: "\u9F99\u867E"
+    chineseSimplified: "\u9F8D\u8766"
   - english: crab
     chineseSimplified: "\u8783\u87F9"
   - english: cuttlefish
-    chineseSimplified: "\u4E4C\u8D3C"
+    chineseSimplified: "\u58A8\u9B5A"
   - english: squid
-    chineseSimplified: "\u9C7F\u9C7C"
+    chineseSimplified: "\u9B77\u9B5A"
   - english: oyster
-    chineseSimplified: "\u7261\u86CE"
+    chineseSimplified: "\u7261\u8823"
   - english: clam
     chineseSimplified: "\u86E4\u870A"
   - english: scallop
-    chineseSimplified: "\u6247\u8D1D"
+    chineseSimplified: "\u6247\u8C9D"
   - english: conch
     chineseSimplified: "\u6D77\u87BA"
   - english: sea slug
@@ -219,51 +219,51 @@ MonoBehaviour:
   - english: manatee
     chineseSimplified: "\u6D77\u725B"
   - english: sea lion
-    chineseSimplified: "\u6D77\u72EE"
+    chineseSimplified: "\u6D77\u7345"
   - english: seal
     chineseSimplified: "\u6D77\u8C79"
   - english: orca
-    chineseSimplified: "\u864E\u9CB8"
+    chineseSimplified: "\u864E\u9BE8"
   - english: manta ray
-    chineseSimplified: "\u9B54\u9B3C\u9C7C"
+    chineseSimplified: "\u8760\u9B5F"
   - english: electric ray
-    chineseSimplified: "\u7535\u9CD0"
+    chineseSimplified: "\u96FB\u9C29"
   - english: moray eel
-    chineseSimplified: "\u6D77\u9CD7"
+    chineseSimplified: "\u6D77\u9C54"
   - english: flounder
-    chineseSimplified: "\u6BD4\u76EE\u9C7C"
+    chineseSimplified: "\u6BD4\u76EE\u9B5A"
   - english: pufferfish
     chineseSimplified: "\u6CB3\u8C5A"
   - english: lionfish
-    chineseSimplified: "\u72EE\u5B50\u9C7C"
+    chineseSimplified: "\u7345\u5B50\u9B5A"
   - english: butterflyfish
-    chineseSimplified: "\u8774\u8776\u9C7C"
+    chineseSimplified: "\u8774\u8776\u9B5A"
   - english: Angelfish
-    chineseSimplified: "\u5929\u4F7F\u9C7C"
+    chineseSimplified: "\u795E\u4ED9\u9B5A"
   - english: parrotfish
-    chineseSimplified: "\u9E66\u9E49\u9C7C"
+    chineseSimplified: "\u9E1A\u5634\u9B5A"
   - english: triggerfish
-    chineseSimplified: "\u70AE\u5F39\u9C7C"
+    chineseSimplified: "\u7832\u5F48\u9B5A"
   - english: wrasse
-    chineseSimplified: "\u9686\u5934\u9C7C"
+    chineseSimplified: "\u9686\u982D\u9B5A"
   - english: grouper
-    chineseSimplified: "\u77F3\u6591\u9C7C"
+    chineseSimplified: "\u77F3\u6591\u9B5A"
   - english: salmon
-    chineseSimplified: "\u9C91\u9C7C"
+    chineseSimplified: "\u9BAD\u9B5A"
   - english: tuna
-    chineseSimplified: "\u91D1\u67AA\u9C7C"
+    chineseSimplified: "\u9BAA\u9B5A"
   - english: sailfish
-    chineseSimplified: "\u65D7\u9C7C"
+    chineseSimplified: "\u65D7\u9B5A"
   - english: flying fish
-    chineseSimplified: "\u98DE\u9C7C"
+    chineseSimplified: "\u98DB\u9B5A"
   - english: lanternfish
-    chineseSimplified: "\u706F\u7B3C\u9C7C"
+    chineseSimplified: "\u71C8\u7C60\u9B5A"
   - english: anglerfish
-    chineseSimplified: "\u5B89\u5EB7\u9C7C"
+    chineseSimplified: "\u9B9F\u9C47\u9B5A"
   - english: leafy seadragon
-    chineseSimplified: "\u53F6\u6D77\u9F99"
+    chineseSimplified: "\u8449\u5F62\u6D77\u9F8D"
   - english: weedy seadragon
-    chineseSimplified: "\u8349\u6D77\u9F99"
+    chineseSimplified: "\u8349\u6D77\u9F8D"
   - english: sea grape
     chineseSimplified: "\u6D77\u8461\u8404"
   - english: sea squirt
@@ -271,11 +271,11 @@ MonoBehaviour:
   - english: sea spider
     chineseSimplified: "\u6D77\u8718\u86DB"
   - english: sea feather
-    chineseSimplified: "\u6D77\u7FBD\u6BDB"
+    chineseSimplified: "\u6D77\u7FBD"
   - english: sea lily
     chineseSimplified: "\u6D77\u767E\u5408"
   - english: sand dollar
-    chineseSimplified: "\u6C99\u94B1"
+    chineseSimplified: "\u6C99\u9322"
   - english: fur seal
     chineseSimplified: "\u6D77\u72D7"
   - english: walrus
@@ -283,20 +283,20 @@ MonoBehaviour:
   - english: sea beaver
     chineseSimplified: "\u6D77\u72F8"
   - english: sea otter
-    chineseSimplified: "\u6D77\u736D"
+    chineseSimplified: "\u6D77\u737A"
   - english: frogfish
-    chineseSimplified: "\u6D77\u86D9\u9C7C"
+    chineseSimplified: "\u8E84\u9B5A"
   - english: seamoth
-    chineseSimplified: "\u6D77\u86FE\u9C7C"
+    chineseSimplified: "\u6D77\u86FE\u9B5A"
   - english: pipefish
-    chineseSimplified: "\u6D77\u9F99"
+    chineseSimplified: "\u6D77\u9F8D"
   - english: sea snake
     chineseSimplified: "\u6D77\u86C7"
   - english: marine bristle worm
-    chineseSimplified: "\u6D77\u8708\u86A3"
+    chineseSimplified: "\u591A\u6BDB\u87F2"
   - english: sea butterfly
     chineseSimplified: "\u6D77\u8774\u8776"
   - english: sea angel
     chineseSimplified: "\u6D77\u5929\u4F7F"
   - english: salp
-    chineseSimplified: "\u6D77\u6A3D"
+    chineseSimplified: "\u6A3D\u6D77\u9798"
