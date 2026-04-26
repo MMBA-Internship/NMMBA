@@ -758,6 +758,10 @@ PrefabInstance:
       propertyPath: uiScoreLabel
       value: 
       objectReference: {fileID: 810071432}
+    - target: {fileID: 3435976339130986225, guid: 226cd394eb3a4cc4f9106ca16ee3c78a, type: 3}
+      propertyPath: uiScoreLabelb
+      value: 
+      objectReference: {fileID: 563638920}
     - target: {fileID: 3963285170470641429, guid: 226cd394eb3a4cc4f9106ca16ee3c78a, type: 3}
       propertyPath: feedbackBubbles
       value: 
@@ -18001,7 +18005,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '#'
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -38606,7 +38610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414686940704794578, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4612648590845364498, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

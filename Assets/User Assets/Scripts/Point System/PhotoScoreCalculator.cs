@@ -12,6 +12,7 @@ public class PhotoScoreCalculator : MonoBehaviour
     [SerializeField] private float baseScoreCentering = 30f;
     [SerializeField] private float baseScoreObstruction = 30f;
     [SerializeField] private TextMeshProUGUI uiScoreLabel;
+    [SerializeField] private TextMeshProUGUI uiScoreLabelb;
 
 
     private static int pictureCounter = 0;
@@ -113,8 +114,14 @@ public class PhotoScoreCalculator : MonoBehaviour
         result.totalScore = totalPictureScore;
 
         Debug.Log($"{pictureName} total score = {totalPictureScore}");
-
-        uiScoreLabel.text = totalPictureScore.ToString();
+        if (uiScoreLabel.isActiveAndEnabled)
+        {
+            uiScoreLabel.text = totalPictureScore.ToString();
+        }
+        else
+        {
+            uiScoreLabelb.text = totalPictureScore.ToString();
+        }
 
         GameEvents.RaisePhotoScored(result);
     }
