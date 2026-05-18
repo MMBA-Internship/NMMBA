@@ -369,7 +369,8 @@ public class GameStateManager : MonoBehaviour
 		RoundOver.SetActive(false);
 		EndScore.SetActive(true);
 		finalScoreText.text = currentScore.ToString();
-		saveLoadManager.score = currentScore;
+        generateName();
+        saveLoadManager.score = currentScore;
 		leaderboard.MakeLeaderboard();
 	}
 
