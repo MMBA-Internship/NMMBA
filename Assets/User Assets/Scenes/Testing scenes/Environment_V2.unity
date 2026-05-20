@@ -36362,7 +36362,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1033417723}
   - component: {fileID: 1033417720}
-  - component: {fileID: 1033417722}
   - component: {fileID: 1033417721}
   m_Layer: 0
   m_Name: Photo Cam
@@ -36561,14 +36560,6 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
---- !u!81 &1033417722
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033417719}
-  m_Enabled: 1
 --- !u!4 &1033417723
 Transform:
   m_ObjectHideFlags: 0
