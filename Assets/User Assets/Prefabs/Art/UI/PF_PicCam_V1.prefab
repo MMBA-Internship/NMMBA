@@ -46,8 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b99f02b4ccfe0840987949aa14bd650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  w: 192
-  h: 108
+  w: 400
+  h: 400
+  textureCam: {fileID: 0}
 --- !u!114 &4646851587036567966
 MonoBehaviour:
   m_ObjectHideFlags: 0

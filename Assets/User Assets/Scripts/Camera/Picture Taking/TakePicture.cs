@@ -5,6 +5,7 @@ public class TakePicture : MonoBehaviour
 {
     [SerializeField] private int w;
     [SerializeField] private int h;
+    [SerializeField] private Camera textureCam;
 
     private RenderTexture renderTexture;
 
@@ -13,6 +14,8 @@ public class TakePicture : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.OnPhotoInputPressed += TryCapture;
+        if (!textureCam)
+            textureCam = Camera.main;
     }
 
     private void OnDisable()
@@ -42,9 +45,9 @@ public class TakePicture : MonoBehaviour
 
         yield return new WaitForEndOfFrame();
 
-        Camera.main.targetTexture = renderTexture;
-        Camera.main.Render();
-        Camera.main.targetTexture = null;
+        textureCam.targetTexture = renderTexture;
+        textureCam.Render();
+        textureCam.targetTexture = null;
 
         GameEvents.RaisePictureTaken(renderTexture);
 

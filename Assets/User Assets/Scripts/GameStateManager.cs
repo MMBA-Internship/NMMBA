@@ -66,6 +66,7 @@ public class GameStateManager : MonoBehaviour
 	private Coroutine countdownCoroutine;
 
 	private bool isChanging = false;
+	[SerializeField] private float timeRemaining; // To debug
 
 	void Start()
 	{
@@ -332,7 +333,7 @@ public class GameStateManager : MonoBehaviour
 
 	IEnumerator OxygenTimer()
 {
-        float timeRemaining = oxygenDuration;
+        timeRemaining = oxygenDuration;
 
         while (timeRemaining > 0)
         {
