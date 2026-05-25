@@ -163,7 +163,7 @@ Material:
     - _CullMode: 2
     - _CullModeForward: 2
     - _Cutoff: 0.5
-    - _DecalBlend: 0.879
+    - _DecalBlend: 1
     - _DecalColorMask0: 15
     - _DecalColorMask1: 15
     - _DecalColorMask2: 11
@@ -214,7 +214,7 @@ Material:
     - _MaskBlendSrc: 1
     - _MaterialID: 1
     - _Metallic: 0
-    - _MetallicRemapMax: 0.61862814
+    - _MetallicRemapMax: 0.5759741
     - _MetallicRemapMin: 0
     - _NormalBlendSrc: 0
     - _NormalMapSpace: 0
@@ -233,7 +233,7 @@ Material:
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
     - _Smoothness: 0.5
-    - _SmoothnessRemapMax: 1
+    - _SmoothnessRemapMax: 0.39810425
     - _SmoothnessRemapMin: 0
     - _SpecularAAScreenSpaceVariance: 0.1
     - _SpecularAAThreshold: 0.2
