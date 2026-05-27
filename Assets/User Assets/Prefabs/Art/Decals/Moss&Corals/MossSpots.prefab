@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2960569682159792889}
   - component: {fileID: 3415692565131531701}
   m_Layer: 0
-  m_Name: MossSpots_1
+  m_Name: MossSpots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

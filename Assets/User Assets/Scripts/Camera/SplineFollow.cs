@@ -7,8 +7,10 @@ public class SplineFollow : MonoBehaviour
 {
 	[SerializeField] private SplineContainer path;
 	[SerializeField] private float speed;
+    [SerializeField] private bool randomizeStartPosition = true;
 
-	private float t = 0f;
+
+    private float t = 0f;
 
     void Start()
     {
@@ -16,9 +18,16 @@ public class SplineFollow : MonoBehaviour
         {
             float splineLength = path.Spline.GetLength();
             Debug.Log($"Spline length: {splineLength} units");
-        }
 
+            // Randomize starting position
+            if (randomizeStartPosition)
+            {
+                t = Random.Range(0f, 1f);
+                Debug.Log($"Starting at random position: {t}");
+            }
+        }
     }
+
     void Update()
 	{
 		if (path == null) return;
