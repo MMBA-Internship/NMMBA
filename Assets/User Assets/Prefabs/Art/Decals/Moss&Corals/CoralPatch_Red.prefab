@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4850934381398082775}
   - component: {fileID: 4312018084736110784}
   m_Layer: 0
-  m_Name: MossPatch2_1
+  m_Name: CoralPatch_Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
