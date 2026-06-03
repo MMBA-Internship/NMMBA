@@ -66,9 +66,9 @@ public class GameStateManager : MonoBehaviour
 	private Coroutine countdownCoroutine;
 
 	private bool isChanging = false;
-	[SerializeField] private float timeRemaining; // To debug
+    [SerializeField] private float timeRemaining; // To debug
 
-	void Start()
+    void Start()
 	{
         StartCoroutine(SetDefaultLanguage());
 

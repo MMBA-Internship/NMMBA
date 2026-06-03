@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 72127f2cc107151439ec8e839e7d81a6, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 513
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 72127f2cc107151439ec8e839e7d81a6, type: 3}
       propertyPath: m_Name
       value: PF_Small.Rock.2_V1
