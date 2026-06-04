@@ -37928,7 +37928,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &781941154
 Transform:
   m_ObjectHideFlags: 0
@@ -51202,7 +51202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3941428144512276693, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
       propertyPath: WallBuild
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3941428144512276693, guid: 8010cbef34045ca44ab30e8939f8258e, type: 3}
       propertyPath: playerName
@@ -60138,6 +60138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Camera_V1
       objectReference: {fileID: 0}
+    - target: {fileID: 2593445343295350792, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3711109187523083180, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -60160,7 +60164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4108519007481705700, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.3067
+      value: -2.3067002
       objectReference: {fileID: 0}
     - target: {fileID: 4108519007481705700, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -60200,11 +60204,11 @@ PrefabInstance:
       objectReference: {fileID: 1902450300}
     - target: {fileID: 5403131646752177410, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
       propertyPath: speed
-      value: 0.005
+      value: 0.0019
       objectReference: {fileID: 0}
     - target: {fileID: 9062679119993737431, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9062679119993737431, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
       propertyPath: cameraPivot
@@ -60216,7 +60220,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4108519007481705700, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1823688467}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b90fb29a6d7777a4490c5b4b960ed5dc, type: 3}
 --- !u!4 &1304331761 stripped
@@ -74688,9 +74695,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1823688467}
-  - {fileID: 2007532929}
   - {fileID: 996768978}
+  - {fileID: 2007532929}
   - {fileID: 1902450301}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -79853,13 +79859,13 @@ Transform:
   m_GameObject: {fileID: 1823688464}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.67, y: 1.4699998, z: -17.9}
+  m_LocalPosition: {x: 75.05714, y: 3.7767, z: 5.8250713}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 694722279}
   - {fileID: 781941154}
-  m_Father: {fileID: 1702885286}
+  m_Father: {fileID: 2007532929}
   m_LocalEulerAnglesHint: {x: 0, y: -26.132, z: 0}
 --- !u!114 &1823688468
 MonoBehaviour:
@@ -87057,53 +87063,17 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -4.536875
+        z: -5.017697
       TangentOut:
         x: 0
         y: 0
-        z: 4.7349663
+        z: 6.4933114
       Rotation:
         value:
-          x: 0.010820907
-          y: 0.8048001
-          z: 0.012816711
-          w: 0.59330887
-    - Position:
-        x: 0.26485443
-        y: 0.00028938055
-        z: 1.019558
-      TangentIn:
-        x: -0.053516388
-        y: -0.00028944016
-        z: -1.6315613
-      TangentOut:
-        x: -0.33399963
-        y: -0.00028944016
-        z: 1.4464722
-      Rotation:
-        value:
-          x: 0
-          y: 0.746083
-          z: 0
-          w: 0.665853
-    - Position:
-        x: 4.367668
-        y: -0.44462532
-        z: 0.059440613
-      TangentIn:
-        x: -0
-        y: -0
-        z: -1.3627664
-      TangentOut:
-        x: 0
-        y: 0
-        z: 1.2727972
-      Rotation:
-        value:
-          x: 0.07967899
-          y: 0.76486385
-          z: -0.000107317195
-          w: 0.63924533
+          x: 0.016999803
+          y: 0.79571295
+          z: 0.00461339
+          w: 0.6054178
     - Position:
         x: 8.009857
         y: -0.81000006
@@ -87111,17 +87081,17 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -1.3362653
+        z: -4.8593063
       TangentOut:
         x: 0
         y: 0
-        z: 1.7229421
+        z: 2.5476372
       Rotation:
         value:
-          x: 0.095336154
-          y: 0.73819697
-          z: -0.16210368
-          w: 0.6478416
+          x: 0.08944744
+          y: 0.766718
+          z: -0.1428538
+          w: 0.61946386
     - Position:
         x: 12.907291
         y: -4.4963593
@@ -87415,19 +87385,19 @@ MonoBehaviour:
         y: 0.63483614
         z: 124.447426
       TangentIn:
-        x: 0
-        y: 0
-        z: -3.4930305
+        x: -0
+        y: -0
+        z: -6.173559
       TangentOut:
         x: 0
         y: 0
-        z: 3.4930305
+        z: 7.369852
       Rotation:
         value:
-          x: 0.06777032
-          y: 0.892983
-          z: 0.08339145
-          w: -0.43707478
+          x: -0.035677277
+          y: 0.7124159
+          z: 0.027003363
+          w: -0.70032954
     - Position:
         x: 29.59401
         y: 0.6562017
@@ -87487,19 +87457,19 @@ MonoBehaviour:
         y: 1.0087944
         z: 88.247375
       TangentIn:
-        x: 0
-        y: 0
-        z: -5.1362553
+        x: -0
+        y: -0
+        z: -4.700888
       TangentOut:
         x: 0
         y: 0
-        z: 5.1362553
+        z: 5.331524
       Rotation:
         value:
-          x: 0.024837282
-          y: -0.60512173
-          z: -0.018892806
-          w: 0.79552114
+          x: 0.019737275
+          y: -0.6650294
+          z: -0.023936363
+          w: 0.7461725
     - Position:
         x: -19.630142
         y: -0.65
@@ -87523,19 +87493,19 @@ MonoBehaviour:
         y: -1.4219999
         z: 95.24756
       TangentIn:
-        x: 0
-        y: 0
-        z: -1.8686725
+        x: -0
+        y: -0
+        z: -2.976739
       TangentOut:
         x: 0
         y: 0
-        z: 1.8686725
+        z: 2.8222735
       Rotation:
         value:
-          x: -0.021988977
-          y: 0.76883066
-          z: 0.0020267474
-          w: -0.63907105
+          x: -0.024974842
+          y: 0.7647383
+          z: -0.0016449157
+          w: -0.6438548
     - Position:
         x: -36.84015
         y: -1.3
@@ -87685,19 +87655,19 @@ MonoBehaviour:
         y: -0.6600001
         z: 6.6275597
       TangentIn:
-        x: 0.00000023841858
-        y: 0.00000014901161
-        z: -2.3123817
+        x: -0
+        y: -0
+        z: -2.2805297
       TangentOut:
-        x: 0.00000023841858
-        y: -0.000000059604645
-        z: 2.3123822
+        x: 0
+        y: 0
+        z: 1.926623
       Rotation:
         value:
-          x: 0.045328375
-          y: 0.91405106
-          z: -0.058639497
-          w: 0.39877
+          x: 0.037035502
+          y: 0.90609264
+          z: -0.044433504
+          w: 0.41910622
     - Position:
         x: -57.390144
         y: -1.35
@@ -87743,8 +87713,6 @@ MonoBehaviour:
       Tension: 0.5
     - Mode: 0
       Tension: 0.5
-    - Mode: 4
-      Tension: 0.5
     - Mode: 0
       Tension: 0.5
     - Mode: 0
@@ -87781,19 +87749,11 @@ MonoBehaviour:
       Tension: 0.5
     - Mode: 0
       Tension: 0.5
-    - Mode: 2
-      Tension: 0.5
     - Mode: 0
       Tension: 0.5
     - Mode: 0
       Tension: 0.5
     - Mode: 0
-      Tension: 0.5
-    - Mode: 2
-      Tension: 0.5
-    - Mode: 0
-      Tension: 0.5
-    - Mode: 2
       Tension: 0.5
     - Mode: 0
       Tension: 0.5
@@ -87811,7 +87771,13 @@ MonoBehaviour:
       Tension: 0.5
     - Mode: 0
       Tension: 0.5
-    - Mode: 4
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
       Tension: 0.5
     - Mode: 0
       Tension: 0.5
@@ -93533,6 +93499,10 @@ PrefabInstance:
     - target: {fileID: 4758421506704602169, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
       propertyPath: m_Name
       value: PicCam
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758421506704602169, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5610562403927365753, guid: e0ac3c5d02f4fed488b9a9e6685d94ba, type: 3}
       propertyPath: h
